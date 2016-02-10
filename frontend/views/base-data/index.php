@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = 'ข้อมูลพื้นฐาน';
     if ($model->end_at != 'wait')
     $last_process = date_format(date_create($model->end_at), 'Y-m-d H:i:s');
     ?>
-    ประมวลผล <?= $last_process ?>
+    ประมวลผลล่าสุดเมื่อ <?= $last_process ?>
 </div>
 
 <p>
