@@ -1,4 +1,4 @@
-#ถอย version
+#version dhdc2
 #ตั้งค่าระบบ
 [php.ini]
 - max_execution_time=360000
