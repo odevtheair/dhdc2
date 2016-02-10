@@ -8,4 +8,4 @@ $this->params['breadcrumbs'][] = 'คุณภาพการบันทึก'
 <p>2) <?=Html::a('คุณภาพการบันทึกงานวางแผนครอบครัว-FP  ', ['epi-check/index']);?></p>
 <p>3) <?=Html::a('คุณภาพการบันทึกงานฝากครรภ์-ANC  ', ['epi-check/index']);?></p>
 <p>4) <?=Html::a('คุณภาพการบันทึกงานคัดกรอง-NCDSCREEN  ', ['epi-check/index']);?></p>
-<p>5) <?=Html::a('คุณภาพการบันทึกงานคัดกรอง-NCDSCREEN  ', ['epi-check/index']);?></p>
+<p>5) <?=Html::a('คุณภาพการบันทึกงานโภชนาการและพัฒนาการเด็ก-NUTRITION  ', ['epi-check/index']);?></p>
