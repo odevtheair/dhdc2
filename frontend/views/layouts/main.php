@@ -50,15 +50,15 @@ AppAsset::register($this);
                     'linkOptions' => ['data-method' => 'post']
                 ];
             }
+            
             $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-unchecked"></i> ข้อมูลพื้นฐาน', 'url' => ['base-data/index']];
-
-            $rpt_mnu_itms[] = ['label' => '<span class="glyphicon glyphicon-list-alt"></span> รวมรายงาน', 'url' => ['sqlscript/index']];
+            $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-list-alt"></i> รวมรายงาน', 'url' => ['sqlscript/index']];
+            $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-check"></i> คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
 
             if (!Yii::$app->user->isGuest) {
-                $rpt_mnu_itms[] = ['label' => '<span class="glyphicon glyphicon-retweet"></span> คำสั่ง SQL', 'url' => ['runquery/index']];
+                $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-retweet"></i> คำสั่ง SQL', 'url' => ['runquery/index']];
             }
 
-            $rpt_mnu_itms[] = ['label' => '<span class="glyphicon glyphicon-check"></span> คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
 
 
             $username = '';
@@ -69,14 +69,14 @@ AppAsset::register($this);
 
             $menuItems = [
                 ['label' =>
-                    '<span class="glyphicon glyphicon-floppy-open"></span> นำเข้า',
+                    '<i class="glyphicon glyphicon-floppy-open"></i> นำเข้า',
                     'url' => ['/uploadfortythree/index']
                 ],
                 ['label' =>
-                    '<span class="glyphicon glyphicon-list-alt"></span> ประมวลผล',
+                    '<i class="glyphicon glyphicon-list-alt"></i> ประมวลผล',
                     'items' => $rpt_mnu_itms
                 ],
-                ['label' => '<span class="glyphicon glyphicon-user"></span> ผู้ใช้ ' . $username,
+                ['label' => '<i class="glyphicon glyphicon-user"></i> ผู้ใช้ ' . $username,
                     'items' => $submenuItems
                 ],
                 ['label' => 'เกี่ยวกับ', 'url' => ['site/about']],
