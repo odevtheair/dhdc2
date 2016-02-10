@@ -8,7 +8,7 @@ use frontend\models\ChospitalAmp;
 $this->params['breadcrumbs'][] = ['label' => 'คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
 $this->params['breadcrumbs'][] = 'คุณภาพการบันทึกงาน EPI';
 ?>
-<h4>กลุ่มเป้าหมาย</h4>
+<b>กลุ่มเป้าหมาย</b>
 
 <div class='well'>
     <form method="POST">       
