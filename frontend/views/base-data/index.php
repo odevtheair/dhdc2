@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = 'ข้อมูลพื้นฐาน';
 
 <p>
     <?php
-    echo \yii\helpers\Html::a('3) จำนวนข้อมูลบริการ (SERVICE)', ['opd/report1']);    
+    echo \yii\helpers\Html::a('3) จำนวนครั้งให้บริการแยกรายเดือน (SERVICE)', ['opd/report1']);    
     ?>
 </p>
 
