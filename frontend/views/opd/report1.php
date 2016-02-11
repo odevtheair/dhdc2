@@ -4,7 +4,7 @@ use yii\helpers\Html;
 ?>
 <?php
 $this->params['breadcrumbs'][] = ['label' => 'ข้อมูลพื้นฐาน', 'url' => ['base-data/index']];
-$this->params['breadcrumbs'][] = 'จำนวนข้อมูลบริการ (SERVICE)';
+$this->params['breadcrumbs'][] = 'จำนวนครั้งให้บริการ (SERVICE)';
 ?>
 
 <div class='well'>
