@@ -28,8 +28,8 @@ return [
         ],
         'urlManagerBackend' => [
             'class' => 'yii\web\urlManager',
-            'baseUrl' => '/dhdc2/backend/web',
-            'scriptUrl' => '/dhdc2/backend/web/index.php',
+            'baseUrl' => '../../backend/web',
+            'scriptUrl' => '../../backend/web/index.php',
             'enablePrettyUrl' => false,
             'showScriptName' => true,
         ],
