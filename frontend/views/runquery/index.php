@@ -3,6 +3,9 @@
 use yii\helpers\ArrayHelper;
 use yii\widgets\Pjax;
 
+$this->params['breadcrumbs'][] = ['label' => 'คลัง Script', 'url' => ['sqlscript/index']];
+$this->params['breadcrumbs'][] = isset($_POST['script_name']) ? $_POST['script_name'] : '';
+
 $role = Yii::$app->user->identity->role;
 ?>
 <?php if ($role == 1 || $role == 2): ?>
@@ -33,11 +36,7 @@ $role = Yii::$app->user->identity->role;
     </form>
 
 <?php endif; ?>
-
-
-<?php if (isset($_POST['script_name'])): ?>
-    <div class="alert alert-warning"><?= $_POST['script_name'] ?></div>
-<?php endif; ?>
+<br>
 <?php
 if (isset($dataProvider))
 //echo yii\grid\GridView::widget([
