@@ -1,7 +1,7 @@
 <?php
-$filename=file_get_contents("http://utehn.plkhealth.go.th/dhdc/version/filename.txt");
+$filename=file_get_contents("http://utehn.plkhealth.go.th/dhdc2/version/filename.txt");
 $new_version = $filename;
-$source = "http://utehn.plkhealth.go.th/dhdc/zip/$new_version.zip";
+$source = "http://utehn.plkhealth.go.th/dhdc2/zip/$new_version.zip";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $source);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

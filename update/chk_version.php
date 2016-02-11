@@ -41,7 +41,7 @@ if ($_POST['isadmin'] != md5('utehn')) {
         <td>New Version</td>
         <td>
             <?php
-            echo file_get_contents("http://utehn.plkhealth.go.th/dhdc/version/version.txt");
+            echo file_get_contents("http://utehn.plkhealth.go.th/dhdc2/version/version.txt");
             ?>
         </td>
     </tr>
@@ -54,7 +54,7 @@ if ($_POST['isadmin'] != md5('utehn')) {
 <hr>
 File Name:
 <?php
-echo file_get_contents("http://utehn.plkhealth.go.th/dhdc/version/filename.txt");
+echo file_get_contents("http://utehn.plkhealth.go.th/dhdc2/version/filename.txt");
 ?>.zip
 <div id="res" style="display: none">
     <img src="updating.gif">
@@ -62,7 +62,7 @@ echo file_get_contents("http://utehn.plkhealth.go.th/dhdc/version/filename.txt")
 <hr>
 <div>
     <?php
-    echo file_get_contents("http://utehn.plkhealth.go.th/dhdc/version/log.txt");
+    echo file_get_contents("http://utehn.plkhealth.go.th/dhdc2/version/log.txt");
     ?>
 </div>
 <script>
