@@ -26,6 +26,13 @@ AppAsset::register($this);
         <?php $this->head() ?>
     </head>
     <body>
+        <?php
+        $username = '';
+
+        if (!Yii::$app->user->isGuest) {
+            $username = '(' . Html::encode(Yii::$app->user->identity->username) . ')';
+        }
+        ?>
 
         <?php $this->beginBody() ?>
         <div class="wrap">
@@ -43,14 +50,20 @@ AppAsset::register($this);
                 $submenuItems[] = ['label' => 'สมัครผู้ใช้', 'url' => ['/site/signup']];
                 $submenuItems[] = ['label' => 'เข้าระบบ', 'url' => ['/site/login']];
             } else {
-
+                if (Yii::$app->user->identity->role == 1) {
+                    $submenuItems[] = [
+                        'label' => 'จัดการระบบ',
+                        'url' => Yii::$app->urlManagerBackend->createUrl(['site/index']),
+                        'linkOptions' => ['target' => '_blank']
+                    ];
+                }
                 $submenuItems[] = [
                     'label' => 'ออกจากระบบ',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ];
             }
-            
+
             $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-unchecked"></i> ข้อมูลพื้นฐาน', 'url' => ['base-data/index']];
             $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-list-alt"></i> รวมรายงาน', 'url' => ['sqlscript/index']];
             $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-check"></i> คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
@@ -59,12 +72,6 @@ AppAsset::register($this);
                 $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-retweet"></i> คำสั่ง SQL', 'url' => ['runquery/index']];
             }
 
-
-
-            $username = '';
-            if (!Yii::$app->user->isGuest) {
-                $username = '(' . Html::encode(Yii::$app->user->identity->username) . ')';
-            }
 
 
             $menuItems = [
