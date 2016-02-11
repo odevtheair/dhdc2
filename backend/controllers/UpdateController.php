@@ -13,7 +13,7 @@ class UpdateController extends \yii\web\Controller {
 
     public function actionCheckver(){
         $curl = new curl\Curl();
-        $ver = $curl->get("http://utehn.plkhealth.go.th/dhdc/version/version.txt");
+        $ver = $curl->get("http://utehn.plkhealth.go.th/dhdc2/version/version.txt");
         
         return $ver;
     }
