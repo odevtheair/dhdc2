@@ -11,7 +11,7 @@ if (isset($dataProvider))
 //echo yii\grid\GridView::widget([
     echo \kartik\grid\GridView::widget([
         'dataProvider' => $dataProvider,
-        'responsive' => TRUE,
+       'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => ''],
         'hover' => true,
         'floatHeader' => true,
         'panel' => [
