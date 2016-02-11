@@ -27,18 +27,18 @@ if ($_POST['isadmin'] != md5('utehn')) {
 
 </script>
 
-<table border="1">
+<table border="0">
 
-    <tr>
-        <td>Your System</td>
+    <tr style="background: green; color: white">
+        <td>Current Version</td>
         <td>
             <?php
             echo file_get_contents("../version/version.txt");
             ?>
         </td>
     </tr>
-    <tr bgcolor="yellow">
-        <td>New Version</td>
+    <tr style="background: blue; color: white">
+        <td>Last Version</td>
         <td>
             <?php
             echo file_get_contents("http://utehn.plkhealth.go.th/dhdc2/version/version.txt");
