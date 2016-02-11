@@ -86,8 +86,7 @@ class ExecuteController extends \yii\web\Controller {
         $running = \backend\models\SysProcessRunning::find()->one();
 
         if ($running->is_running == 'false') {
-            //$running->is_running = 'true';
-            //$running->update();
+            
             //ใส่  store;
             $this->call("start_process", NULL);
 
@@ -113,15 +112,7 @@ class ExecuteController extends \yii\web\Controller {
             $this->call("clear_upload_error", NULL);
             $this->call("clear_null_hospcode", NULL);
 
-            //$this->call("cal_chart_dial_1", $bdg);
-            //$this->call("cal_chart_dial_2", $bdg);
-            //$this->call("cal_chart_dial_3", $bdg);
-            //$this->call("cal_chart_dial_4", NULL);
-            //$this->call("cal_chart_dial_5", NULL);
-            //$this->call("cal_chart_dial_6", NULL);
-            //$this->call("cal_ncd_cholesteral_colorchart", $bdg);
-            //$this->call("cal_ncd_nocholesteral_colorchart", $bdg);
-
+           
 
             $this->call("cal_pyramid_level_1", $bdg);
             $this->call("cal_pyramid_level_2");
@@ -133,33 +124,13 @@ class ExecuteController extends \yii\web\Controller {
             $this->call("cal_count_service", $y - 1);
             $this->call("cal_count_service", $y);
 
-            //$this->call("cal_rpt_visit_oldman", $y - 1);
-            //$this->call("cal_rpt_visit_oldman", $y);
-            //รายงานแผนไทย-knott
-            /*
-              $this->call("cal_rpt_panth_visit_ratio", $y - 1);
-              $this->call("cal_rpt_panth_visit_ratio", $y);
-              $this->call("cal_rpt_panth_drug_value", $y - 1);
-              $this->call("cal_rpt_panth_drug_value", $y);
-              $this->call("cal_rpt_cervical_cancer_screening", $y - 1);
-              $this->call("cal_rpt_cervical_cancer_screening", $y);
-              $this->call("cal_rpt_breast_cancer_screening", $y - 1);
-              $this->call("cal_rpt_breast_cancer_screening", $y); */
-
-            // sos store
-            /*
-              $this->call("cal_chart_dial_7", $bdg);
-              $this->call("cal_chart_dial_8", $bdg);
-              $this->call("cal_chart_dial_9", NULL); */
-
-
+            
 
 
             $this->call("end_process", NULL);
             //
             //จบใส่ store
-            //$running->is_running = 'false';
-            // $running->update();
+            
         }
     }
 
