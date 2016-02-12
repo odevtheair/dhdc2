@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model frontend\models\UploadFortythree */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Fortythrees All '), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'รายการไฟล์ '), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="upload-fortythree-view">
