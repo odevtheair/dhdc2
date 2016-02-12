@@ -23,7 +23,7 @@ var gaugeOptions = {
         stops: [                     
             [0.6, 'red'], 
             [0.8, 'orange'],
-            [0.9, 'lime'], 
+            [0.9, '#00cc00'], 
         ],
         lineWidth: 0,
         minorTickInterval: null,
