@@ -55,4 +55,4 @@ JS;
 $this->registerJs($script, yii\web\View::POS_HEAD);
 ?>
 <hr>
-<div class="alert alert-danger">&copy; สงวนลิขสิทธิ์ SOURCECODE ส่วนนำเข้าไฟล์ 43 แฟ้ม</div>
+<div class="alert alert-danger">&copy; สงวนลิขสิทธิ์ SOURCECODE ส่วนการทำงานนำเข้าไฟล์ 43 แฟ้ม</div>
