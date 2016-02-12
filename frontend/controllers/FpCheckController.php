@@ -7,7 +7,7 @@ use yii\filters\VerbFilter;
 
 include Yii::getAlias('@common').'/config/thai_date.php';
 
-class EpiCheckController extends \yii\web\Controller {
+class FpCheckController extends \yii\web\Controller {
 
     public $enableCsrfValidation = false;
     
@@ -105,7 +105,7 @@ ORDER BY p.BIRTH DESC,AGE_Y ASC,AGE_M ASC";
 FROM person p
 LEFT JOIN home h   on  p.HOSPCODE=h.HOSPCODE AND p.HID = h.HID
 LEFT JOIN chospital hos on hos.hoscode = p.HOSPCODE 
-WHERE p.CID = '$cid' AND p.TYPEAREA in (1,3,5) AND p.CID <> '' ";
+WHERE p.CID = '$cid' AND p.TYPEAREA IN (1,3,5) AND p.CID <> '' ";
           $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',

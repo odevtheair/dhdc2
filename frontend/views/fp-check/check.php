@@ -1,8 +1,8 @@
 <?php
 /* @var $this yii\web\View */
-//$this->title = 'EPI';
+
 ?>
-<h4>งานสร้างเสริมภูมิคุ้มกันโรค</h4>
+<h4>งานวางแผนครอบครัว</h4>
 
 <form method="POST">
     <input type="text" name="cid" id="cid" placeholder="กรอกเลข 13 หลัก" value="<?= isset($_GET['cid']) ? $_GET['cid'] : '' ?>" > 
@@ -21,7 +21,7 @@ echo \kartik\grid\GridView::widget([
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
 ]);
 ?>
-<b style="color: blue">ได้รับวัคซีน (<u>EPI</u> + SERVICE + DIAGNOSIS_OPD)</b>
+<b style="color: blue">ได้รับบริการวางแผนครอบครัว (<u>FP</u> + SERVICE + DIAGNOSIS_OPD)</b>
 <?php
 echo \kartik\grid\GridView::widget([
     'dataProvider' => $check,
