@@ -3,7 +3,7 @@
 namespace backend\controllers;
 
 //use backend\models\SysCheckProcess;
-use backend\models\SysStoreProc;
+use backend\models\SysStoreProcErr;
 
 class QcController extends \yii\web\Controller {
 
@@ -40,8 +40,9 @@ class QcController extends \yii\web\Controller {
         if ($running->is_running == 'false') {
             $this->call("start_process", NULL);
             $this->call("clear_qc", NULL);
-            $models=SysStoreProc::find()->where(['note1' => 'err','note2'=>1])->all();
-            
+            //$models=  SysStoreProcErr::find()->where(['note1' => 'err','note2'=>1])->all();
+             $models=  SysStoreProcErr::find()->all();
+             
             foreach ($models as $model) {
                  $this->call($model->spname, NULL);
             }

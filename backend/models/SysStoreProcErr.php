@@ -15,14 +15,14 @@ use Yii;
  * @property string $note2
  * @property string $note3
  */
-class SysStoreProc extends \yii\db\ActiveRecord
+class SysStoreProcErr extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'sys_store_proc';
+        return 'sys_store_proc_err';
     }
 
     /**
