@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <span class="glyphicon glyphicon-play"></span> 
             นำเข้า
         </button>
-
+    
     <?php else: ?>
 
         <div class="alert alert-danger">
@@ -100,6 +100,8 @@ JS;
     <div id="res" style="display: none">
         <img src="images/busy.gif">
     </div>
+    <hr>
+    <div class="alert alert-danger">&copy; สงวนลิขสิทธิ์ ระบบนำเข้าไฟล์ 43 แฟ้มในชุดซอฟต์แวร์ DHDC </div>
 
 
 </div>
