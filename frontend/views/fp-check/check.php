@@ -28,15 +28,15 @@ echo \kartik\grid\GridView::widget([
     'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
     'columns' => [
-        ['attribute' => 'AGE_M', 'header' => 'อายุ(เดือน)', 'contentOptions' => ['class' => 'text-center']],
-        ['attribute' => 'VACCINETYPE', 'header' => 'รหัสวัคซีน', 'contentOptions' => ['class' => 'text-center']],
-        ['attribute' => 'engvaccine', 'header' => 'ชื่อวัคซีน'],
+        ['attribute' => 'AGE_Y', 'header' => 'อายุ(ปี)', 'contentOptions' => ['class' => 'text-center']],
+        ['attribute' => 'FPTYPE', 'header' => 'FPTYPE', 'contentOptions' => ['class' => 'text-center']],
+        ['attribute' => 'FPDESC', 'header' => 'บริการ'],
         ['attribute' => 'DATE_SERV','header' => 'วันที่ได้รับ' ],
-        ['attribute' => 'VACCINEPLACE', 'header' => 'ได้รับที่'],
+        ['attribute' => 'FPPLACE', 'header' => 'ได้รับที่'],
         ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],
         ['attribute' => 'CC', 'header' => 'Cc'],
         ['attribute' => 'DX', 'header' => 'Dx'],
-        ['attribute' => 'D_UPDATE', 'header' => 'อัพเดท',]
+        ['attribute' => 'D_UPDATE', 'header' => 'อัพเดท']
     ]
 
         /* 'panel' => [

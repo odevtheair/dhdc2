@@ -77,7 +77,7 @@ $this->title = 'DHDC Backend';
             <div class="col-sm-4">
 
                 <button class="btn btn-danger btn-xlarge" id="btn_process_report"> 
-                    <i class="glyphicon glyphicon-refresh"></i> ประมวลผลรายงาน
+                    <i class="glyphicon glyphicon-refresh"></i> ประมวลผลข้อมูล
                 </button>
 
 
