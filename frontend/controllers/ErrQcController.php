@@ -65,10 +65,12 @@ class ErrQcController extends \yii\web\Controller {
         $pagination = ['pageSize' => 15];
         
         $data = \Yii::$app->request->post();
+        $hospcode= NULL;
         if(!empty($data['hospcode'])){
             $hospcode = $data['hospcode'];
             $sql = "select * from err_$file where hospcode='$hospcode'";
             $pagination = FALSE;
+            
         }
         
 
@@ -85,7 +87,8 @@ class ErrQcController extends \yii\web\Controller {
         ]);
         return $this->render('index', [
                     'filename' => $filename,
-                    'dataProvider' => $dataProvider
+                    'dataProvider' => $dataProvider,
+                    'hospcode'=>$hospcode
         ]);
     }
 

@@ -11,7 +11,8 @@ $this->params['breadcrumbs'][] = 'ERROR แฟ้ม '.$filename;
 <!--        <input type="text" name="hospcode" placeholder="รหัสสถานบริการ" maxlength="5" size="15" >  -->
         <?php
         $items = ArrayHelper::map(ChospitalAmp::find()->all(), 'hoscode', 'fullname');
-        echo Html::dropDownList('hospcode', NULL, $items, ['prompt' => '--- หน่วยบริการ ---']);
+        
+        echo Html::dropDownList('hospcode',$hospcode, $items, ['prompt' => '--- หน่วยบริการ ---']);
         ?>
      <button class='btn btn-danger'> ตกลง </button>
  </form>
