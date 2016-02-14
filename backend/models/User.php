@@ -26,7 +26,7 @@ class User extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'user';
+        return 'user2';
     }
 
     /**
@@ -36,6 +36,7 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             [['username', 'auth_key', 'password_hash', 'email', 'created_at', 'updated_at'], 'required'],
+            //[['username',  'password_hash', 'email'], 'required'],
             [['role', 'status', 'created_at', 'updated_at'], 'integer'],
             [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32]
@@ -55,7 +56,7 @@ class User extends \yii\db\ActiveRecord
             'id' => 'ID',
             'username' => 'Username',
             'auth_key' => 'Auth Key',
-            'password_hash' => 'Password Hash',
+            'password_hash' => 'Password',
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
             'role' => 'สิทธิใช้งาน',
