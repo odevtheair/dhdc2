@@ -4,6 +4,7 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use frontend\models\ChospitalAmp;
+use frontend\models\Csex;
 
 $this->params['breadcrumbs'][] = ['label' => 'คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
 $this->params['breadcrumbs'][] = 'คุณภาพการบันทึกงาน EPI';
@@ -17,16 +18,17 @@ $this->params['breadcrumbs'][] = 'คุณภาพการบันทึก�
         $items = ArrayHelper::map(ChospitalAmp::find()->all(), 'hoscode', 'fullname');
         echo Html::dropDownList('hospcode', $hospcode, $items, ['prompt' => '--- หน่วยบริการ ---']);
         ?>
-        <select name="sex">
-            <option value="1,2" selected> --เพศ-- </option>
-            <option value="1">1-ชาย</option>
-            <option value="2">2-หญิง</option>
-        </select>
+        
+         <?php
+        $items = ArrayHelper::map(Csex::find()->all(), 'sex', 'sexname');
+        echo Html::dropDownList('sex', $sex, $items);
+        ?>
+        
         เกิดระหว่าง:
         <?php
         echo yii\jui\DatePicker::widget([
             'name' => 'date1',
-            //'value' => $date1,
+            'value' => $date1,
             'language' => 'th',
             'dateFormat' => 'yyyy-MM-dd',
             'clientOptions' => [
@@ -39,7 +41,7 @@ $this->params['breadcrumbs'][] = 'คุณภาพการบันทึก�
         <?php
         echo yii\jui\DatePicker::widget([
             'name' => 'date2',
-            //'value' => $date2,
+            'value' => $date2,
             'language' => 'th',
             'dateFormat' => 'yyyy-MM-dd',
             'clientOptions' => [

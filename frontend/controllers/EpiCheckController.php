@@ -59,19 +59,22 @@ class EpiCheckController extends \yii\web\Controller {
         
         $data = Yii::$app->request->post();
         $hospcode = isset($data['hospcode']) ? $data['hospcode'] : 'null';
-        $sex = isset($data['sex']) ? $data['sex'] : '0';
-        $date1 =isset($data['date1'])  ? $data['date1'] : '0000-00-00';
-        $date2 =isset($data['date2'])  ? $data['date2'] : date('Y-m-d', strtotime("+10 years"));
-        $date1 = $date1 ==''?'0000-00-00':$date1;
-        $date2 = $date2 ==''?date('Y-m-d', strtotime("+10 years")):$date2;
+        $sex = isset($data['sex']) ? $data['sex'] : '1,2';
+        $date1 =isset($data['date1'])  ? $data['date1'] : '';
+        $date2 =isset($data['date2'])  ? $data['date2'] : '';
+        //$date1 = $date1 ==''?'0000-00-00':$date1;
+        //$date2 = $date2 ==''?date('Y-m-d', strtotime("+10 years")):$date2;
         
         $sql = "SELECT p.CID,p.`NAME`,p.LNAME,p.SEX,p.BIRTH
 ,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as AGE_Y
 ,TIMESTAMPDIFF(MONTH,p.BIRTH,CURDATE()) MOD 12 as AGE_M
 ,p.TYPEAREA,p.NATION,p.DISCHARGE from person p
 WHERE p.DISCHARGE = 9 AND p.TYPEAREA in (1,3,5) AND p.HOSPCODE = '$hospcode'
-AND p.SEX in ($sex) AND (p.BIRTH between '$date1' AND '$date2')
-ORDER BY p.BIRTH DESC,AGE_Y ASC,AGE_M ASC";
+AND p.SEX in ($sex)";
+        if(!empty($date1) && !empty($date2)){
+            $sql.= " AND (p.BIRTH between '$date1' AND '$date2')";
+        }
+        $sql.= " ORDER BY p.BIRTH DESC,AGE_Y ASC,AGE_M ASC";
         
          $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
