@@ -28,7 +28,7 @@ class SqlscriptController extends Controller {
         if ($role == 1) {
             $arr = ['index', 'view', 'create', 'update', 'delete'];
         }
-        if ($role == 2 ) {
+        if ($role == 2) {
             $arr = ['index', 'view'];
         }
 
@@ -126,19 +126,21 @@ class SqlscriptController extends Controller {
                     $model_script = new Sqlscript();
                     $save_name = '';
                     if (strtolower($file->extension) === 'txt' || strtolower($file->extension) === 'sql') {
-                        
-                        $path = \Yii::getAlias('@webroot') . "/txt/";
 
-                        $fname = iconv('UTF-8', 'tis-620', $file->name);// win
-                        $save_name = $path . $fname;                        
-                        $file->saveAs($save_name);
                         
-                        $model_script->topic = iconv('tis-620', 'UTF-8',$fname);
-                        
-                        $model_script->sql_script = iconv('tis-620', 'UTF-8', file_get_contents($save_name));
+                            $path = \Yii::getAlias('@webroot') . "/txt/";
 
-                        $model_script->user = Yii::$app->user->identity->username;
-                        $model_script->d_update = date('Y-m-d H:i:s');
+                            $fname = iconv('UTF-8', 'tis-620', $file->name); // win
+                            $save_name = $path . $fname;
+                            $file->saveAs($save_name);
+
+                            $model_script->topic = iconv('tis-620', 'UTF-8', $fname);
+
+                            $model_script->sql_script = iconv('tis-620', 'UTF-8', file_get_contents($save_name));
+
+                            $model_script->user = Yii::$app->user->identity->username;
+                            $model_script->d_update = date('Y-m-d H:i:s');
+                        
                     }
                     $model_script->save();
                 }
