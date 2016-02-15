@@ -108,7 +108,7 @@ AND p.SEX in ($sex)";
 FROM person p
 LEFT JOIN home h   on  p.HOSPCODE=h.HOSPCODE AND p.HID = h.HID
 LEFT JOIN chospital hos on hos.hoscode = p.HOSPCODE 
-WHERE p.CID = '$cid' AND p.TYPEAREA in (1,3,5) AND p.CID <> '' ";
+WHERE p.CID = '$cid'  AND p.CID <> '' ";
           $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',

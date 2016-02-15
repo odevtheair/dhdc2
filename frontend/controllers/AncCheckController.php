@@ -7,7 +7,7 @@ use yii\filters\VerbFilter;
 
 include Yii::getAlias('@common').'/config/thai_date.php';
 
-class EpiCheckController extends \yii\web\Controller {
+class AncCheckController extends \yii\web\Controller {
 
     public $enableCsrfValidation = false;
     
@@ -59,22 +59,16 @@ class EpiCheckController extends \yii\web\Controller {
         
         $data = Yii::$app->request->post();
         $hospcode = isset($data['hospcode']) ? $data['hospcode'] : 'null';
-        $sex = isset($data['sex']) ? $data['sex'] : '1,2';
+      
         $date1 =isset($data['date1'])  ? $data['date1'] : '';
         $date2 =isset($data['date2'])  ? $data['date2'] : '';
-        //$date1 = $date1 ==''?'0000-00-00':$date1;
-        //$date2 = $date2 ==''?date('Y-m-d', strtotime("+10 years")):$date2;
+       
         
-        $sql = "SELECT p.CID,p.`NAME`,p.LNAME,p.SEX,p.BIRTH
-,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as AGE_Y
-,TIMESTAMPDIFF(MONTH,p.BIRTH,CURDATE()) MOD 12 as AGE_M
-,p.TYPEAREA,p.NATION,p.DISCHARGE from person p
-WHERE p.DISCHARGE = 9 AND p.TYPEAREA in (1,3,5) AND p.HOSPCODE = '$hospcode'
-AND p.SEX in ($sex)";
+        $sql = "SELECT * FROM labor_cid p WHERE p.HOSPCODE = '$hospcode'";
         if(!empty($date1) && !empty($date2)){
-            $sql.= " AND (p.BIRTH between '$date1' AND '$date2')";
+            $sql.= " AND (p.BDATE between '$date1' AND '$date2')";
         }
-        $sql.= " ORDER BY p.BIRTH DESC,AGE_Y ASC,AGE_M ASC";
+        $sql.= " ORDER BY p.BDATE DESC";
         
          $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
@@ -87,28 +81,27 @@ AND p.SEX in ($sex)";
         return $this->render('index',[
             'hospcode'=>$hospcode,
             'person'=>$person,
-            'sql'=>$sql,
-            'sex'=>$sex,
+            'sql'=>$sql,         
             'date1'=>$date1,
             'date2'=>$date2,
             
         ]);
     
-    }
+    }// end index
 
     public function actionCheck() {
         $data = Yii::$app->request->post();
         $cid = isset($data['cid']) ? $data['cid'] : 'null';
         
         $sql = "SELECT REPLACE(concat(p.HOSPCODE,'-',hos.hosname),'โรงพยาบาลส่งเสริมสุขภาพตำบล','รพสต.') as HOSPCODE
-,p.CID,p.`NAME` as 'ชื่อ',p.LNAME as 'สกุล',p.SEX as 'เพศ',p.BIRTH as 'เกิด'
-,TIMESTAMPDIFF(MONTH,p.BIRTH,CURDATE()) as 'อายุ(เดือน)'
-,h.HOUSE as 'ที่อยู่',h.VILLAGE as 'หมู่',h.TAMBON as 'ต',h.AMPUR as 'อ',h.CHANGWAT as 'จ'
-,p.TYPEAREA,p.NATION,p.DISCHARGE,p.D_UPDATE as 'อัพเดท'
-FROM person p
-LEFT JOIN home h   on  p.HOSPCODE=h.HOSPCODE AND p.HID = h.HID
+,p.CID,p.`NAME` as 'ชื่อ',p.LNAME as 'สกุล',p.SEX as 'เพศ',p.BIRTH as 'เกิด',p.LMP
+,TIMESTAMPDIFF(YEAR,p.BIRTH,p.LMP) as 'อายุขณะตั้งครรภ์'
+,p.GRAVIDA,p.BDATE as 'วันคลอด'
+,p.HOUSE as 'ที่อยู่',p.VILLAGE as 'หมู่',p.TAMBON as 'ต',p.AMPUR as 'อ',p.CHANGWAT as 'จ'
+
+FROM labor_cid p
 LEFT JOIN chospital hos on hos.hoscode = p.HOSPCODE 
-WHERE p.CID = '$cid' AND  p.CID <> '' ";
+WHERE p.CID = '$cid'  AND p.CID <> '' ";
           $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',
@@ -119,20 +112,7 @@ WHERE p.CID = '$cid' AND  p.CID <> '' ";
         
         ///////////////////////////////        
         
-         $sql = "SELECT e.VACCINETYPE,vc.engvaccine ,e.DATE_SERV ,TIMESTAMPDIFF(MONTH,p.BIRTH,e.DATE_SERV) as AGE_M
-,e.VACCINEPLACE ,p.HOSPCODE,s.CHIEFCOMP as CC
-,(
-	SELECT GROUP_CONCAT(CONCAT('(',d.DIAGTYPE,')',d.DIAGCODE) ORDER BY d.DIAGTYPE SEPARATOR ',') 
-	FROM diagnosis_opd d WHERE d.HOSPCODE = e.HOSPCODE AND d.PID = e.PID AND d.SEQ = e.SEQ
-	GROUP BY d.SEQ
-) as DX , DATE(e.D_UPDATE) as D_UPDATE
-from epi e
-LEFT JOIN person p on p.HOSPCODE = e.HOSPCODE AND p.PID = e.PID
-LEFT JOIN service s on s.HOSPCODE = e.HOSPCODE and s.PID = e.PID and s.SEQ = e.SEQ
-LEFT JOIN cvaccinetype vc on vc.vaccinecode = e.VACCINETYPE
-
-WHERE p.CID = '$cid' AND p.CID <> ''
-ORDER BY  e.DATE_SERV ASC";
+         $sql = "SELECT * FROM anc_cid t WHERE t.CID='$cid' ORDER BY  t.DATE_SERV ASC";
 
         $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $check = new \yii\data\ArrayDataProvider([
