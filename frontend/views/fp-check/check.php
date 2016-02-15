@@ -28,10 +28,16 @@ echo \kartik\grid\GridView::widget([
     'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
     'columns' => [
+        ['attribute' => 'DATE_SERV','header' => 'วันที่' ],
         ['attribute' => 'AGE_Y', 'header' => 'อายุ(ปี)', 'contentOptions' => ['class' => 'text-center']],
-        ['attribute' => 'FPTYPE', 'header' => 'FPTYPE', 'contentOptions' => ['class' => 'text-center']],
-        ['attribute' => 'FPDESC', 'header' => 'บริการ'],
-        ['attribute' => 'DATE_SERV','header' => 'วันที่ได้รับ' ],
+        //['attribute' => 'FPTYPE', 'header' => 'ชนิด', 'contentOptions' => ['class' => 'text-center']],
+        [
+            'attribute' => 'FPDESC', 'header' => 'ชนิดการคุมกำเนิด',
+            'value'=>function($data){
+                return $data['FPTYPE'].'-'.$data['FPDESC'];
+            }
+        ],
+        
         ['attribute' => 'FPPLACE', 'header' => 'ได้รับที่'],
         ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],
         ['attribute' => 'CC', 'header' => 'Cc'],
