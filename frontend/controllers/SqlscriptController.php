@@ -69,9 +69,9 @@ class SqlscriptController extends Controller {
     public function actionIndex() {
 
         if (!file_exists("txt")) {
-            mkdir('txt', 0777);
+            mkdir('txt', 777);
         }
-        chmod("txt", 0777);
+        //chmod("txt", 0777);
 
         $searchModel = new SqlscriptSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
