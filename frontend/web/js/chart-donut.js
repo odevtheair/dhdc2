@@ -21,9 +21,9 @@ var gaugeOptions = {
     // the value axis
     yAxis: {
         stops: [                     
-            [0.6, 'red'], 
-            [0.8, 'orange'],
-            [0.9, '#00cc00'], 
+            [0.8, 'red'], 
+            [0.9, 'orange'],
+            [1.0, '#00cc00'], 
         ],
         lineWidth: 0,
         minorTickInterval: null,
