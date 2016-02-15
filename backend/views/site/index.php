@@ -195,7 +195,7 @@ $this->title = 'DHDC Backend';
 <?php
 $route_chk_update = Yii::$app->urlManager->createUrl('update/checkver');
 $route_process_report = Yii::$app->urlManager->createUrl('execute/processreport');
-$route_qc = Yii::$app->urlManager->createUrl('qc/excec');
+$route_qc = Yii::$app->urlManager->createUrl('qc/exec');
 $route_indiv_exec = yii\helpers\Url::to(['indiv/exec', 'selyear' => '2015']);
 $route_process_json = \yii\helpers\Url::to(['execute/process-json']);
 

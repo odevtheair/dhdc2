@@ -34,7 +34,7 @@ class QcController extends \yii\web\Controller {
         return $this->render('index');
     }
 
-    public function actionExcec() {
+    public function actionExec() {
 
         $running = \backend\models\SysProcessRunning::find()->one();
         if ($running->is_running == 'false') {
@@ -45,6 +45,7 @@ class QcController extends \yii\web\Controller {
              
             foreach ($models as $model) {
                  $this->call($model->spname, NULL);
+                //echo $model->spname;
             }
           
             $this->call("end_process", NULL);
