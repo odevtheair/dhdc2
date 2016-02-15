@@ -123,7 +123,7 @@ class ExecuteController extends \yii\web\Controller {
             $y = date('Y');
             $this->call("cal_count_service", $y - 1);
             $this->call("cal_count_service", $y);
-            $this->call('z_fp_cid', NULL);
+            $this->call('z_all', NULL);
             
 
 
