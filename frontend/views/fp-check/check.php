@@ -1,6 +1,5 @@
 <?php
 /* @var $this yii\web\View */
-
 ?>
 <h4>งานวางแผนครอบครัว</h4>
 
@@ -28,21 +27,24 @@ echo \kartik\grid\GridView::widget([
     'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
     'columns' => [
-        ['attribute' => 'DATE_SERV','header' => 'วันที่' ],
+        ['attribute' => 'DATE_SERV', 'header' => 'วันที่'],
         ['attribute' => 'AGE_Y', 'header' => 'อายุ(ปี)', 'contentOptions' => ['class' => 'text-center']],
         //['attribute' => 'FPTYPE', 'header' => 'ชนิด', 'contentOptions' => ['class' => 'text-center']],
         [
             'attribute' => 'FPDESC', 'header' => 'ชนิดการคุมกำเนิด',
-            'value'=>function($data){
-                return $data['FPTYPE'].'-'.$data['FPDESC'];
+            'value' => function($data) {
+                return $data['FPTYPE'] . '-' . $data['FPDESC'];
             }
         ],
-        
         ['attribute' => 'FPPLACE', 'header' => 'ได้รับที่'],
         ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],
         ['attribute' => 'CC', 'header' => 'Cc'],
         ['attribute' => 'DX', 'header' => 'Dx'],
-        ['attribute' => 'D_UPDATE', 'header' => 'อัพเดท']
+        ['attribute' => 'D_UPDATE',
+            'value' => function($data) {
+                return date('Y-m-d', strtotime($data['D_UPDATE']));
+            }
+        ]
     ]
 
         /* 'panel' => [

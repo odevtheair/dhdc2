@@ -1,6 +1,5 @@
 <?php
 /* @var $this yii\web\View */
-
 ?>
 <h4>งานวางแผนครอบครัว</h4>
 
@@ -27,7 +26,33 @@ echo \kartik\grid\GridView::widget([
     'dataProvider' => $check,
     'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
-   
+    'columns' => [
+        ['attribute' => 'GRAVIDA', 'header' => 'ครรภ์ที่'],
+        ['attribute' => 'DATE_SERV', 'header' => 'วันที่'],
+        ['attribute' => 'GA', 'header' => 'อายุครรภ์(สัปดาห์)'],
+        ['attribute' => 'ANCNO', 'header' => 'ANC ช่วงที่'],
+        ['attribute' => 'ANCRESULT', 'header' => 'ผลตรวจ',
+            'value' => function($data) {
+                $msg = '';
+                switch ($data['ANCRESULT']) {
+                    case '1' :$msg = '1-ปกติ';
+                        break;
+                    case '2' :$msg = '2-ผิดปกติ';
+                        break;
+                    case '9' :$msg = '9-ไม่ทราบ';
+                        break;
+                    default:$msg = '';
+                }
+                return $msg;
+            }
+        ],
+        ['attribute' => 'ANCPLACE', 'header' => 'รับบริการที่'],
+        ['attribute' => 'D_UPDATE',
+            'value' => function($data) {
+                return date('Y-m-d', strtotime($data['D_UPDATE']));
+            }
+        ]
+    ]
 
         /* 'panel' => [
           'before' => '',

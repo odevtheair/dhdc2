@@ -31,12 +31,16 @@ echo \kartik\grid\GridView::widget([
         ['attribute' => 'AGE_M', 'header' => 'อายุ(เดือน)', 'contentOptions' => ['class' => 'text-center']],
         ['attribute' => 'VACCINETYPE', 'header' => 'รหัสวัคซีน', 'contentOptions' => ['class' => 'text-center']],
         ['attribute' => 'engvaccine', 'header' => 'ชื่อวัคซีน'],
-        ['attribute' => 'DATE_SERV','header' => 'วันที่ได้รับ' ],
+        ['attribute' => 'DATE_SERV', 'header' => 'วันที่ได้รับ'],
         ['attribute' => 'VACCINEPLACE', 'header' => 'ได้รับที่'],
         ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],
         ['attribute' => 'CC', 'header' => 'Cc'],
         ['attribute' => 'DX', 'header' => 'Dx'],
-        ['attribute' => 'D_UPDATE', 'header' => 'อัพเดท',]
+        ['attribute' => 'D_UPDATE',
+            'value' => function($data) {
+                return date('Y-m-d', strtotime($data['D_UPDATE']));
+            }
+        ]
     ]
 
         /* 'panel' => [
