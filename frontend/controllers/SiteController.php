@@ -188,5 +188,9 @@ class SiteController extends Controller {
                     'model' => $model,
         ]);
     }
+    
+    public function actionDownload(){
+        return $this->render('download');
+    }
 
 }

@@ -71,6 +71,8 @@ AppAsset::register($this);
             if (!Yii::$app->user->isGuest) {
                 $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-retweet"></i> คำสั่ง SQL', 'url' => ['runquery/index']];
             }
+            
+            $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-floppy-saved"></i> โปรแกรมตัดข้อมูล', 'url' => ['site/download']];
 
 
 
