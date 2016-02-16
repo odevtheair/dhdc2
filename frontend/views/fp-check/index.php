@@ -94,11 +94,7 @@ echo \kartik\grid\GridView::widget([
                 [
                     'attribute' => 'AGE_Y',
                     'header' => 'อายุ(ปี)'
-                ],
-                [
-                    'attribute' => 'AGE_M',
-                    'header' => '(เดือน)'
-                ],
+                ],              
                 [
                     'attribute' => 'TYPEAREA',
                 ],
