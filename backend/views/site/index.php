@@ -30,7 +30,7 @@ $this->title = 'DHDC Backend';
                 [Your WebApps]=><?= $ver ?><br>[Your Database]=><?= $ver_db->version ?>
             </div>
             <font color="yellow"><div id="version_new">Checking new version ...</div></font>
-            <div class="row">
+            <div class="row" >
                 <div class="col-sm-3">
                     <form action="../../update/chk_version.php" method="POST" target="_blank">
                         <input type="hidden" name="isadmin" value="<?= md5('utehn') ?>">
