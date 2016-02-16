@@ -10,31 +10,32 @@ $role = Yii::$app->user->identity->role;
 ?>
 <?php if ($role == 1 || $role == 2): ?>
     <h4>คำสั่ง SQL  <?= $saved ?></h4>
-    <div class="alert alert-danger">กรุณาใส่เครื่องหมาย ; ปิดท้ายคำสั่ง ตัวอย่างเช่น select * from person limit 100;</div>
-    <?php
-    $route = Yii::$app->urlManager->createUrl('runquery/result');
-    ?>
-
     <a href="#" id="btn-collape">ย่อ-ขยาย</a>
-    <form method="POST" id="frm-sql">
-        <div style="margin-bottom: 3px">
-            <textarea name="sql_code" id="sql_code" class="form-control" rows='6'><?= @$sql_code ?></textarea>
-        </div>
-        <div>
-            <?php
-            $onof = \frontend\models\SysOnoffSql::findOne(1);
-            if ($onof->status === 'on'):
-                ?>
-                <button class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> รันชุดคำสั่ง</button>
-                <button name="save" value="yes" class="btn btn-success"><i class="glyphicon glyphicon-floppy-disk"></i> จัดเก็บ</button>
-                <a href="<?= yii\helpers\Url::to(['sqlscript/index']) ?>" class="btn btn-primary"><i class="glyphicon glyphicon-list-alt"></i> คลัง script</a>
-            <?php else: ?>
-                <label> ผู้ดูแลระบบปิดใช้งาน </label>
+    <div id="frm-sql">
+        <div class="alert alert-danger">กรุณาใส่เครื่องหมาย ; ปิดท้ายคำสั่ง ตัวอย่างเช่น select * from person limit 100;</div>
+        <?php
+        $route = Yii::$app->urlManager->createUrl('runquery/result');
+        ?>
 
-            <?php endif; ?>
-        </div>
-    </form>
+        <form method="POST" >
+            <div style="margin-bottom: 3px">
+                <textarea name="sql_code" id="sql_code" class="form-control" rows='6'><?= @$sql_code ?></textarea>
+            </div>
+            <div>
+                <?php
+                $onof = \frontend\models\SysOnoffSql::findOne(1);
+                if ($onof->status === 'on'):
+                    ?>
+                    <button class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> รันชุดคำสั่ง</button>
+                    <button name="save" value="yes" class="btn btn-success"><i class="glyphicon glyphicon-floppy-disk"></i> จัดเก็บ</button>
+                    <a href="<?= yii\helpers\Url::to(['sqlscript/index']) ?>" class="btn btn-primary"><i class="glyphicon glyphicon-list-alt"></i> คลัง script</a>
+                <?php else: ?>
+                    <label> ผู้ดูแลระบบปิดใช้งาน </label>
 
+                <?php endif; ?>
+            </div>
+        </form>
+    </div>
 <?php endif; ?>
 <br>
 <?php
