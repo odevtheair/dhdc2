@@ -110,7 +110,7 @@ $this->title = 'DHDC Backend';
                 <?php
                 $route = \Yii::$app->urlManager->createUrl('syssettime/index');
                 ?>
-                <a class="btn btn-success btn-xlarge" id="btn_set_process" href="#"> 
+                <a class="btn btn-success btn-xlarge" id="btn_set_process" href="<?=$route?>"> 
                     <i class="glyphicon glyphicon-time"></i> ตั้งเวลาประมวลผล
                 </a>
             </div>

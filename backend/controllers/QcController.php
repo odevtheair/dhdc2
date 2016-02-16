@@ -54,5 +54,15 @@ class QcController extends \yii\web\Controller {
             return 'running';
         }
     }
+    public function actionList(){
+        $sql = "select name from mysql.proc WHERE name like 'err_%';";
+        $raw = \Yii::$app->db->createCommand($sql)->queryAll();
+        foreach ($raw as $data){
+            echo 'call '.$data['name'].';<br>';
+        }
+        //echo $raw[0]['name'];
+        //echo $raw[1]['name'];
+        
+    }
 
 }

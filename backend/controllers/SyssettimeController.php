@@ -60,7 +60,7 @@ class SyssettimeController extends Controller {
         $this->exec_sql("DROP EVENT IF EXISTS event4;");
 
 
-        $bdg = '2014-09-30';
+        $bdg = '2015-09-30';
         $model = \backend\models\Sysconfigmain::find()->one();
         if ($model) {
             $bdg = $model->note2;
@@ -118,14 +118,16 @@ class SyssettimeController extends Controller {
             $sql .=$this->call("cal_rpt_panth_drug_value", $y);
             $sql .=$this->call("cal_rpt_cervical_cancer_screening", $y - 1);
             $sql .=$this->call("cal_rpt_cervical_cancer_screening", $y);*/
-
-
-          
+                
 
 
             //จบ ใส่ store
 
             $sql .= $this->call("end_process", NULL);
+            
+            // ใส่ QC
+            $sql.= $this->call("err_all",NULL);
+            
 
             $sql.="\nEND;";
 
