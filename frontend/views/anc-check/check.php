@@ -47,6 +47,7 @@ echo \kartik\grid\GridView::widget([
             }
         ],
         ['attribute' => 'ANCPLACE', 'header' => 'รับบริการที่'],
+        ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],
         ['attribute' => 'D_UPDATE',
             'value' => function($data) {
                 return date('Y-m-d', strtotime($data['D_UPDATE']));

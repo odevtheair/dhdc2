@@ -70,9 +70,9 @@ AppAsset::register($this);
 
             if (!Yii::$app->user->isGuest) {
                 $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-retweet"></i> คำสั่ง SQL', 'url' => ['runquery/index']];
+                $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-floppy-saved"></i> โปรแกรมตัดข้อมูล', 'url' => ['site/download']];
             }
-            
-            $rpt_mnu_itms[] = ['label' => '<i class="glyphicon glyphicon-floppy-saved"></i> โปรแกรมตัดข้อมูล', 'url' => ['site/download']];
+
 
 
 
@@ -116,19 +116,19 @@ AppAsset::register($this);
             ?>
 
             <div class="container">
-                <?php
-                $process = \backend\models\SysProcessRunning::find()->one();
-                if ($process->is_running === 'true'):
-                    $log_time = \frontend\models\SysEventLog::find()->orderBy(['id' => SORT_DESC])->one();
-                    $log_time = isset($log_time->start_at) ? $log_time->start_at : 'NA';
-                    ?>
+<?php
+$process = \backend\models\SysProcessRunning::find()->one();
+if ($process->is_running === 'true'):
+    $log_time = \frontend\models\SysEventLog::find()->orderBy(['id' => SORT_DESC])->one();
+    $log_time = isset($log_time->start_at) ? $log_time->start_at : 'NA';
+    ?>
                     <div class="alert alert-warning">
                         <i class="glyphicon glyphicon-refresh"></i> เวลา <?= $log_time ?> ระบบกำลังประมวลผล
 
                     </div>
-                    <?php
-                endif;
-                ?>
+    <?php
+endif;
+?>
 
                 <?=
                 Breadcrumbs::widget([
@@ -145,10 +145,10 @@ AppAsset::register($this);
                 <p class="pull-left">
                     District Health Data Checker,
 
-                    <?php
-                    $ver = file_get_contents(Yii::getAlias('@version/version.txt'));
-                    $ver = explode(',', $ver);
-                    ?>
+<?php
+$ver = file_get_contents(Yii::getAlias('@version/version.txt'));
+$ver = explode(',', $ver);
+?>
                     Version <?= $ver[0] ?>
 
                 </p>
@@ -157,7 +157,7 @@ AppAsset::register($this);
             </div>
         </footer>
 
-        <?php $this->endBody() ?>
+<?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>
