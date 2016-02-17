@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = 'ข้อมูลพื้นฐาน';
 
 <p>
     <?php
-    echo \yii\helpers\Html::a('4) ปริมาณข้อมูลแยกรายแฟ้ม', ['#']);    
+    echo \yii\helpers\Html::a('4) ปริมาณข้อมูลแยกรายแฟ้ม', ['syscountall/index']);    
     ?>
 </p>
 
