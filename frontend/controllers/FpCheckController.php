@@ -107,7 +107,7 @@ AND p.SEX in ($sex)";
 FROM person p
 LEFT JOIN home h   on  p.HOSPCODE=h.HOSPCODE AND p.HID = h.HID
 LEFT JOIN chospital hos on hos.hoscode = p.HOSPCODE 
-WHERE p.CID = '$cid'  AND p.CID <> '' ";
+WHERE p.TYPEAREA in (1,3,5) AND p.CID = '$cid'  AND p.CID <> '' ";
           $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',
@@ -120,7 +120,12 @@ WHERE p.CID = '$cid'  AND p.CID <> '' ";
         
          $sql = "SELECT * FROM fp_cid t WHERE t.CID='$cid' ORDER BY  t.DATE_SERV ASC";
 
-        $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
+         try {
+            $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
+        } catch (\yii\db\Exception $e) {
+            throw new \yii\web\ConflictHttpException('กรุณาประมวลผลเพื่อจัดเตรียมข้อมูลก่อน');
+        }
+         
         $check = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',
             'allModels' => $rawData,
