@@ -7,7 +7,7 @@ use frontend\models\ChospitalAmp;
 use frontend\models\Csex;
 
 $this->params['breadcrumbs'][] = ['label' => 'คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
-$this->params['breadcrumbs'][] = 'คุณภาพการบันทึกงาน ANC';
+$this->params['breadcrumbs'][] = 'คุณภาพการบันทึกงาน ANC (หญิงคลอดแล้ว)';
 ?>
 <b>กลุ่มเป้าหมาย</b>
 
