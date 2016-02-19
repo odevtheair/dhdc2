@@ -9,4 +9,5 @@ $this->params['breadcrumbs'][] = 'คุณภาพการบันทึก'
 <p>3) <?=Html::a('คุณภาพการบันทึกงานฝากครรภ์-ANC  ', ['anc-check/index']);?></p>
 <p>4) <?=Html::a('คุณภาพการบันทึกงานโภชนาการและพัฒนาการเด็ก-NUTRITION  ', ['nutri-check/index']);?></p>
 <p>5) <?=Html::a('คุณภาพการบันทึกงานคัดกรอง-NCDSCREEN  ', ['ncdscreen-check/index']);?></p>
+<p>5) <?=Html::a('คุณภาพการบันทึกงานดูแลหลังคลอด-POSTNATAL  ', ['postnatal-check/index']);?></p>
 

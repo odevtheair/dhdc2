@@ -7,7 +7,7 @@ use yii\filters\VerbFilter;
 
 include Yii::getAlias('@common') . '/config/thai_date.php';
 
-class AncCheckController extends \yii\web\Controller {
+class PostnatalCheckController extends \yii\web\Controller {
 
     public $enableCsrfValidation = false;
 
@@ -86,7 +86,7 @@ class AncCheckController extends \yii\web\Controller {
         ]);
     }
 
-// end index
+    /////// end ชื่อเป้า
 
     public function actionCheck() {
         $data = Yii::$app->request->post();
@@ -100,7 +100,7 @@ class AncCheckController extends \yii\web\Controller {
 
 FROM labor_cid p
 LEFT JOIN chospital hos on hos.hoscode = p.HOSPCODE 
-WHERE p.TYPEAREA in (1,3,5) AND p.CID = '$cid'  AND p.CID <> '' ";
+WHERE  p.CID = '$cid' ";
         $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',
@@ -110,13 +110,10 @@ WHERE p.TYPEAREA in (1,3,5) AND p.CID = '$cid'  AND p.CID <> '' ";
 
         ///////////////////////////////        
 
-        $sql = "SELECT * FROM anc_cid t WHERE t.CID='$cid' ORDER BY  t.DATE_SERV ASC";
+        $sql = "SELECT * FROM postnatal_cid t WHERE t.CID='$cid' ORDER BY  t.PPCARE ASC";
 
-        try {
-            $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
-        } catch (\yii\db\Exception $e) {
-            throw new \yii\web\ConflictHttpException('กรุณาประมวลผลเพื่อจัดเตรียมข้อมูลก่อน');
-        }
+        $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
+
         $check = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',
             'allModels' => $rawData,
