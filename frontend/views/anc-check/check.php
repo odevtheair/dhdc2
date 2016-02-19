@@ -1,7 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 ?>
-<h4>งานวางแผนครอบครัว</h4>
+<h4>งาน ANC</h4>
 
 <form method="POST">
     <input type="text" name="cid" id="cid" placeholder="กรอกเลข 13 หลัก" value="<?= isset($_GET['cid']) ? $_GET['cid'] : '' ?>" > 
