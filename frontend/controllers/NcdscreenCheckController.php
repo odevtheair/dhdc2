@@ -109,7 +109,13 @@ AND p.SEX in ($sex)";
 
         $sql = "SELECT p.HOSPCODE
 ,p.CID,p.NAME,p.LNAME,p.SEX,p.BIRTH,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as AGE_Y 
-,p.TYPEAREA,p.DISCHARGE,date(p.D_UPDATE) as D_UPDATE
+,p.TYPEAREA,p.DISCHARGE,(
+	SELECT GROUP_CONCAT(c.CHRONIC SEPARATOR ',') 
+	from chronic_cid c 
+	WHERE  c.TYPEDISCH = '03' AND c.CID = '$cid'
+	GROUP BY c.CID
+) as CHRONIC
+,date(p.D_UPDATE) as DUPDATE
 FROM person p where p.TYPEAREA in (1,3,5) AND p.cid ='$cid' ";
           $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         try {

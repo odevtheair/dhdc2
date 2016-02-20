@@ -62,14 +62,15 @@ class EpiCheckController extends \yii\web\Controller {
         $sex = isset($data['sex']) ? $data['sex'] : '1,2';
         $date1 =isset($data['date1'])  ? $data['date1'] : '';
         $date2 =isset($data['date2'])  ? $data['date2'] : '';
-        //$date1 = $date1 ==''?'0000-00-00':$date1;
-        //$date2 = $date2 ==''?date('Y-m-d', strtotime("+10 years")):$date2;
+     
         
         $sql = "SELECT p.CID,p.`NAME`,p.LNAME,p.SEX,p.BIRTH
 ,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as AGE_Y
 ,TIMESTAMPDIFF(MONTH,p.BIRTH,CURDATE()) MOD 12 as AGE_M
 ,p.TYPEAREA,p.NATION,p.DISCHARGE from person p
-WHERE p.DISCHARGE = 9 AND p.TYPEAREA in (1,3,5) AND p.HOSPCODE = '$hospcode'
+
+WHERE p.DISCHARGE = 9 AND p.TYPEAREA in (1,3,5) 
+AND p.HOSPCODE = '$hospcode'
 AND p.SEX in ($sex)";
         if(!empty($date1) && !empty($date2)){
             $sql.= " AND (p.BIRTH between '$date1' AND '$date2')";
@@ -102,7 +103,8 @@ AND p.SEX in ($sex)";
         
         $sql = "SELECT REPLACE(concat(p.HOSPCODE,'-',hos.hosname),'โรงพยาบาลส่งเสริมสุขภาพตำบล','รพสต.') as HOSPCODE
 ,p.CID,p.`NAME` as 'ชื่อ',p.LNAME as 'สกุล',p.SEX as 'เพศ',p.BIRTH as 'เกิด'
-,TIMESTAMPDIFF(MONTH,p.BIRTH,CURDATE()) as 'อายุ(เดือน)'
+,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as 'อายุ(ปี)'
+,TIMESTAMPDIFF(MONTH,p.BIRTH,CURDATE()) MOD 12 as '(เดือน)'
 ,h.HOUSE as 'ที่อยู่',h.VILLAGE as 'หมู่',h.TAMBON as 'ต',h.AMPUR as 'อ',h.CHANGWAT as 'จ'
 ,p.TYPEAREA,p.NATION,p.DISCHARGE,p.D_UPDATE as 'อัพเดท'
 FROM person p
@@ -119,21 +121,7 @@ WHERE p.CID = '$cid' AND  p.CID <> '' ";
         
         ///////////////////////////////        
         
-         $sql = "SELECT e.VACCINETYPE,vc.engvaccine ,e.DATE_SERV ,TIMESTAMPDIFF(MONTH,p.BIRTH,e.DATE_SERV) as AGE_M
-,e.VACCINEPLACE ,p.HOSPCODE,s.CHIEFCOMP as CC
-,(
-	SELECT GROUP_CONCAT(CONCAT('(',d.DIAGTYPE,')',d.DIAGCODE) ORDER BY d.DIAGTYPE SEPARATOR ',') 
-	FROM diagnosis_opd d WHERE d.HOSPCODE = e.HOSPCODE AND d.PID = e.PID AND d.SEQ = e.SEQ
-	GROUP BY d.SEQ
-) as DX , DATE(e.D_UPDATE) as D_UPDATE
-from epi e
-LEFT JOIN person p on p.HOSPCODE = e.HOSPCODE AND p.PID = e.PID
-LEFT JOIN service s on s.HOSPCODE = e.HOSPCODE and s.PID = e.PID and s.SEQ = e.SEQ
-LEFT JOIN cvaccinetype vc on vc.vaccinecode = e.VACCINETYPE
-
-WHERE p.CID = '$cid' AND p.CID <> ''
-ORDER BY  e.DATE_SERV ASC";
-
+        $sql = "SELECT * from epi_cid e WHERE e.CID = '$cid' ORDER BY  e.DATE_SERV ASC";
         $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $check = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',

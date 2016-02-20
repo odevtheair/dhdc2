@@ -4,8 +4,8 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=dhdc;port=3309',
-            'username' => 'root',
+            'dsn' => 'mysql:host=61.19.22.165;dbname=dhdc;port=3306',
+            'username' => 'tehnn',
             'password' => '112233',
             'charset' => 'utf8',
             'attributes' => array(

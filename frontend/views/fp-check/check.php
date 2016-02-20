@@ -1,7 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 ?>
-<h4>งานวางแผนครอบครัว</h4>
+<h4>งานวางแผนครอบครัว FP</h4>
 
 <form method="POST">
     <input type="text" name="cid" id="cid" placeholder="กรอกเลข 13 หลัก" value="<?= isset($_GET['cid']) ? $_GET['cid'] : '' ?>" > 
@@ -20,32 +20,13 @@ echo \kartik\grid\GridView::widget([
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
 ]);
 ?>
-<b style="color: blue">ได้รับบริการวางแผนครอบครัว (<u>FP</u> + SERVICE + DIAGNOSIS_OPD)</b>
+<b style="color: blue">ได้รับบริการวางแผนครอบครัว (<u>FP</u>)</b>
 <?php
 echo \kartik\grid\GridView::widget([
     'dataProvider' => $check,
     'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
-    'columns' => [
-        ['attribute' => 'DATE_SERV', 'header' => 'วันที่'],
-        ['attribute' => 'AGE_Y', 'header' => 'อายุ(ปี)', 'contentOptions' => ['class' => 'text-center']],
-        //['attribute' => 'FPTYPE', 'header' => 'ชนิด', 'contentOptions' => ['class' => 'text-center']],
-        [
-            'attribute' => 'FPDESC', 'header' => 'ชนิดการคุมกำเนิด',
-            'value' => function($data) {
-                return $data['FPTYPE'] . '-' . $data['FPDESC'];
-            }
-        ],
-        ['attribute' => 'FPPLACE', 'header' => 'ได้รับที่'],
-        ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],
-        ['attribute' => 'CC', 'header' => 'Cc'],
-        ['attribute' => 'DX', 'header' => 'Dx'],
-        ['attribute' => 'D_UPDATE',
-            'value' => function($data) {
-                return date('Y-m-d', strtotime($data['D_UPDATE']));
-            }
-        ]
-    ]
+    
 
         /* 'panel' => [
           'before' => '',

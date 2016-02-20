@@ -1,8 +1,8 @@
 <?php
 /* @var $this yii\web\View */
-//$this->title = 'EPI';
+$this->title = 'EPI-CHECK';
 ?>
-<h4>งานสร้างเสริมภูมิคุ้มกันโรค</h4>
+<h4>งานสร้างเสริมภูมิคุ้มกันโรค-EPI</h4>
 
 <form method="POST">
     <input type="text" name="cid" id="cid" placeholder="กรอกเลข 13 หลัก" value="<?= isset($_GET['cid']) ? $_GET['cid'] : '' ?>" > 
@@ -28,19 +28,15 @@ echo \kartik\grid\GridView::widget([
     'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
     'columns' => [
-        ['attribute' => 'AGE_M', 'header' => 'อายุ(เดือน)', 'contentOptions' => ['class' => 'text-center']],
+         ['attribute' => 'DATE_SERV', 'header' => 'วันที่ได้รับ'],
+        ['attribute' => 'AGEY_DATESERV', 'header' => 'อายุ(ปี)', 'contentOptions' => ['class' => 'text-center']],
+        ['attribute' => 'AGEM_DATESERV', 'header' => '(เดือน)', 'contentOptions' => ['class' => 'text-center']],
         ['attribute' => 'VACCINETYPE', 'header' => 'รหัสวัคซีน', 'contentOptions' => ['class' => 'text-center']],
-        ['attribute' => 'engvaccine', 'header' => 'ชื่อวัคซีน'],
-        ['attribute' => 'DATE_SERV', 'header' => 'วันที่ได้รับ'],
+        ['attribute' => 'engvaccine', 'header' => 'ชื่อวัคซีน'],       
         ['attribute' => 'VACCINEPLACE', 'header' => 'ได้รับที่'],
-        ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],
-        ['attribute' => 'CC', 'header' => 'Cc'],
+        ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],       
         ['attribute' => 'DX', 'header' => 'Dx'],
-        ['attribute' => 'D_UPDATE',
-            'value' => function($data) {
-                return date('Y-m-d', strtotime($data['D_UPDATE']));
-            }
-        ]
+        'DUPDATE'
     ]
 
         /* 'panel' => [
