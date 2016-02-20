@@ -88,15 +88,7 @@ class SyssettimeController extends Controller {
             $sql .= $this->call("clear_upload_error", NULL);
 
             $sql .= $this->call("merge_newborncare", NULL);
-            //$sql .= $this->call("cal_chart_dial_1", $bdg);
-            //$sql .= $this->call("cal_chart_dial_2", $bdg);
-            //$sql .= $this->call("cal_chart_dial_3", $bdg);
-            //$sql .= $this->call("cal_chart_dial_4", NULL);
-            //$sql .= $this->call("cal_chart_dial_5", NULL);
-            //$sql .= $this->call("cal_chart_dial_6", NULL);
-
-           // $sql .= $this->call("cal_ncd_cholesteral_colorchart", $bdg);
-            //$sql .= $this->call("cal_ncd_nocholesteral_colorchart", $bdg);
+       
 
 
             $sql .= $this->call("cal_pyramid_level_1", $bdg);
@@ -107,19 +99,6 @@ class SyssettimeController extends Controller {
             $sql .= $this->call("cal_count_service", $y - 1);
             $sql .= $this->call("cal_count_service", $y);
 
-            //$sql .=$this->call("cal_rpt_visit_oldman", $y - 1);
-            //$sql .=$this->call("cal_rpt_visit_oldman", $y);
-
-            //รายงานแผนไทย-knott
-            /*
-            $sql .=$this->call("cal_rpt_panth_visit_ratio", $y - 1);
-            $sql .=$this->call("cal_rpt_panth_visit_ratio", $y);
-            $sql .=$this->call("cal_rpt_panth_drug_value", $y - 1);
-            $sql .=$this->call("cal_rpt_panth_drug_value", $y);
-            $sql .=$this->call("cal_rpt_cervical_cancer_screening", $y - 1);
-            $sql .=$this->call("cal_rpt_cervical_cancer_screening", $y);*/
-                
-
 
             //จบ ใส่ store
 
@@ -127,8 +106,8 @@ class SyssettimeController extends Controller {
             
             // ใส่ QC
             $sql.= $this->call("err_all",NULL);
-            
-
+            $sql.= $this->call('z_all',NULL);
+                
             $sql.="\nEND;";
 
             $this->exec_sql($sql);

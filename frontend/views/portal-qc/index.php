@@ -11,4 +11,5 @@ $this->params['breadcrumbs'][] = 'คุณภาพการบันทึก'
 <p>5) <?=Html::a('คุณภาพการบันทึกงานคัดกรอง-NCDSCREEN  ', ['ncdscreen-check/index']);?></p>
 <p>6) <?=Html::a('คุณภาพการบันทึกงานดูแลแม่หลังคลอด-POSTNATAL  ', ['postnatal-check/index']);?></p>
 <p>7) <?=Html::a('คุณภาพการบันทึกงานดูแลเด็กหลังคลอด-NEWBORNCARE  ', ['newborncare-check/index']);?></p>
+<p>8) <?=Html::a('คุณภาพการบันทึกงานติดตามดูแลผู้ป่วยโรคเรื้อรัง CHRONIC', ['chronic-check/index']);?></p>
 
