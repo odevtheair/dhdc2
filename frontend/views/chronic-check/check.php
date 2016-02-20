@@ -32,7 +32,7 @@ echo \kartik\grid\GridView::widget([
 ]);
 ?>
 
-<b style="color: blue">ได้รับบริการตรวจทางห้องปฏิบัติการ 5 ครั้งหลังสุด(<u>LABFU</u>)</b>
+<b style="color: blue">ได้รับบริการตรวจทางห้องปฏิบัติการ ย้อนหลัง 2 ปี(<u>LABFU</u>)</b>
 <?php
 echo \kartik\grid\GridView::widget([
     'dataProvider' => $check_lab,

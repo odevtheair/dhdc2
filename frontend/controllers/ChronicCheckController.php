@@ -130,7 +130,10 @@ FROM chronic_cid p where p.TYPEAREA in (1,3,5) AND p.cid ='$cid' GROUP BY p.CID 
         
            $sql = "SELECT 
                t.DATE_SERV,t.labtest,t.labresult,t.HOSPCODE,t.DUPDATE
-           FROM labfu_cid  t WHERE t.CID = '$cid' AND t.CID <> '' ORDER BY t.DATE_SERV DESC LIMIT 5 ";
+           FROM labfu_cid  t WHERE t.CID = '$cid' AND t.CID <> '' 
+           AND  t.DATE_SERV > (CURDATE()-INTERVAL 24 MONTH)
+            
+            ORDER BY t.DATE_SERV DESC ";
         
             $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
        
