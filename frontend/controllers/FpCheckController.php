@@ -62,18 +62,16 @@ class FpCheckController extends \yii\web\Controller {
         $sex = isset($data['sex']) ? $data['sex'] : '1,2';
         $date1 =isset($data['date1'])  ? $data['date1'] : '';
         $date2 =isset($data['date2'])  ? $data['date2'] : '';
-        //$date1 = $date1 ==''?'0000-00-00':$date1;
-        //$date2 = $date2 ==''?date('Y-m-d', strtotime("+10 years")):$date2;
         
         $sql = "SELECT p.CID,p.`NAME`,p.LNAME,p.SEX,p.BIRTH
 ,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as AGE_Y
-,p.TYPEAREA,p.NATION,p.DISCHARGE from person p
+,p.TYPEAREA,p.NATION,p.DISCHARGE  from person p
 WHERE p.DISCHARGE = 9 AND p.TYPEAREA in (1,3,5) AND p.HOSPCODE = '$hospcode'
 AND p.SEX in ($sex)";
         if(!empty($date1) && !empty($date2)){
             $sql.= " AND (p.BIRTH between '$date1' AND '$date2')";
         }
-        $sql.= " ORDER BY p.BIRTH DESC,AGE_Y ASC";
+        $sql.= " ORDER BY p.BIRTH DESC";
         
          $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
@@ -103,7 +101,7 @@ AND p.SEX in ($sex)";
 ,p.CID,p.`NAME` as 'ชื่อ',p.LNAME as 'สกุล',p.SEX as 'เพศ',p.BIRTH as 'เกิด'
 ,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as 'อายุ(ปี)'
 ,h.HOUSE as 'ที่อยู่',h.VILLAGE as 'หมู่',h.TAMBON as 'ต',h.AMPUR as 'อ',h.CHANGWAT as 'จ'
-,p.TYPEAREA,p.NATION,p.DISCHARGE,p.D_UPDATE as 'อัพเดท'
+,p.TYPEAREA,p.NATION,p.DISCHARGE,date(p.D_UPDATE) as 'DUPDATE'
 FROM person p
 LEFT JOIN home h   on  p.HOSPCODE=h.HOSPCODE AND p.HID = h.HID
 LEFT JOIN chospital hos on hos.hoscode = p.HOSPCODE 

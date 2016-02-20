@@ -5,6 +5,7 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use frontend\models\ChospitalAmp;
 use frontend\models\Csex;
+$this->title = 'FP-TARGET';
 
 $this->params['breadcrumbs'][] = ['label' => 'คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
 $this->params['breadcrumbs'][] = 'คุณภาพการบันทึกงาน FP';

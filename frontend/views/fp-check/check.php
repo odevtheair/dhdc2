@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+$this->title = 'FP-CHECK';
 ?>
 <h4>งานวางแผนครอบครัว FP</h4>
 
@@ -26,7 +27,13 @@ echo \kartik\grid\GridView::widget([
     'dataProvider' => $check,
     'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
-    
+    'columns'=>[
+       'DATE_SERV',
+       [
+        'attribute'=>'AGEY_DATESERV','label'=>'อายุ(ปี)'   
+       ]
+       ,'FP_TYPE','FPPLACE','HOSPCODE','DUPDATE'
+    ]
 
         /* 'panel' => [
           'before' => '',

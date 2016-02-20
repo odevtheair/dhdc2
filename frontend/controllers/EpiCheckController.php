@@ -106,11 +106,11 @@ AND p.SEX in ($sex)";
 ,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as 'อายุ(ปี)'
 ,TIMESTAMPDIFF(MONTH,p.BIRTH,CURDATE()) MOD 12 as '(เดือน)'
 ,h.HOUSE as 'ที่อยู่',h.VILLAGE as 'หมู่',h.TAMBON as 'ต',h.AMPUR as 'อ',h.CHANGWAT as 'จ'
-,p.TYPEAREA,p.NATION,p.DISCHARGE,p.D_UPDATE as 'อัพเดท'
+,p.TYPEAREA,p.NATION,p.DISCHARGE,date(p.D_UPDATE) as 'DUPDATE'
 FROM person p
 LEFT JOIN home h   on  p.HOSPCODE=h.HOSPCODE AND p.HID = h.HID
 LEFT JOIN chospital hos on hos.hoscode = p.HOSPCODE 
-WHERE p.CID = '$cid' AND  p.CID <> '' ";
+WHERE p.CID = '$cid' AND  p.CID <> '' AND  p.TYPEAREA in (1,3,5) ";
           $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         $person = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',
