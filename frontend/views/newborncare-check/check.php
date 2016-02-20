@@ -2,7 +2,7 @@
 /* @var $this yii\web\View */
 $this->title = 'POSTNATAL-CHECK';
 ?>
-<h4>งานดูแลแม่หลังคลอด (POSTNATAL)</h4>
+<h4>งานดูแลลูกหลังคลอด (NEWBORNCARE)</h4>
 
 <form method="POST">
     <input type="text" name="cid" id="cid" placeholder="กรอกเลข 13 หลัก" value="<?= isset($_GET['cid']) ? $_GET['cid'] : '' ?>" > 
@@ -13,7 +13,7 @@ $this->title = 'POSTNATAL-CHECK';
 //print_r($data)
 ?>
 <hr>
-<b style="color: blue">ข้อมูลหญิงคลอด (<u>LABOR</u>)</b>
+<b style="color: blue">ข้อมูลลูกคลอด (<u>NEWBORN</u>)</b>
 <?php
 echo \kartik\grid\GridView::widget([
     'dataProvider' => $person,
@@ -21,25 +21,25 @@ echo \kartik\grid\GridView::widget([
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
 ]);
 ?>
-<b style="color: blue">แม่ได้รับบริการดูแลหลังคลอด (<u>POSTNATAL</u>)</b>
+<b style="color: blue">ลูกได้รับบริการดูแลหลังคลอด (<u>NEWBORNCARE</u>)</b>
 <?php
 echo \kartik\grid\GridView::widget([
     'dataProvider' => $check,
     'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
     'columns' => [
-        'GRAVIDA',
+       
         [
-            'attribute' => 'PPCARE', 
+            'attribute' => 'BCARE', 
         ],
         [
             'attribute' => 'DAY_POSTNATAL','label'=>'หลังคลอด(วัน)'
         ],
         [
-            'attribute' => 'PPRESULT',
+            'attribute' => 'BCARERESULT',
             'value' => function($data) {
                 $msg = '';
-                switch ($data['PPRESULT']) {
+                switch ($data['BCARERESULT']) {
                     case '1':$msg = '1-ปกติ';
                         break;
                     case '2':$msg = '2-ผิดปกติ';
@@ -52,7 +52,7 @@ echo \kartik\grid\GridView::widget([
             }
         ],
         [
-            'attribute' => 'PPPLACE', 'label' => 'สถานที่'
+            'attribute' => 'BCPLACE', 'label' => 'สถานที่'
         ],
         [
             'attribute' => 'HOSPCODE', 'label' => 'ผู้บันทึก'
