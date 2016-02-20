@@ -6,6 +6,8 @@ use yii\helpers\ArrayHelper;
 use frontend\models\ChospitalAmp;
 use frontend\models\Csex;
 
+$this->title = 'ANC-TARGET';
+
 $this->params['breadcrumbs'][] = ['label' => 'คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
 $this->params['breadcrumbs'][] = 'คุณภาพการบันทึกงาน ANC (หญิงคลอดแล้ว)';
 ?>
@@ -89,11 +91,14 @@ echo \kartik\grid\GridView::widget([
                     'attribute' => 'NATION',
                 ],
                 [
-                    'attribute' => 'GRAVIDA',
-                //'header' => 'อายุปัจจุบัน(ปี)'
+                    'attribute' => 'DISCHARGE',
                 ],
                 [
-                    'attribute' => 'AGE_YY',
+                    'attribute' => 'GRAVIDA',
+          
+                ],
+                [
+                    'attribute' => 'AGEY_PREG',
                     'header' => 'อายุขณะตั้งครรภ์(ปี)'
                 ],
                 [
@@ -127,9 +132,7 @@ echo \kartik\grid\GridView::widget([
                 [
                     'attribute' => 'BRESULT', 'header' => 'Dx'
                 ],
-                [
-                    'attribute' => 'DISCHARGE',
-                ],
+                
             ]
         ]);
         ?>

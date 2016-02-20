@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+$this->title ='ANC-CHECK';
 ?>
 <h4>งาน ANC</h4>
 
@@ -12,7 +13,7 @@
 //print_r($data)
 ?>
 <hr>
-<b style="color: blue">ข้อมูลประชากร (<u>LABOR</u> + HOME)</b>
+<b style="color: blue">ข้อมูลประชากร (<u>PERSON+LABOR</u> + HOME)</b>
 <?php
 echo \kartik\grid\GridView::widget([
     'dataProvider' => $person,
@@ -20,6 +21,8 @@ echo \kartik\grid\GridView::widget([
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
 ]);
 ?>
+
+
 <b style="color: blue">ได้รับบริการฝากครรภ์ (<u>ANC</u> + SERVICE)</b>
 <?php
 echo \kartik\grid\GridView::widget([
