@@ -32,6 +32,9 @@ echo \kartik\grid\GridView::widget([
             'attribute' => 'PPCARE', 
         ],
         [
+            'attribute' => 'DAY_POSTNATAL','label'=>'หลังคลอด(วัน)'
+        ],
+        [
             'attribute' => 'PPRESULT',
             'value' => function($data) {
                 $msg = '';

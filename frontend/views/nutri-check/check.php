@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-//$this->title = 'EPI';
+$this->title = 'NUTRITION-CHECK';
 ?>
 <h4>งานโภชนาการและพัฒนาการเด็ก</h4>
 
@@ -21,7 +21,7 @@ echo \kartik\grid\GridView::widget([
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
 ]);
 ?>
-<b style="color: blue">ได้รับบริการโภชนาการและพัฒนาการ(<u>NUTRITION</u>)</b>
+<b style="color: blue">ได้การตรวจโภชนาการและพัฒนาการ(<u>NUTRITION</u>)</b>
 <?php
 echo \kartik\grid\GridView::widget([
     'dataProvider' => $check,
@@ -30,8 +30,8 @@ echo \kartik\grid\GridView::widget([
     'columns' => [
         
         ['attribute' => 'DATE_SERV', 'header' => 'วันที่รับบริการ'],
-        ['attribute' => 'AGE_Y', 'header' => 'อายุ(ปี)'],
-        ['attribute' => 'AGE_M', 'header' => 'เดือน'],
+        ['attribute' => 'AGEY_DATESERV', 'header' => 'อายุ(ปี)'],
+        ['attribute' => 'AGEM_DATESERV', 'header' => '(เดือน)'],
         'WEIGHT','HEIGHT','HEADCIRCUM',
         ['attribute' => 'CHILDDEVELOP', 'header' => 'พัฒนาการ',
             'value' => function($data) {
@@ -70,11 +70,7 @@ echo \kartik\grid\GridView::widget([
         
         ['attribute' => 'NUTRITIONPLACE', 'header' => 'รับบริการที่'],
         ['attribute' => 'HOSPCODE', 'header' => 'ผู้บันทึก'],
-        ['attribute' => 'D_UPDATE',
-            'value' => function($data) {
-                return date('Y-m-d', strtotime($data['D_UPDATE']));
-            }
-        ]
+        'DUPDATE'
     ]
 
         /* 'panel' => [

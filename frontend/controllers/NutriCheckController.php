@@ -62,8 +62,7 @@ class NutriCheckController extends \yii\web\Controller {
         $sex = isset($data['sex']) ? $data['sex'] : '1,2';
         $date1 =isset($data['date1'])  ? $data['date1'] : '';
         $date2 =isset($data['date2'])  ? $data['date2'] : '';
-        //$date1 = $date1 ==''?'0000-00-00':$date1;
-        //$date2 = $date2 ==''?date('Y-m-d', strtotime("+10 years")):$date2;
+      
         
         $sql = "SELECT p.CID,p.`NAME`,p.LNAME,p.SEX,p.BIRTH
 ,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as AGE_Y
@@ -105,7 +104,7 @@ AND p.SEX in ($sex)";
 ,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as 'อายุ(ปี)'
 ,TIMESTAMPDIFF(MONTH,p.BIRTH,CURDATE()) MOD 12 as 'อายุ(เดือน)'
 ,h.HOUSE as 'ที่อยู่',h.VILLAGE as 'หมู่',h.TAMBON as 'ต',h.AMPUR as 'อ',h.CHANGWAT as 'จ'
-,p.TYPEAREA,p.NATION,p.DISCHARGE,p.D_UPDATE as 'UPDATE'
+,p.TYPEAREA,p.NATION,p.DISCHARGE,date(p.D_UPDATE) as 'DUPDATE'
 FROM person p
 LEFT JOIN home h   on  p.HOSPCODE=h.HOSPCODE AND p.HID = h.HID
 LEFT JOIN chospital hos on hos.hoscode = p.HOSPCODE 

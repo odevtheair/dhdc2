@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use frontend\models\ChospitalAmp;
 use frontend\models\Csex;
-
+$this->title='NCDSCREEN-TARGET';
 $this->params['breadcrumbs'][] = ['label' => 'คุณภาพการบันทึก', 'url' => ['portal-qc/index']];
 $this->params['breadcrumbs'][] = 'คุณภาพการบันทึกงาน NCDSCREEN';
 ?>
@@ -57,7 +57,7 @@ echo \kartik\grid\GridView::widget([
     //'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
     'panel' => [
-        'before' => 'กลุ่มเป้าหมาย (<b style="color: blue">PERSON-CHRONIC</b>)',
+        'before' => 'กลุ่มเป้าหมาย (<b style="color: blue"><u>PERSON</u>-CHRONIC</b>)',
     //'type' => \kartik\grid\GridView::TYPE_SUCCESS,
     ],
     'hover' => true,

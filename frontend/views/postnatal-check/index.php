@@ -57,7 +57,7 @@ echo \kartik\grid\GridView::widget([
     //'summary' => "",
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
     'panel' => [
-        'before' => 'กลุ่มเป้าหมาย (<b style="color: blue">LABOR</b>)',
+        'before' => 'กลุ่มเป้าหมาย (<b style="color: blue">LABOR+PERSON</b>)',
     //'type' => \kartik\grid\GridView::TYPE_SUCCESS,
     ],
     'hover' => true,
@@ -90,10 +90,10 @@ echo \kartik\grid\GridView::widget([
                 ],
                 [
                     'attribute' => 'GRAVIDA',
-                //'header' => 'อายุปัจจุบัน(ปี)'
+                
                 ],
                 [
-                    'attribute' => 'AGE_YY',
+                    'attribute' => 'AGEY_PREG',
                     'header' => 'อายุขณะตั้งครรภ์(ปี)'
                 ],
                 [

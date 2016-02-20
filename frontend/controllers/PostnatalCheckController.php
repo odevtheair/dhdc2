@@ -110,7 +110,7 @@ WHERE  p.CID = '$cid' ";
 
         ///////////////////////////////        
 
-        $sql = "SELECT * FROM postnatal_cid t WHERE t.CID='$cid' ORDER BY  t.PPCARE ASC";
+        $sql = "SELECT * FROM postnatal_cid t WHERE t.CID='$cid' ORDER BY  t.GRAVIDA DESC,t.PPCARE ASC";
 
         $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
 

@@ -61,12 +61,10 @@ class NcdscreenCheckController extends \yii\web\Controller {
         $sex = isset($data['sex']) ? $data['sex'] : '1,2';
         $date1 = isset($data['date1']) ? $data['date1'] : '';
         $date2 = isset($data['date2']) ? $data['date2'] : '';
-        //$date1 = $date1 ==''?'0000-00-00':$date1;
-        //$date2 = $date2 ==''?date('Y-m-d', strtotime("+10 years")):$date2;
+      
 
         $sql = "SELECT p.CID,p.`NAME`,p.LNAME,p.SEX,p.BIRTH
 ,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as AGE_Y
-
 ,p.TYPEAREA,p.NATION,p.DISCHARGE 
 ,(
 	SELECT GROUP_CONCAT(c.CHRONIC SEPARATOR ',') 
@@ -131,15 +129,13 @@ FROM person p where p.TYPEAREA in (1,3,5) AND p.cid ='$cid' ";
 
         ///////////////////////////////        
 
-        $sql = " SELECT t.DATE_SERV,t.AGE_Y,t.WEIGHT,t.HEIGHT,t.SBP_1,t.DBP_1,t.SBP_2,t.DBP_2
-,t.BSLEVEL,date(t.D_UPDATE) as D_UPDATE,t.HOSPCODE FROM ncdscreen_cid t 
+        $sql = " SELECT t.DATE_SERV,t.AGEY_DATESERV as 'อายุ(ปี)',t.WEIGHT,t.HEIGHT,t.SBP_1,t.DBP_1,t.SBP_2,t.DBP_2
+,t.BSLEVEL,t.HOSPCODE,date(t.D_UPDATE) as D_UPDATE FROM ncdscreen_cid t 
 WHERE t.CID = '$cid' 
-ORDER BY t.DATE_SERV ASC ";
-        try {
+ORDER BY t.DATE_SERV DESC ";
+        
             $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
-        } catch (\yii\db\Exception $e) {
-            throw new \yii\web\ConflictHttpException('กรุณาประมวลผลเพื่อจัดเตรียมข้อมูลก่อน2');
-        }
+       
         $check = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',
             'allModels' => $rawData,

@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+$this->title = 'NCDSCREEN-CHECK';
 ?>
 <h4>งานคัดกรอง</h4>
 
