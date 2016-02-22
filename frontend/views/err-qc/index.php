@@ -30,16 +30,21 @@ $this->params['breadcrumbs'][] = 'ERROR แฟ้ม ' . $filename;
 </div>
 <div>
     <?php
+    
     echo \kartik\grid\GridView::widget([
         'dataProvider' => $dataProvider,
         'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
         'hover' => true,
+        'pjax' => true,
+        'containerOptions' => ['style'=>'overflow: auto'],
+        'responsive' => FALSE,
         //'floatHeader' => true,
         'panel' => [
             'before' => '',
             'type' => \kartik\grid\GridView::TYPE_DANGER,
         ],
     ]);
+   
     ?>
 </div>
 <div><a href="err_code.xls">ERROR_CODE</a></div>

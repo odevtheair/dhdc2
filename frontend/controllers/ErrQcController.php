@@ -57,20 +57,16 @@ class ErrQcController extends \yii\web\Controller {
 
     public function actionIndex($filename = NULL, $hospcode = NULL) {
         if ($filename == NULL) {
-            //$this->redirect(['site/index']);
+            $this->redirect(['site/index']);
         }
         $file = strtolower($filename);
         $sql = "select * from err_$file";
 
         $pagination = ['pageSize' => 15];
 
-        //$data = \Yii::$app->request->post();
-        //$hospcode= NULL;
-        //if(!empty($data['hospcode'])){
         if ($hospcode <> NULL) {
-            //$hospcode = $data['hospcode'];
+
             $sql = "select * from err_$file where hospcode='$hospcode'";
-            $pagination = FALSE;
         }
 
 
@@ -79,12 +75,20 @@ class ErrQcController extends \yii\web\Controller {
         } catch (\yii\db\Exception $e) {
             throw new \yii\web\ConflictHttpException('sql error');
         }
+
+        if (!empty($rawData[0])) {
+            $cols = array_keys($rawData[0]);
+            foreach ($cols as $col) {
+                $col_names[] = $col;
+            }
+        }
+
+        //return;
+        //'attributes' => ['DUPDATE','HOSPCODE', 'DATE_SERV','BIRTH','PPCARE','BCARE','LMP','DATE_DIAG','DATE_DISCH','DATE_DETECT','DATERECORD'],
         $dataProvider = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',//
             'allModels' => $rawData,
-            'sort' => [
-                'attributes' => ['HOSPCODE', 'DATE_SERV', 'PPCARE','BCARE','LMP'],
-            ],
+            'sort' => !empty($rawData[0]) ? [ 'attributes' => $col_names] : FALSE,
             'pagination' => $pagination,
         ]);
         return $this->render('index', [
