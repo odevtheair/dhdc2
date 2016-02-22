@@ -8,15 +8,14 @@ use yii\filters\VerbFilter;
 class Test2Controller extends \yii\web\Controller {
 
     public $enableCsrfValidation = false;
-    
-      public function behaviors()
-    {
+
+    public function behaviors() {
         return [
-            
+
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    //'json' => ['post'],
+                //'json' => ['post'],
                 ],
             ],
         ];
@@ -38,10 +37,10 @@ class Test2Controller extends \yii\web\Controller {
         }
         echo "<pre>";
         print_r($rawData);
-        
-        
+
+
         return;
-        
+
         $dataProvider = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',
             'allModels' => $rawData,
@@ -74,45 +73,53 @@ class Test2Controller extends \yii\web\Controller {
         //echo $s = json_encode($items);
         \Yii::$app->response->format = 'json';
         echo json_encode($items);
-       
+
         //return \yii\helpers\Json::encode($items);
     }
 
     public function actionReportGrid3() {
         $rawData = [
             [
-                'id'=>'1',
+                'id' => '1',
                 'name' => 'utehn',
                 'lname' => 'jad'
             ],
             [
-                'id'=>'1',
+                'id' => '1',
                 'name' => 'utehn',
                 'lname' => 'jad'
             ],
             [
-                'id'=>'1',
+                'id' => '1',
                 'name' => 'utehn',
                 'lname' => 'jad'
             ]
         ];
-    
+
         $dataProvider = new \yii\data\ArrayDataProvider([
             'allModels' => $rawData,
-            
             'pagination' => FALSE,
         ]);
 
         return $this->render('report3', [
                     'dataProvider' => $dataProvider,
-                    
+        ]);
+    }
+
+    public function actionGet1() {
+        return $this->render('get1', [
         ]);
     }
     
-    public function actionGet1(){
-        return $this->render('get1',[
-            
-        ]);
+    public function actionEmpty(){
+        $a;
+        echo empty(NULL);
+        echo "<hr>";
+        echo empty(trim(' '));
+        echo "<hr>";
+        echo empty($a);
+        echo "<hr>";
+        echo empty($cc);
     }
 
 }
