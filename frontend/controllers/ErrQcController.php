@@ -6,23 +6,24 @@ use Yii;
 use yii\filters\VerbFilter;
 
 class ErrQcController extends \yii\web\Controller {
-      public $enableCsrfValidation = false;
-      
-       public function behaviors() {
+
+    public $enableCsrfValidation = false;
+
+    public function behaviors() {
 
         $role = 0;
         if (!Yii::$app->user->isGuest) {
             $role = Yii::$app->user->identity->role;
         }
         $arr = [''];
-        if ($role == 1 ) {
-            $arr = ['index','check'];
+        if ($role == 1) {
+            $arr = ['index', 'check'];
         }
-        if( $role == 2) {
-             $arr = ['index','check'];
+        if ($role == 2) {
+            $arr = ['index', 'check'];
         }
-          if( $role == 3) {
-             $arr = ['index','check'];
+        if ($role == 3) {
+            $arr = ['index', 'check'];
         }
 
         return [
@@ -31,7 +32,7 @@ class ErrQcController extends \yii\web\Controller {
                 'denyCallback' => function ($rule, $action) {
                     throw new \yii\web\ForbiddenHttpException("ไม่ได้รับอนุญาต");
                 },
-                'only' => ['index','check'],
+                'only' => ['index', 'check'],
                 'rules' => [
                     [
                         'allow' => true,
@@ -54,25 +55,24 @@ class ErrQcController extends \yii\web\Controller {
         ];
     }
 
-
-    public function actionIndex($filename = NULL) {
+    public function actionIndex($filename = NULL, $hospcode = NULL) {
         if ($filename == NULL) {
-            $this->redirect(['site/index']);
+            //$this->redirect(['site/index']);
         }
         $file = strtolower($filename);
         $sql = "select * from err_$file";
-        
+
         $pagination = ['pageSize' => 15];
-        
-        $data = \Yii::$app->request->post();
-        $hospcode= NULL;
-        if(!empty($data['hospcode'])){
-            $hospcode = $data['hospcode'];
+
+        //$data = \Yii::$app->request->post();
+        //$hospcode= NULL;
+        //if(!empty($data['hospcode'])){
+        if ($hospcode <> NULL) {
+            //$hospcode = $data['hospcode'];
             $sql = "select * from err_$file where hospcode='$hospcode'";
             $pagination = FALSE;
-            
         }
-        
+
 
         try {
             $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
@@ -82,13 +82,15 @@ class ErrQcController extends \yii\web\Controller {
         $dataProvider = new \yii\data\ArrayDataProvider([
             //'key' => 'hoscode',//
             'allModels' => $rawData,
-            //'pagination' => FALSE,
+            'sort' => [
+                'attributes' => ['HOSPCODE', 'DATE_SERV', 'PPCARE','BCARE','LMP'],
+            ],
             'pagination' => $pagination,
         ]);
         return $this->render('index', [
                     'filename' => $filename,
                     'dataProvider' => $dataProvider,
-                    'hospcode'=>$hospcode
+                    'hospcode' => $hospcode
         ]);
     }
 

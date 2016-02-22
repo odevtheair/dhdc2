@@ -108,5 +108,11 @@ class Test2Controller extends \yii\web\Controller {
                     
         ]);
     }
+    
+    public function actionGet1(){
+        return $this->render('get1',[
+            
+        ]);
+    }
 
 }
