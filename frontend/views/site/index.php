@@ -43,7 +43,11 @@ $this->registerJsFile($dir_web . '/js/chart-donut.js', ['depends' => [\yii\web\J
         'pagination' => $pages,
     ]);
     ?>
-    
+    <div>
+        <a class="btn btn-small btn-danger" href="<?= yii\helpers\Url::to(['site/hos-index']) ?>">
+            มุมมองตาราง
+        </a>
+    </div>
 </div>
 
 <?php
@@ -54,6 +58,6 @@ $script = <<< JS
         }
         
 JS;
-$this->registerJs($script,  yii\web\View::POS_HEAD);
+$this->registerJs($script, yii\web\View::POS_HEAD);
 ?>
 

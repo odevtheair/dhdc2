@@ -15,6 +15,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use frontend\models\SysFiles;
 use yii\data\Pagination;
+use frontend\models\ChospitalAmp;
 
 /**
  * Site controller
@@ -67,7 +68,7 @@ class SiteController extends Controller {
     }
 
     public function actionIndex() {
-        $query = SysFiles::find()->where(['note1'=>'y']);
+        $query = SysFiles::find()->where(['note1' => 'y']);
         $countQuery = clone $query;
         $pages = new Pagination([
             'totalCount' => $countQuery->count(),
@@ -80,6 +81,65 @@ class SiteController extends Controller {
         return $this->render('index', [
                     'models' => $models,
                     'pages' => $pages,
+        ]);
+    }
+
+    public function actionHosIndex() {
+        $sql = "SELECT t.HOSPCODE,h.hosname as 'HOSPNAME' ,t.TOTAL,t.ERR,t.QC from chospital_amp h 
+                RIGHT JOIN (
+		SELECT t.HOSPCODE
+		,SUM(t.TOTAL)  as 'TOTAL'
+		,SUM(t.ERR) as 'ERR'
+		,100-ROUND(SUM(t.ERR)*100/SUM(t.TOTAL),2) as 'QC'
+		FROM err_zhos t GROUP BY t.HOSPCODE
+                ) t on t.HOSPCODE = h.hoscode ";
+
+        try {
+            $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
+        } catch (\yii\db\Exception $e) {
+            throw new \yii\web\ConflictHttpException('sql error');
+        }
+        if (!empty($rawData[0])) {
+            $cols = array_keys($rawData[0]);
+        }
+
+        $dataProvider = new \yii\data\ArrayDataProvider([
+            //'key' => 'hoscode',//
+            'allModels' => $rawData,
+            'sort' => !empty($cols) ? [ 'attributes' => $cols] : FALSE,
+            'pagination' => FALSE,
+        ]);
+
+
+        return $this->render('hos-index', [
+                    'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionHosFile($hospcode) {
+        $sql = "SELECT t.HOSPCODE,t.FILE,t.TOTAL,t.ERR,100 - ROUND(t.ERR*100/t.TOTAL,2) as 'QC'  
+         FROM err_zhos t where  t.HOSPCODE = '$hospcode' ";
+
+        try {
+            $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
+        } catch (\yii\db\Exception $e) {
+            throw new \yii\web\ConflictHttpException('sql error');
+        }
+        if (!empty($rawData[0])) {
+            $cols = array_keys($rawData[0]);
+        }
+
+        $dataProvider = new \yii\data\ArrayDataProvider([
+            //'key' => 'hoscode',//
+            'allModels' => $rawData,
+            'sort' => !empty($cols) ? [ 'attributes' => $cols] : FALSE,
+            'pagination' => FALSE,
+        ]);
+
+
+        return $this->render('hos-file', [
+                    'dataProvider' => $dataProvider,
+                    'hospcode' => $hospcode
         ]);
     }
 
@@ -188,8 +248,8 @@ class SiteController extends Controller {
                     'model' => $model,
         ]);
     }
-    
-    public function actionDownload(){
+
+    public function actionDownload() {
         return $this->render('download');
     }
 

@@ -55,7 +55,7 @@ class ErrQcController extends \yii\web\Controller {
         ];
     }
 
-    public function actionIndex($filename = NULL, $hospcode = NULL) {
+    public function actionIndex($filename = NULL, $hospcode = NULL,$from=NULL) {
         if (empty($filename)) {
             return $this->redirect(['site/index']);
         }
@@ -88,7 +88,8 @@ class ErrQcController extends \yii\web\Controller {
         return $this->render('index', [
                     'filename' => $filename,
                     'dataProvider' => $dataProvider,
-                    'hospcode' => $hospcode
+                    'hospcode' => $hospcode,
+                    'from'=>$from
         ]);
     }
 

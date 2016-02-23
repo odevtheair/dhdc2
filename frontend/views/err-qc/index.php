@@ -7,6 +7,10 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
 
+if (!empty($from)) {
+    $this->params['breadcrumbs'][] = ['label' => 'คุณภาพข้อมูลของหน่วยบริการ '.$hospcode
+            , 'url' => ['site/hos-file','hospcode'=>$hospcode]];
+}
 $this->params['breadcrumbs'][] = 'ERROR แฟ้ม ' . $filename;
 ?>
 <div class="well">
@@ -30,13 +34,12 @@ $this->params['breadcrumbs'][] = 'ERROR แฟ้ม ' . $filename;
 </div>
 <div>
     <?php
-    
     echo \kartik\grid\GridView::widget([
         'dataProvider' => $dataProvider,
         'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '-'],
         'hover' => true,
         'pjax' => true,
-        'containerOptions' => ['style'=>'overflow: auto'],
+        'containerOptions' => ['style' => 'overflow: auto'],
         'responsive' => FALSE,
         //'floatHeader' => true,
         'panel' => [
@@ -44,7 +47,6 @@ $this->params['breadcrumbs'][] = 'ERROR แฟ้ม ' . $filename;
             'type' => \kartik\grid\GridView::TYPE_DANGER,
         ],
     ]);
-   
     ?>
 </div>
 <div><a href="err_code.xls">ERROR_CODE</a></div>
