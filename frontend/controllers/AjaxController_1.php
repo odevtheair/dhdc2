@@ -421,8 +421,8 @@ class AjaxController extends \yii\web\Controller {
                 \Yii::$app->db->createCommand("truncate sys_count_service;")->execute();
                 \Yii::$app->db->createCommand("truncate sys_person_type;")->execute();
 
-                \Yii::$app->db->createCommand("call clear_qc;")->execute();
-               
+                \Yii::$app->db->createCommand("truncate sys_ncd_nocholesteral_colorchart;")->execute();
+                \Yii::$app->db->createCommand("truncate sys_ncd_cholesteral_colorchart;")->execute();
             }
         }
     }

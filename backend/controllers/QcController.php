@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 //use backend\models\SysCheckProcess;
 use backend\models\SysStoreProcErr;
+use backend\models\SysStoreProcErrB;
 
 class QcController extends \yii\web\Controller {
 
@@ -41,28 +42,29 @@ class QcController extends \yii\web\Controller {
             $this->call("start_process", NULL);
             $this->call("clear_qc", NULL);
             //$models=  SysStoreProcErr::find()->where(['note1' => 'err','note2'=>1])->all();
-             $models=  SysStoreProcErr::find()->all();
-             
+            $models = SysStoreProcErr::find()->all();
+
             foreach ($models as $model) {
-                 $this->call($model->spname, NULL);
+                $this->call($model->spname, NULL);
                 //echo $model->spname;
             }
-          
+            
+
             $this->call("end_process", NULL);
             return 'success';
-        }else{
+        } else {
             return 'running';
         }
     }
-    public function actionList(){
-        $sql = "select name from mysql.proc WHERE name like 'err_%';";
+
+    public function actionList() {
+        $sql = "select name from mysql.proc WHERE name like '%_b';";
         $raw = \Yii::$app->db->createCommand($sql)->queryAll();
-        foreach ($raw as $data){
-            echo 'call '.$data['name'].';<br>';
+        foreach ($raw as $data) {
+            echo 'call ' . $data['name'] . ';<br>';
         }
         //echo $raw[0]['name'];
         //echo $raw[1]['name'];
-        
     }
 
 }

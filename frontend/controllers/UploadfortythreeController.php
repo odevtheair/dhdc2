@@ -188,36 +188,22 @@ class UploadfortythreeController extends Controller {
         }
     }
 
-    public function actionDetail($filename, $upload_date, $upload_time) {
+    public function actionDetail($filename) {
 
-        $model = \frontend\models\SysCountImport::find()
-                ->where(['filename' => $filename,
-                    'upload_date' => $upload_date,
-                    'upload_time' => $upload_time])
-                ->one();
-        if ($model) {
+        
 
             return $this->render('detail', [
-                        'model' => $model,
+                        'zipname' => $filename,
             ]);
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
+        
     }
     
       public function actionDetail2($filename) {
 
-        $model = \frontend\models\SysCountImport::find()
-                ->where(['filename' => $filename])
-                ->one();
-        if ($model) {
-
             return $this->render('detail2', [
-                        'model' => $model,
+                        
             ]);
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
+       
     }
     
     public function actionImportall(){

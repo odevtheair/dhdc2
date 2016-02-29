@@ -56,8 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 } else {
                     echo Html::a('รายละเอียด', ['detail',
                         'filename' => $model->file_name,
-                        'upload_date' => $model->upload_date,
-                        'upload_time' => $model->upload_time
+                        
                     ]);
                 }
             }
