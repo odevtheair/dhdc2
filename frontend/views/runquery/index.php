@@ -31,8 +31,7 @@ $role = Yii::$app->user->identity->role;
                     <a href="<?= yii\helpers\Url::to(['sqlscript/index']) ?>" class="btn btn-primary"><i class="glyphicon glyphicon-list-alt"></i> คลัง script</a>
                 <?php else: ?>
                     <label> ผู้ดูแลระบบปิดใช้งาน </label>
-
-                <?php endif; ?>
+                <?php endif; ?>                    
             </div>
         </form>
     </div>
