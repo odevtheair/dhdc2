@@ -38,19 +38,8 @@ class QcController extends \yii\web\Controller {
     public function actionExec() {
 
         $running = \backend\models\SysProcessRunning::find()->one();
-        if ($running->is_running == 'false') {
-            $this->call("start_process", NULL);
-            $this->call("clear_qc", NULL);
-            //$models=  SysStoreProcErr::find()->where(['note1' => 'err','note2'=>1])->all();
-            $models = SysStoreProcErr::find()->all();
-
-            foreach ($models as $model) {
-                $this->call($model->spname, NULL);
-                //echo $model->spname;
-            }
-            
-
-            $this->call("end_process", NULL);
+        if ($running->is_running == 'false') {    
+            $this->call("err_all", NULL);
             return 'success';
         } else {
             return 'running';
