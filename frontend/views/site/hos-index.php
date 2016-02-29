@@ -3,10 +3,35 @@
 use miloschuman\highcharts\Highcharts;
 use yii\data\Pagination;
 use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Url;
 
 $this->title = "District Health Data Checker";
 $this->params['breadcrumbs'][] = 'คุณภาพข้อมูลรายหน่วยบริการ';
 ?>
+
+<div class="well">
+    <?php
+    ActiveForm::begin([
+        'method' => 'get',
+        'action' => Url::to(['site/hos-index']),
+    ]);
+    ?>
+ 
+    <?php
+    $items =[ 
+            '2558'=>'2558',    
+            '2559'=>'2559',        
+    ];
+
+    echo Html::dropDownList('byear', $byear, $items, ['prompt' => '--- ปีงบประมาณ ---']);
+    ?>
+
+    <?php
+    echo Html::submitButton(' ตกลง ', ['class' => 'btn btn-danger']);
+    ActiveForm::end();
+    ?>
+</div>
 
 <div>
     <?php
@@ -27,8 +52,11 @@ $this->params['breadcrumbs'][] = 'คุณภาพข้อมูลราย�
                 'attribute' => 'HOSPCODE',
                 'format'=>'raw',
                 'label' => 'รหัส',
-                'value'=> function($data){
-                    return Html::a($data['HOSPCODE'], ['site/hos-file','hospcode'=>$data['HOSPCODE']]);
+                'value'=> function($data) use ($byear){
+                    return Html::a($data['HOSPCODE'], ['site/hos-file'
+                        ,'hospcode'=>$data['HOSPCODE']
+                        ,'byear'=> !empty($byear)?$byear:NULL
+                    ]);
                 }
             ],
             ['attribute' => 'HOSPNAME', 'label' => 'หน่วยบริการ'],

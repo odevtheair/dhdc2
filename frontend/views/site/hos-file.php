@@ -9,7 +9,7 @@ $this->title = "District Health Data Checker";
 $this->params['breadcrumbs'][] = ['label' => 'รายหน่วยบริการ' , 'url' => ['site/hos-index']];
 $this->params['breadcrumbs'][] = 'คุณภาพข้อมูลของหน่วยบริการ '.$hospcode;
 ?>
-
+<h4><?=$byear?></h4>
 <div>
     <?php
     echo \kartik\grid\GridView::widget([

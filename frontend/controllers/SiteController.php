@@ -84,8 +84,9 @@ class SiteController extends Controller {
         ]);
     }
 
-    public function actionHosIndex() {
-        $sql = "SELECT t.HOSPCODE,h.hosname as 'HOSPNAME' ,t.TOTAL,t.ERR,t.QC from chospital_amp h 
+    public function actionHosIndex($byear=NULL) {
+        if (empty($byear)) {
+            $sql = "SELECT t.HOSPCODE,h.hosname as 'HOSPNAME' ,t.TOTAL,t.ERR,t.QC from chospital_amp h 
                 RIGHT JOIN (
 		SELECT t.HOSPCODE
 		,SUM(t.TOTAL)  as 'TOTAL'
@@ -93,7 +94,19 @@ class SiteController extends Controller {
 		,100-ROUND(SUM(t.ERR)*100/SUM(t.TOTAL),2) as 'QC'
 		FROM err_zhos t GROUP BY t.HOSPCODE
                 ) t on t.HOSPCODE = h.hoscode ";
-
+        }else{
+             $sql = "SELECT t.HOSPCODE,h.hosname as 'HOSPNAME' ,t.TOTAL,t.ERR,t.QC from chospital_amp h 
+                RIGHT JOIN (
+		SELECT t.HOSPCODE
+		,SUM(t.TOTAL)  as 'TOTAL'
+		,SUM(t.ERR+t.ERR_DATE) as 'ERR'
+		,100-ROUND(SUM(t.ERR+t.ERR_DATE)*100/SUM(t.TOTAL),2) as 'QC'
+		FROM err_zall t WHERE t.BYEAR = '$byear'  GROUP BY t.HOSPCODE
+                ) t on t.HOSPCODE = h.hoscode ";
+            
+        }
+        
+        
         try {
             $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         } catch (\yii\db\Exception $e) {
@@ -113,13 +126,20 @@ class SiteController extends Controller {
 
         return $this->render('hos-index', [
                     'dataProvider' => $dataProvider,
+                    'byear'=>$byear
         ]);
     }
 
-    public function actionHosFile($hospcode) {
+    public function actionHosFile($hospcode,$byear=NULL) {
+        if(empty($byear)){
         $sql = "SELECT t.HOSPCODE,t.FILE,t.TOTAL,t.ERR,100 - ROUND(t.ERR*100/t.TOTAL,2) as 'QC'  
          FROM err_zhos t where  t.HOSPCODE = '$hospcode' ";
-
+        }else{
+          $sql = "SELECT t.HOSPCODE,t.FILE,t.TOTAL,(t.ERR+t.ERR_DATE) as ERR,100 - ROUND((t.ERR+t.ERR_DATE)*100/t.TOTAL,2) as 'QC'  
+         FROM err_zall t where  t.HOSPCODE = '$hospcode' AND t.BYEAR = '$byear' ";  
+        }
+        
+        
         try {
             $rawData = \Yii::$app->db->createCommand($sql)->queryAll();
         } catch (\yii\db\Exception $e) {
@@ -139,7 +159,8 @@ class SiteController extends Controller {
 
         return $this->render('hos-file', [
                     'dataProvider' => $dataProvider,
-                    'hospcode' => $hospcode
+                    'hospcode' => $hospcode,
+                    'byear'=>$byear
         ]);
     }
 
