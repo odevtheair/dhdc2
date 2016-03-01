@@ -55,6 +55,8 @@ class NcdscreenCheckController extends \yii\web\Controller {
     }
 
     public function actionIndex() {
+        ini_set('max_execution_time', 0);   
+        ini_set('memory_limit', '2048M');
 
         $data = Yii::$app->request->post();
         $hospcode = isset($data['hospcode']) ? $data['hospcode'] : 'null';

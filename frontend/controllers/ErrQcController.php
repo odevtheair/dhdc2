@@ -56,6 +56,9 @@ class ErrQcController extends \yii\web\Controller {
     }
 
     public function actionIndex($filename = NULL, $hospcode = NULL,$from=NULL) {
+        ini_set('max_execution_time', 0);   
+        ini_set('memory_limit', '2048M');
+        
         if (empty($filename)) {
             return $this->redirect(['site/index']);
         }

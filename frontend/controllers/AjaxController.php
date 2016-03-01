@@ -22,7 +22,7 @@ class AjaxController extends \yii\web\Controller {
     //import on window
     public function actionImport($fortythree, $upload_date, $upload_time, $id) {
 
-        ini_set('max_execution_time', 0);
+        ini_set('max_execution_time', 0);        
 
         $model = UploadFortythree::findOne($id);
         $model->note2 = 'กำลังนำเข้า';
