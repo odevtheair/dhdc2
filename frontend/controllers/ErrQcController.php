@@ -63,7 +63,7 @@ class ErrQcController extends \yii\web\Controller {
             return $this->redirect(['site/index']);
         }
         $file = strtolower($filename);
-        $sql = "select * from err_$file";
+        $sql = "select * from err_$file order by ERR_DATE DESC,BYEAR DESC";
 
         $pagination = ['pageSize' => 15];
 
