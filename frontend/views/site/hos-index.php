@@ -5,6 +5,8 @@ use yii\data\Pagination;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
+use yii\helpers\ArrayHelper;
+use frontend\models\Cbyear;
 
 $this->title = "District Health Data Checker";
 $this->params['breadcrumbs'][] = 'คุณภาพข้อมูลรายหน่วยบริการ';
@@ -17,12 +19,9 @@ $this->params['breadcrumbs'][] = 'คุณภาพข้อมูลราย�
         'action' => Url::to(['site/hos-index']),
     ]);
     ?>
- 
+
     <?php
-    $items =[ 
-            '2558'=>'2558',    
-            '2559'=>'2559',        
-    ];
+    $items = ArrayHelper::map(Cbyear::find()->all(), 'BYEAR', 'BYEAR');
 
     echo Html::dropDownList('byear', $byear, $items, ['prompt' => '--- ปีงบประมาณ ---']);
     ?>
@@ -50,20 +49,20 @@ $this->params['breadcrumbs'][] = 'คุณภาพข้อมูลราย�
         'columns' => [
             [
                 'attribute' => 'HOSPCODE',
-                'format'=>'raw',
+                'format' => 'raw',
                 'label' => 'รหัส',
-                'value'=> function($data) use ($byear){
+                'value' => function($data) use ($byear) {
                     return Html::a($data['HOSPCODE'], ['site/hos-file'
-                        ,'hospcode'=>$data['HOSPCODE']
-                        ,'byear'=> !empty($byear)?$byear:NULL
+                                , 'hospcode' => $data['HOSPCODE']
+                                , 'byear' => !empty($byear) ? $byear : NULL
                     ]);
                 }
-            ],
-            ['attribute' => 'HOSPNAME', 'label' => 'หน่วยบริการ'],
-            ['attribute' => 'TOTAL'],
-            ['attribute' => 'ERR'],
-            ['attribute' => 'QC', 'label' => 'คุณภาพ'],
-        ]
-    ]);
-    ?>
+                    ],
+                    ['attribute' => 'HOSPNAME', 'label' => 'หน่วยบริการ'],
+                    ['attribute' => 'TOTAL'],
+                    ['attribute' => 'ERR'],
+                    ['attribute' => 'QC', 'label' => 'คุณภาพ'],
+                ]
+            ]);
+            ?>
 </div>
