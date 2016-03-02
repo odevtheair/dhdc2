@@ -68,7 +68,7 @@ class ErrQcController extends \yii\web\Controller {
         $pagination = ['pageSize' => 15];
 
         if (!empty($hospcode)) {
-            $sql = "select * from err_$file where hospcode='$hospcode'";
+            $sql = "select * from err_$file where hospcode='$hospcode' order by ERR_DATE DESC,BYEAR DESC";
         }
 
 
