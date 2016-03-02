@@ -97,11 +97,11 @@ class ExecuteController extends \yii\web\Controller {
             $month = \backend\models\SysMonth::find()->all();
             foreach ($month as $m) {
                 if ($m->month <= date('Ym')) {
-                    $this->run_sys_count_all($m->month);
+                    //$this->run_sys_count_all($m->month);
                 }
             }
 
-            $bdg = '2014-09-30';
+            $bdg = '2015-09-30';
             $model = \backend\models\Sysconfigmain::find()->one();
             if ($model) {
                 $bdg = $model->note2;
