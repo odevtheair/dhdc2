@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = 'คุณภาพข้อมูลราย�
     ?>
 
     <?php
-    $items = ArrayHelper::map(Cbyear::find()->all(), 'BYEAR', 'BYEAR');
+    $items = ArrayHelper::map(Cbyear::find()->orderBy(['BYEAR' => SORT_DESC])->all(), 'BYEAR', 'BYEAR');
 
     echo Html::dropDownList('byear', $byear, $items, ['prompt' => '--- ปีงบประมาณ ---']);
     ?>
