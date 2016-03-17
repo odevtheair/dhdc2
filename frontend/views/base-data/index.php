@@ -37,6 +37,12 @@ $this->params['breadcrumbs'][] = 'ข้อมูลพื้นฐาน';
     ?>
 </p>
 
+<p>
+    <?php
+    echo \yii\helpers\Html::a('5) รายการ PERSON ที่มี TYPEAREA 1,3 ซ้ำซ้อน', ['err-person-typearea-cup/index']);    
+    ?>
+</p>
+
 
 
 
