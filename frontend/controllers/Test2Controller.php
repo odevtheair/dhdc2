@@ -121,5 +121,9 @@ class Test2Controller extends \yii\web\Controller {
         echo "<hr>";
         echo empty($cc);
     }
+    
+    public function actionTestFilter(){
+        return $this->render('test-filter');
+    }
 
 }

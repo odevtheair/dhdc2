@@ -22,7 +22,7 @@ class AjaxController extends \yii\web\Controller {
     //import on window
     public function actionImport($fortythree, $upload_date, $upload_time, $id) {
 
-        ini_set('max_execution_time', 0);
+        ini_set('max_execution_time', 0);        
 
         $model = UploadFortythree::findOne($id);
         $model->note2 = 'กำลังนำเข้า';
@@ -63,29 +63,38 @@ class AjaxController extends \yii\web\Controller {
 
                     $transaction = \Yii::$app->db->beginTransaction();
                     try {
-
+                        //raw
                         $sql = "LOAD DATA LOCAL INFILE 'fortythree/$folder_without_ext/$file'";
                         $sql.= " REPLACE INTO TABLE $ftxt";
-                        //$sql.= " REPLACE INTO TABLE tmp_$ftxt";
                         $sql.= " FIELDS TERMINATED BY '|'  LINES TERMINATED BY '\r\n' IGNORE 1 LINES";
-                        //$sql.= " SET NOTE1='$fortythree',NOTE2=NOW()";
-                        $count = \Yii::$app->db->createCommand($sql)->execute();
+                        $raw = \Yii::$app->db->createCommand($sql)->execute();
+
+                        //tmp                        
+                        $sql = "LOAD DATA LOCAL INFILE 'fortythree/$folder_without_ext/$file'";
+                        $sql.= " REPLACE INTO TABLE tmp_$ftxt";
+                        $sql.= " FIELDS TERMINATED BY '|'  LINES TERMINATED BY '\r\n' IGNORE 1 LINES";
+                        $sql.= " SET NOTE1='$fortythree',NOTE2=NOW()";
+                        $tmp = \Yii::$app->db->createCommand($sql)->execute();
+
+                        // count
+                        $sql = " REPLACE  INTO sys_count_import_file  (
+                                 SELECT IF(NOTE1 is NULL,'$fortythree','$fortythree'),'$ftxt',COUNT(*),NOW(),'','','' FROM tmp_$ftxt
+                                 WHERE NOTE1 = '$fortythree'
+                            );  ";
+                        \Yii::$app->db->createCommand($sql)->execute();
+
+                        $sql = "DELETE FROM tmp_$ftxt WHERE NOTE1 = '$fortythree' ";
+                        \Yii::$app->db->createCommand($sql)->execute();
+
                         $transaction->commit();
                     } catch (Exception $e) {
                         $transaction->rollBack();
                     }
-                    if ($cfmodel->hasAttribute($ftxt)) {
-                        $cfmodel->setAttribute($ftxt, $count);
-                    }
                 }
             }
         }
-        $cfmodel->save();
-
-
 
         closedir($dir);
-
 
         $dir = opendir($full_dir);
         while (($file = readdir($dir)) !== false) {
@@ -160,17 +169,33 @@ class AjaxController extends \yii\web\Controller {
                         $sql.= " REPLACE INTO TABLE $ftxt";
                         $sql.= " FIELDS TERMINATED BY '|'  LINES TERMINATED BY '\r\n' IGNORE 1 LINES";
                         $count = \Yii::$app->db->createCommand($sql)->execute();
+
+                        //tmp                        
+                        $sql = "LOAD DATA LOCAL INFILE 'fortythree/$folder_without_ext/$file'";
+                        $sql.= " REPLACE INTO TABLE tmp_$ftxt";
+                        $sql.= " FIELDS TERMINATED BY '|'  LINES TERMINATED BY '\r\n' IGNORE 1 LINES";
+                        $sql.= " SET NOTE1='$fortythree',NOTE2=NOW()";
+                        $tmp = \Yii::$app->db->createCommand($sql)->execute();
+
+                        // count
+                        $sql = " REPLACE  INTO sys_count_import_file  (
+                                 SELECT IF(NOTE1 is NULL,'$fortythree','$fortythree'),'$ftxt',COUNT(*),NOW(),'','','' FROM tmp_$ftxt
+                                 WHERE NOTE1 = '$fortythree'
+                            );  ";
+                        \Yii::$app->db->createCommand($sql)->execute();
+
+                        $sql = "DELETE FROM tmp_$ftxt WHERE NOTE1 = '$fortythree' ";
+                        \Yii::$app->db->createCommand($sql)->execute();
+
+
                         $transaction->commit();
                     } catch (Exception $e) {
                         $transaction->rollBack();
                     }
-                    if ($cfmodel->hasAttribute($ftxt)) {
-                        $cfmodel->setAttribute($ftxt, $count);
-                    }
                 }
             }
         }
-        $cfmodel->save();
+
         closedir($dir);
 
         $dir = opendir($full_dir);
@@ -200,8 +225,8 @@ class AjaxController extends \yii\web\Controller {
         ini_set('max_execution_time', 0);
 
         $filefortythree = "fortythree/$fortythree";
-     
-        $file_size = number_format(filesize($filefortythree)/(1024*1024),3);
+
+        $file_size = number_format(filesize($filefortythree) / (1024 * 1024), 3);
         $file_size = strval($file_size);
         $zip = new \ZipArchive();
         if ($zip->open($filefortythree) === TRUE) {
@@ -239,21 +264,15 @@ class AjaxController extends \yii\web\Controller {
                         $sql = "LOAD DATA LOCAL INFILE 'fortythree/$folder_without_ext/$file'";
                         $sql.= " REPLACE INTO TABLE $ftxt";
                         $sql.= " FIELDS TERMINATED BY '|'  LINES TERMINATED BY '\r\n' IGNORE 1 LINES";
-                        $count = \Yii::$app->db->createCommand($sql)->execute();
+                        \Yii::$app->db->createCommand($sql)->execute();
                         $transaction->commit();
                     } catch (Exception $e) {
                         $transaction->rollBack();
                     }
-                    if ($cfmodel->hasAttribute($ftxt)) {
-                        $cfmodel->setAttribute($ftxt, $count);
-                    }
                 }
             }
         }
-        $cfmodel->save();
-
-
-
+        //$cfmodel->save();
 
         $upload = new UploadFortythree;
         $upload->file_name = $fortythree;
@@ -303,10 +322,10 @@ class AjaxController extends \yii\web\Controller {
 
         $rootpath = \Yii::getAlias('@webroot') . "/fortythree/";
         $filefortythree = $rootpath . $fortythree;
-        
-        $file_size = number_format(filesize($filefortythree)/(1024*1024),3);
+
+        $file_size = number_format(filesize($filefortythree) / (1024 * 1024), 3);
         $file_size = strval($file_size);
-        
+
         $zip = new \ZipArchive();
         if ($zip->open($filefortythree) === TRUE) {
             $zip->extractTo($rootpath);
@@ -345,18 +364,15 @@ class AjaxController extends \yii\web\Controller {
                         $sql = "LOAD DATA LOCAL INFILE '$rootpath$folder_without_ext/$file'";
                         $sql.= " REPLACE INTO TABLE $ftxt";
                         $sql.= " FIELDS TERMINATED BY '|'  LINES TERMINATED BY '\r\n' IGNORE 1 LINES";
-                        $count = \Yii::$app->db->createCommand($sql)->execute();
+                        \Yii::$app->db->createCommand($sql)->execute();
                         $transaction->commit();
                     } catch (Exception $e) {
                         $transaction->rollBack();
                     }
-                    if ($cfmodel->hasAttribute($ftxt)) {
-                        $cfmodel->setAttribute($ftxt, $count);
-                    }
                 }
             }
         }
-        $cfmodel->save();
+
 
 
         $upload = new UploadFortythree;
@@ -421,8 +437,8 @@ class AjaxController extends \yii\web\Controller {
                 \Yii::$app->db->createCommand("truncate sys_count_service;")->execute();
                 \Yii::$app->db->createCommand("truncate sys_person_type;")->execute();
 
-                \Yii::$app->db->createCommand("truncate sys_ncd_nocholesteral_colorchart;")->execute();
-                \Yii::$app->db->createCommand("truncate sys_ncd_cholesteral_colorchart;")->execute();
+                // \Yii::$app->db->createCommand("truncate sys_ncd_nocholesteral_colorchart;")->execute();
+                // \Yii::$app->db->createCommand("truncate sys_ncd_cholesteral_colorchart;")->execute();
             }
         }
     }
