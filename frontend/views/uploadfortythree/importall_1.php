@@ -1,7 +1,3 @@
-<?php
-
-use yii\helpers\FileHelper;
-?>
 <h1>รายการไฟล์</h1>
 <div class="alert alert-danger">
     <h3>ควรนำเข้าครั้งละไม่เกิน 5 ไฟล์ ขนาดไฟล์ไม่ควรเกิน 6 M</h3>
@@ -9,25 +5,23 @@ use yii\helpers\FileHelper;
 <table class="table table-bordered table-striped">
     <tbody>
         <?php
-        $zipFiles = FileHelper::findFiles("fortythree", [
-                    'only' => ['*.zip', '*.ZIP'],
-                    'recursive' => TRUE,
-        ]);
+         
+
+        $allfiles = glob("fortythree/*.{ZIP,zip,Zip}", GLOB_BRACE);
 
 
-
-        foreach ($zipFiles as $zfile) {
-            $zip = basename($zfile);
+        foreach ($allfiles as $filename) {
+            $f = explode('/', $filename);
             ?>
             <tr>
-                <td><div id="<?= $zip ?>"><?= $zip ?></div></td>
+                <td><div id="<?= $f[1] ?>"><?= $f[1] ?></div></td>
                 <td>
-                    <?php
-                    echo number_format(filesize($zfile) / (1024 * 1024), 3) . " MB";
+                    <?php 
+                    echo number_format(filesize($filename)/(1024*1024),3)." MB";
                     ?>
                 </td>
-                <td><button class="<?= $zip ?>" onclick="$(this).hide();
-                            excec('<?= $zip ?>')">นำเข้า</button></td>
+                <td><button class="<?= $f[1] ?>" onclick="$(this).hide();
+                        excec('<?= $f[1] ?>')">นำเข้า</button></td>
                 <td></td>
             </tr>
             <?php
