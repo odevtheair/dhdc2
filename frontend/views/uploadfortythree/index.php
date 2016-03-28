@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="upload-fortythree-index">
 
-    
+
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
@@ -28,12 +28,16 @@ $this->params['breadcrumbs'][] = $this->title;
     kartik\grid\GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'floatHeader' => true,
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+            'nullDisplay' => '-',
+        ],
+        //'floatHeader' => true,
         'pjax' => TRUE,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             //'id',
-            'hospcode',
+            //'hospcode',
             [
                 'attribute' => 'file_name',
                 'format' => 'raw',
@@ -63,11 +67,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             return $data->note3;
                         },
                     ),
-                  
-                        // 'note4',
-                        // 'note5',
-                        ],
-                    ]);
-                    ?>
+                // 'note4',
+                // 'note5',
+                ],
+            ]);
+            ?>
 
 </div>

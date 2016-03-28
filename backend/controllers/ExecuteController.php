@@ -49,7 +49,7 @@ class ExecuteController extends \yii\web\Controller {
         $fnc_time = $chk_proc->time;
 
 
-        $sql = "show processlist;";
+        $sql = "show full processlist;";
         $rawData = $this->query_all($sql);
 
         $dataProvider = new \yii\data\ArrayDataProvider([
