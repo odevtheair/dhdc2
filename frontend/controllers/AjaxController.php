@@ -1,11 +1,5 @@
 <?php
 
-/*
- * เปลี่ยน  '/n' เป็น /r/n  ใน LOAD DATA
- * เปลี่ยน  $ext == 'txt'  เป็น  strtolower($ext) == 'txt'
- * message  'admin do import all'  เป็น  'import all'
- */
-
 namespace frontend\controllers;
 
 use yii;
@@ -201,23 +195,47 @@ class AjaxController extends \yii\web\Controller {
     }
 
     public function actionTruncate() {
-
         ini_set('max_execution_time', 0);
-        $model = \frontend\models\SysFiles::find()->asArray()->all();
-        foreach ($model as $m) {
-            $table = $m['file_name'];
-            $sql = "truncate $table";
-            \Yii::$app->db->createCommand($sql)->execute();
+        if (!\Yii::$app->user->isGuest) {
+            $user = Html::encode(Yii::$app->user->identity->username);
+            if ($user === 'admin') {
+                
+                $model = \frontend\models\SysFiles::find()->asArray()->all();
+                foreach ($model as $m) {
+                    $table = $m['file_name'];
+                    $sql = "truncate $table";
+                    \Yii::$app->db->createCommand($sql)->execute();
 
-            $sql = "truncate tmp_$table";
-            \Yii::$app->db->createCommand($sql)->execute();
+                    $sql = "truncate tmp_$table";
+                    \Yii::$app->db->createCommand($sql)->execute();
 
-            echo $sql . "<br>";
+                    echo $sql . "<br>";
+                }
+
+                \Yii::$app->db->createCommand("truncate sys_upload_fortythree;")->execute();
+                \Yii::$app->db->createCommand("truncate sys_count_import;")->execute();
+                \Yii::$app->db->createCommand("truncate  sys_count_import_file;")->execute();
+            }
         }
+    }
 
-        \Yii::$app->db->createCommand("truncate sys_upload_fortythree;")->execute();
-        \Yii::$app->db->createCommand("truncate sys_count_import;")->execute();
-        \Yii::$app->db->createCommand("truncate  sys_count_import_file;")->execute();
+    public function actionRename() {
+        ini_set('max_execution_time', 0);
+        if (!\Yii::$app->user->isGuest) {
+            $user = Html::encode(Yii::$app->user->identity->username);
+            if ($user === 'admin') {
+                //return;
+                $sql = " select table_name from information_schema.tables where table_schema='dhdc' AND TABLE_NAME like 'tmp_%'; ";
+                $raw = \Yii::$app->db->createCommand($sql)->queryAll();
+                //\yii\helpers\VarDumper::dump($raw);
+                foreach ($raw as $tb) {
+                    $old = $tb['table_name'];
+                    $new = "dhdc_" . $old;
+                    $sql = " RENAME TABLE $old TO $new ";
+                    \Yii::$app->db->createCommand($sql)->execute();
+                }
+            }
+        }
     }
 
 }

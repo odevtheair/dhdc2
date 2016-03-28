@@ -30,10 +30,8 @@
     </tbody>
 </table>
 <?php
-$action_route = "index.php?r=ajax/import3";
-if (strncasecmp(PHP_OS, 'WIN', 3) !== 0) {
-    $action_route = "index.php?r=ajax/import4";
-}
+$action_route = "index.php?r=ajax/import-all";
+
 $date = date('Ymd');
 $time = date('His');
 

@@ -69,9 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
     $action_route = "index.php?r=ajax/import";
-    if (strncasecmp(PHP_OS, 'WIN', 3) !== 0) {
-        $action_route = "index.php?r=ajax/import2";
-    }
+   
     $script = <<< JS
 $('#btn_import').on('click', function(e) {
     
