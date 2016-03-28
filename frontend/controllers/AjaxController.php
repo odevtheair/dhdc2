@@ -233,6 +233,7 @@ class AjaxController extends \yii\web\Controller {
                     $new = "dhdc_" . $old;
                     $sql = " RENAME TABLE $old TO $new ";
                     \Yii::$app->db->createCommand($sql)->execute();
+                    echo $sql; echo "<br>";
                 }
             }
         }
