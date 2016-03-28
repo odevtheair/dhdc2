@@ -11,7 +11,7 @@ use yii\helpers\FileHelper;
         <?php
         $zipFiles = FileHelper::findFiles("fortythree", [
                     'only' => ['*.zip', '*.ZIP'],
-                    'recursive' => TRUE,
+                    'recursive' => FALSE,
         ]);
 
 
