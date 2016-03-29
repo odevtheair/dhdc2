@@ -22,9 +22,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <?=
     DetailView::widget([
         'model' => $model,
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+            'nullDisplay' => '-',
+        ],
         'attributes' => [
             //'id',
-            'hospcode',
+           // 'hospcode',
             'file_name',
             'file_size',
             'upload_date',
@@ -40,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <span class="glyphicon glyphicon-play"></span> 
             นำเข้า
         </button>
-    
+
     <?php else: ?>
 
         <div class="alert alert-danger">
@@ -56,20 +60,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 } else {
                     echo Html::a('รายละเอียด', ['detail',
                         'filename' => $model->file_name,
-                        
                     ]);
                 }
             }
             ?>
         </div>    
-   
+
     <?php endif; ?>
 
     <div id="info" style="display: none">ระหว่างนำเข้าข้อมูล ท่านสามารถปิดหน้าจอนี้ได้</div>
 
     <?php
     $action_route = "index.php?r=ajax/import";
-   
+
     $script = <<< JS
 $('#btn_import').on('click', function(e) {
     
