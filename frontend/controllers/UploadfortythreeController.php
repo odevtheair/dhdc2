@@ -109,6 +109,10 @@ class UploadfortythreeController extends Controller {
             }
             $hos = '-';
             $hospcode = explode("_", $upfile->baseName);
+            if(empty($hospcode[1])){
+                 throw new \yii\web\ConflictHttpException('ชื่อไฟล์ไม่ตรงตามมาตรฐาน');
+                return;
+            }
             if (strtoupper($hospcode[1]) === 'F43') {
                 $hos = $hospcode[2];
             } else {
