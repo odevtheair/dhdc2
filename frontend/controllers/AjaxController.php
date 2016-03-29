@@ -219,13 +219,14 @@ class AjaxController extends \yii\web\Controller {
         }
     }
 
-    public function actionRename() {
+    public function actionUpdate() {
         ini_set('max_execution_time', 0);
         if (!\Yii::$app->user->isGuest) {
             $user = Html::encode(Yii::$app->user->identity->username);
             if ($user === 'admin') {
                 //return;
-                $sql = " select table_name from information_schema.tables where table_schema='dhdc' AND TABLE_NAME like 'tmp_%'; ";
+                $sql = " select table_name from information_schema.tables  "
+                        . " where table_schema='dhdc' AND TABLE_NAME like 'tmp_%'; ";
                 $raw = \Yii::$app->db->createCommand($sql)->queryAll();
                 //\yii\helpers\VarDumper::dump($raw);
                 foreach ($raw as $tb) {
@@ -235,6 +236,9 @@ class AjaxController extends \yii\web\Controller {
                     \Yii::$app->db->createCommand($sql)->execute();
                     echo $sql; echo "<br>";
                 }
+                $sql = "CALL zz_update_upload_log;";
+                \Yii::$app->db->createCommand($sql)->execute();
+                echo 'update success.';
             }
         }
     }
