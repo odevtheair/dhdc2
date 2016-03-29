@@ -185,8 +185,8 @@ class AjaxController extends \yii\web\Controller {
         $upload = new UploadFortythree;
         $upload->file_name = $fortythree;
         $upload->file_size = $file_size;
-        $upload->upload_date = date('Ymd');
-        $upload->upload_time = date('His');
+        $upload->upload_date = date('Y-m-d');
+        $upload->upload_time = date('H:i:s');
         $upload->note2 = 'OK';
         $upload->note3 = 'import all';
         $upload->save();

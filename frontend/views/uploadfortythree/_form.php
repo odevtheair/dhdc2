@@ -32,8 +32,8 @@ use kartik\widgets\FileInput;
           ]); */
         ?>
 
-        <?= $form->field($model, 'upload_date')->hiddenInput(['value' => date('Ymd')])->label(false) ?>
-        <?= $form->field($model, 'upload_time')->hiddenInput(['value' => date('His')])->label(false) ?>
+        <?= $form->field($model, 'upload_date')->hiddenInput(['value' => date('Y-m-d')])->label(false) ?>
+        <?= $form->field($model, 'upload_time')->hiddenInput(['value' => date('H:i:s')])->label(false) ?>
         <button class="btn btn-primary"><i class="glyphicon glyphicon-upload"></i> Upload</button>
         <?php ActiveForm::end(); ?>
     <?php else: ?>
