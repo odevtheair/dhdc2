@@ -224,6 +224,8 @@ class AjaxController extends \yii\web\Controller {
         if (!\Yii::$app->user->isGuest) {
             $user = Html::encode(Yii::$app->user->identity->username);
             if ($user === 'admin') {
+                 $sql = "CALL zz_update_upload_log;";
+                \Yii::$app->db->createCommand($sql)->execute();
                 //return;
                 $sql = " select table_name from information_schema.tables  "
                         . " where table_schema='dhdc' AND TABLE_NAME like 'tmp_%'; ";
@@ -236,8 +238,7 @@ class AjaxController extends \yii\web\Controller {
                     \Yii::$app->db->createCommand($sql)->execute();
                     echo $sql; echo "<br>";
                 }
-                $sql = "CALL zz_update_upload_log;";
-                \Yii::$app->db->createCommand($sql)->execute();
+               
                 echo 'update success.';
             }
         }
