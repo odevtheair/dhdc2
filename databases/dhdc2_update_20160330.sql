@@ -1,17 +1,4 @@
-/*
-Navicat MySQL Data Transfer
 
-Source Server         : localhost3309
-Source Server Version : 50542
-Source Host           : localhost:3309
-Source Database       : dhdc2_update
-
-Target Server Type    : MYSQL
-Target Server Version : 50542
-File Encoding         : 65001
-
-Date: 2016-03-17 09:41:13
-*/
 SET NAMES 'utf8' COLLATE 'utf8_general_ci';
 SET FOREIGN_KEY_CHECKS=0;
 
@@ -34,10 +21,10 @@ INSERT INTO `cbyear` VALUES ('2558', '2014-10-01', '2015-09-30', '\'2014-10-01\'
 INSERT INTO `cbyear` VALUES ('2559', '2015-10-01', '2016-09-30', '\'2015-10-01\' AND \'2016-09-30\'');
 
 -- ----------------------------
--- Table structure for ccup_plk
+-- Table structure for ccup_plk_
 -- ----------------------------
-DROP TABLE IF EXISTS `ccup_plk`;
-CREATE TABLE `ccup_plk` (
+DROP TABLE IF EXISTS `ccup_plk_`;
+CREATE TABLE `ccup_plk_` (
   `cupcode` varchar(2) DEFAULT NULL,
   `cuphosp` varchar(5) DEFAULT NULL,
   `cupname` varchar(100) DEFAULT NULL,
@@ -45,433 +32,433 @@ CREATE TABLE `ccup_plk` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of ccup_plk
+-- Records of ccup_plk_
 -- ----------------------------
-INSERT INTO `ccup_plk` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07476');
-INSERT INTO `ccup_plk` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07477');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07478');
-INSERT INTO `ccup_plk` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07479');
-INSERT INTO `ccup_plk` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07480');
-INSERT INTO `ccup_plk` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07481');
-INSERT INTO `ccup_plk` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07482');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07483');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07484');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07485');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07486');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07487');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07488');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07489');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07490');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07491');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07492');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07493');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07494');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07495');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07496');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '11797');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '11798');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '14055');
-INSERT INTO `ccup_plk` VALUES ('11', '0', 'เทศบาลนครพิษณุโลก', '15272');
-INSERT INTO `ccup_plk` VALUES ('11', '0', 'เทศบาลนครพิษณุโลก', '15273');
-INSERT INTO `ccup_plk` VALUES ('11', '0', 'เทศบาลนครพิษณุโลก', '15274');
-INSERT INTO `ccup_plk` VALUES ('11', '0', 'เทศบาลนครพิษณุโลก', '15282');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '77749');
-INSERT INTO `ccup_plk` VALUES ('01', '10676', 'รพ.พุทธชินราช', '77750');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07497');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07498');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07499');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07500');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07501');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07502');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07503');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07504');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07505');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07506');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07507');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07508');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07509');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07510');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07511');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07512');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07513');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07514');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '07515');
-INSERT INTO `ccup_plk` VALUES ('02', '11455', 'รพร.นครไทย', '10611');
-INSERT INTO `ccup_plk` VALUES ('02', '0', 'รพร.นครไทย', '11455');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07516');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07517');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07518');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07519');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07520');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07521');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07522');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07523');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07524');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07525');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '10612');
-INSERT INTO `ccup_plk` VALUES ('03', '11251', 'รพ.ชาติตระการ', '10613');
-INSERT INTO `ccup_plk` VALUES ('03', '0', 'รพ.ชาติตระการ', '11251');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07526');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07527');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07528');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07529');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07530');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07531');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07532');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07533');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07534');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07535');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07536');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07537');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07538');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07539');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07540');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07541');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07542');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '07543');
-INSERT INTO `ccup_plk` VALUES ('04', '0', 'รพ.บางระกำ', '11252');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '11803');
-INSERT INTO `ccup_plk` VALUES ('04', '11252', 'รพ.บางระกำ', '14056');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07544');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07545');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07546');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07547');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07548');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07549');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07550');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07551');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07552');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07553');
-INSERT INTO `ccup_plk` VALUES ('05', '0', 'รพ.บางกระทุ่ม', '11253');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '14057');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '14058');
-INSERT INTO `ccup_plk` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '14059');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07554');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07555');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07556');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07557');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07558');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07559');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07560');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07561');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07562');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07563');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07564');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07565');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07566');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07567');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07568');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07569');
-INSERT INTO `ccup_plk` VALUES ('06', '0', 'รพ.พรหมพิราม', '11254');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '14060');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '14061');
-INSERT INTO `ccup_plk` VALUES ('06', '11254', 'รพ.พรหมพิราม', '24667');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07570');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07571');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07572');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07573');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07574');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07575');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07576');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07577');
-INSERT INTO `ccup_plk` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07578');
-INSERT INTO `ccup_plk` VALUES ('07', '0', 'รพ.วัดโบสถ์', '11255');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07579');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07580');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07581');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07582');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07583');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07584');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07585');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07586');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07587');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07588');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07589');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07590');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07591');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07592');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07593');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07594');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07595');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '07596');
-INSERT INTO `ccup_plk` VALUES ('08', '0', 'รพ.วังทอง', '11256');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '77747');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07597');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07598');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07599');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07600');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07601');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07602');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07603');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07604');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07605');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07606');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07607');
-INSERT INTO `ccup_plk` VALUES ('09', '0', 'รพ.เนินมะปราง', '11257');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '25022');
-INSERT INTO `ccup_plk` VALUES ('12', '0', 'รพ.ค่ายสมเด็จพระนเรศวร', '11517');
-INSERT INTO `ccup_plk` VALUES ('10', '0', 'รพ.มหาวิทยาลัยนเรศวร', '14972');
-INSERT INTO `ccup_plk` VALUES ('09', '11257', 'รพ.เนินมะปราง', '77748');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '77743');
-INSERT INTO `ccup_plk` VALUES ('08', '11256', 'รพ.วังทอง', '23068');
-INSERT INTO `ccup_plk` VALUES ('01', '0', 'รพ.พุทธชินราช', '10676');
+INSERT INTO `ccup_plk_` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07476');
+INSERT INTO `ccup_plk_` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07477');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07478');
+INSERT INTO `ccup_plk_` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07479');
+INSERT INTO `ccup_plk_` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07480');
+INSERT INTO `ccup_plk_` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07481');
+INSERT INTO `ccup_plk_` VALUES ('10', '14972', 'รพ.มหาวิทยาลัยนเรศวร', '07482');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07483');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07484');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07485');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07486');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07487');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07488');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07489');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07490');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07491');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07492');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07493');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07494');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07495');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '07496');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '11797');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '11798');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '14055');
+INSERT INTO `ccup_plk_` VALUES ('11', '0', 'เทศบาลนครพิษณุโลก', '15272');
+INSERT INTO `ccup_plk_` VALUES ('11', '0', 'เทศบาลนครพิษณุโลก', '15273');
+INSERT INTO `ccup_plk_` VALUES ('11', '0', 'เทศบาลนครพิษณุโลก', '15274');
+INSERT INTO `ccup_plk_` VALUES ('11', '0', 'เทศบาลนครพิษณุโลก', '15282');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '77749');
+INSERT INTO `ccup_plk_` VALUES ('01', '10676', 'รพ.พุทธชินราช', '77750');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07497');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07498');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07499');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07500');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07501');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07502');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07503');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07504');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07505');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07506');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07507');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07508');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07509');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07510');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07511');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07512');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07513');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07514');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '07515');
+INSERT INTO `ccup_plk_` VALUES ('02', '11455', 'รพร.นครไทย', '10611');
+INSERT INTO `ccup_plk_` VALUES ('02', '0', 'รพร.นครไทย', '11455');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07516');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07517');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07518');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07519');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07520');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07521');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07522');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07523');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07524');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '07525');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '10612');
+INSERT INTO `ccup_plk_` VALUES ('03', '11251', 'รพ.ชาติตระการ', '10613');
+INSERT INTO `ccup_plk_` VALUES ('03', '0', 'รพ.ชาติตระการ', '11251');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07526');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07527');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07528');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07529');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07530');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07531');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07532');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07533');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07534');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07535');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07536');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07537');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07538');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07539');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07540');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07541');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07542');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '07543');
+INSERT INTO `ccup_plk_` VALUES ('04', '0', 'รพ.บางระกำ', '11252');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '11803');
+INSERT INTO `ccup_plk_` VALUES ('04', '11252', 'รพ.บางระกำ', '14056');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07544');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07545');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07546');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07547');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07548');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07549');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07550');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07551');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07552');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '07553');
+INSERT INTO `ccup_plk_` VALUES ('05', '0', 'รพ.บางกระทุ่ม', '11253');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '14057');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '14058');
+INSERT INTO `ccup_plk_` VALUES ('05', '11253', 'รพ.บางกระทุ่ม', '14059');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07554');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07555');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07556');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07557');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07558');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07559');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07560');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07561');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07562');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07563');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07564');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07565');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07566');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07567');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07568');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '07569');
+INSERT INTO `ccup_plk_` VALUES ('06', '0', 'รพ.พรหมพิราม', '11254');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '14060');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '14061');
+INSERT INTO `ccup_plk_` VALUES ('06', '11254', 'รพ.พรหมพิราม', '24667');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07570');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07571');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07572');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07573');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07574');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07575');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07576');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07577');
+INSERT INTO `ccup_plk_` VALUES ('07', '11255', 'รพ.วัดโบสถ์', '07578');
+INSERT INTO `ccup_plk_` VALUES ('07', '0', 'รพ.วัดโบสถ์', '11255');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07579');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07580');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07581');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07582');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07583');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07584');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07585');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07586');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07587');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07588');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07589');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07590');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07591');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07592');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07593');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07594');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07595');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '07596');
+INSERT INTO `ccup_plk_` VALUES ('08', '0', 'รพ.วังทอง', '11256');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '77747');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07597');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07598');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07599');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07600');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07601');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07602');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07603');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07604');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07605');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07606');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '07607');
+INSERT INTO `ccup_plk_` VALUES ('09', '0', 'รพ.เนินมะปราง', '11257');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '25022');
+INSERT INTO `ccup_plk_` VALUES ('12', '0', 'รพ.ค่ายสมเด็จพระนเรศวร', '11517');
+INSERT INTO `ccup_plk_` VALUES ('10', '0', 'รพ.มหาวิทยาลัยนเรศวร', '14972');
+INSERT INTO `ccup_plk_` VALUES ('09', '11257', 'รพ.เนินมะปราง', '77748');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '77743');
+INSERT INTO `ccup_plk_` VALUES ('08', '11256', 'รพ.วังทอง', '23068');
+INSERT INTO `ccup_plk_` VALUES ('01', '0', 'รพ.พุทธชินราช', '10676');
 
 -- ----------------------------
--- Table structure for cppspecial
+-- Table structure for cppspecial_
 -- ----------------------------
-DROP TABLE IF EXISTS `cppspecial`;
-CREATE TABLE `cppspecial` (
+DROP TABLE IF EXISTS `cppspecial_`;
+CREATE TABLE `cppspecial_` (
   `itmcode` varchar(6) NOT NULL,
   `itmname` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`itmcode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of cppspecial
+-- Records of cppspecial_
 -- ----------------------------
-INSERT INTO `cppspecial` VALUES ('1B003', 'การคัดกรองความเสี่ยง/โรคมะเร็งเต้านม');
-INSERT INTO `cppspecial` VALUES ('1B0030', 'ตรวจคัดกรองได้ผลปกติ ผู้รับบริการเคยตรวจด้วยตนเองได้ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0031', 'ตรวจคัดกรองได้ผลปกติ ผู้รับบริการเคยตรวจด้วยตนเองได้ผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0032', 'ตรวจคัดกรองได้ผลปกติ ผู้รับบริการไม่เคยตรวจด้วยตนเอง');
-INSERT INTO `cppspecial` VALUES ('1B0033', 'ตรวจคัดกรองได้ผลปกติ ไม่ระบุว่าผู้รับบริการเคยตรวจด้วยตนเองหรือไม่');
-INSERT INTO `cppspecial` VALUES ('1B0034', 'ตรวจคัดกรองได้ผลผิดปกติ ผู้รับบริการเคยตรวจด้วยตนเองได้ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0035', 'ตรวจคัดกรองได้ผลผิดปกติ ผู้รับบริการเคยตรวจด้วยตนเองได้ผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0036', 'ตรวจคัดกรองได้ผลผิดปกติ ผู้รับบริการไม่เคยตรวจด้วยตนเอง');
-INSERT INTO `cppspecial` VALUES ('1B0037', 'ตรวจคัดกรองได้ผลผิดปกติ ไม่ระบุว่าผู้รับบริการเคยตรวจด้วยตนเองหรือไม่');
-INSERT INTO `cppspecial` VALUES ('1B0039', 'ตรวจคัดกรองมะเร็งเต้านม ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B004 ', 'การคัดกรองความเสี่ยง/โรคมะเร็งปากมดลูก ');
-INSERT INTO `cppspecial` VALUES ('1B0040', 'ตรวจคัดกรอง VIA ได้ผลลบ');
-INSERT INTO `cppspecial` VALUES ('1B0041', 'ตรวจคัดกรอง VIA ได้ผลบวก ไม่ให้การรักษา');
-INSERT INTO `cppspecial` VALUES ('1B0042', 'ตรวจคัดกรอง VIA ได้ผลบวก และให้การรักษา ');
-INSERT INTO `cppspecial` VALUES ('1B0043', 'ตรวจคัดกรอง VIA ไม่ระบุผลการตรวจ');
-INSERT INTO `cppspecial` VALUES ('1B0044', 'ตรวจคัดกรอง Pap (ยังไม่ทราบผล)');
-INSERT INTO `cppspecial` VALUES ('1B0045', 'การคัดกรองมะเร็งปากมดลูก ด้วยวิธี VIA ผลตรวจเป็นมะเร็งปากมดลูก');
-INSERT INTO `cppspecial` VALUES ('1B0048', 'ตรวจคัดกรอง วิธีอื่น (ระบุวิธี)');
-INSERT INTO `cppspecial` VALUES ('1B0049', 'ตรวจคัดกรอง ไม่ระบุวิธี');
-INSERT INTO `cppspecial` VALUES ('1B026', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q ในกลุ่มผู้ป่วยที่มีผลการคัดกรอง 2Q ผิดปกติ  ');
-INSERT INTO `cppspecial` VALUES ('1B0260', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q พบว่าผลปกติ ');
-INSERT INTO `cppspecial` VALUES ('1B0261', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q พบว่าซึมเศร้าน้อย (คะแนน 7-12)');
-INSERT INTO `cppspecial` VALUES ('1B0262', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q พบว่าซึมเศร้าปานกลาง (คะแนน 13-18)');
-INSERT INTO `cppspecial` VALUES ('1B0263', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q พบว่าซึมเศร้ารุนแรง (คะแนน≥19)');
-INSERT INTO `cppspecial` VALUES ('1B0269', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B027', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q ');
-INSERT INTO `cppspecial` VALUES ('1B0270', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q พบว่าไม่มีแนวโน้มการฆ่าตัวตาย ');
-INSERT INTO `cppspecial` VALUES ('1B0271', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q พบว่ามีแนวโน้มที่จะฆ่าตัวตายระดับน้อย (คะแนน 1-8) ');
-INSERT INTO `cppspecial` VALUES ('1B0272', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q พบว่ามีแนวโน้มที่จะฆ่าตัวตายระดับปานกลาง (คะแนน 9-16)');
-INSERT INTO `cppspecial` VALUES ('1B0273', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q พบว่ามีแนวโน้มที่จะฆ่าตัวตายระดับรุนแรง (คะแนน ≥17)');
-INSERT INTO `cppspecial` VALUES ('1B0279', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q ไม่ระบุรายละเอียด ');
-INSERT INTO `cppspecial` VALUES ('1B028', 'การตรวจคัดกรองความเสี่ยง / โรคทางจิตเวช อื่นๆ');
-INSERT INTO `cppspecial` VALUES ('1B0280', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0281', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0282', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 9Q พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0283', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 9Q พบว่าซึมเศร้าน้อย (คะแนน 7-12)');
-INSERT INTO `cppspecial` VALUES ('1B0284', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 9Q พบว่าซึมเศร้าปานกลาง (คะแนน 13-18)');
-INSERT INTO `cppspecial` VALUES ('1B0285', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 9Q พบว่าซึมเศร้ารุนแรง (คะแนน ≥19)');
-INSERT INTO `cppspecial` VALUES ('1B0286', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้สูงอายุ พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0287', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้สูงอายุ พบว่าผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B0289', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้สูงอายุ ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B113', 'การตรวจคัดกรองสมรรถภาพทางการเห็น ');
-INSERT INTO `cppspecial` VALUES ('1B1130', 'การตรวจคัดกรองสมรรถภาพทางการเห็น ผลเหมาะสมกับลักษณะงาน');
-INSERT INTO `cppspecial` VALUES ('1B1131', 'การตรวจคัดกรองสมรรถภาพทางการเห็น ผลไม่เหมาะสมกับลักษณะงาน');
-INSERT INTO `cppspecial` VALUES ('1B1139', 'การตรวจคัดกรองสมรรถภาพทางการเห็น ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B114', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน');
-INSERT INTO `cppspecial` VALUES ('1B1140', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B1141', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ผลต้องเฝ้าระวัง');
-INSERT INTO `cppspecial` VALUES ('1B1142', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B1143', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ผลผิดปกติจากเสียง');
-INSERT INTO `cppspecial` VALUES ('1B1149', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B115', 'การตรวจคัดกรองสมรรถภาพทางปอด');
-INSERT INTO `cppspecial` VALUES ('1B1150', 'การตรวจคัดกรองสมรรถภาพทางปอด ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B1151', 'การตรวจคัดกรองสมรรถภาพทางปอด ผลต่ำกว่าเกณฑ์มาตรฐานแบบหลอดลมอุดกั้น');
-INSERT INTO `cppspecial` VALUES ('1B1152', 'การตรวจคัดกรองสมรรถภาพทางปอด ผลต่ำกว่าเกณฑ์มาตรฐานแบบจำกัดการขยายตัว');
-INSERT INTO `cppspecial` VALUES ('1B1153', 'การตรวจคัดกรองสมรรถภาพทางปอด ผลต่ำกว่าเกณฑ์มาตรฐานแบบผสม');
-INSERT INTO `cppspecial` VALUES ('1B1159', 'การตรวจคัดกรองสมรรถภาพทางปอด ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B116', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ');
-INSERT INTO `cppspecial` VALUES ('1B1160', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ผลปกติระดับ 0/0');
-INSERT INTO `cppspecial` VALUES ('1B1161', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ผลผิดปกติตั้งแต่ระดับ 0/1 – 1/0 ');
-INSERT INTO `cppspecial` VALUES ('1B1162', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ผลผิดปกติตั้งแต่ระดับ 1/1 ขึ้นไป ');
-INSERT INTO `cppspecial` VALUES ('1B1169', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B117', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ');
-INSERT INTO `cppspecial` VALUES ('1B1170', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B1171', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ผลปลอดภัย');
-INSERT INTO `cppspecial` VALUES ('1B1172', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ผลมีความเสี่ยง');
-INSERT INTO `cppspecial` VALUES ('1B1173', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ผลไม่ปลอดภัย');
-INSERT INTO `cppspecial` VALUES ('1B1179', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B118', 'การตรวจคัดกรองความเสี่ยง / เฝ้าระวัง ในประชากรวัยแรงงาน อื่น ๆ  ');
-INSERT INTO `cppspecial` VALUES ('1B119', 'การตรวจคัดกรองความเสี่ยง / เฝ้าระวัง ในประชากรวัยแรงงาน ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B12', 'การตรวจคัดกรองความเสี่ยง/เฝ้าระวังในผู้สูงอายุ');
-INSERT INTO `cppspecial` VALUES ('1B120', 'การตรวจคัดกรองผู้สูงอายุที่เสี่ยงต่อภาวะหกล้ม');
-INSERT INTO `cppspecial` VALUES ('1B1200', 'การตรวจคัดกรองผู้สูงอายุที่มีภาวะหกล้ม พบว่าไม่มีความเสี่ยง');
-INSERT INTO `cppspecial` VALUES ('1B1201', 'การตรวจคัดกรองผู้สูงอายุที่มีภาวะหกล้ม พบว่ามีความเสี่ยง ให้คำแนะนำและรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1202', 'การตรวจคัดกรองผู้สูงอายุที่มีภาวะหกล้ม พบว่ามีความเสี่ยงส่งรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1209', 'การตรวจคัดกรองผู้สูงอายุที่เสี่ยงภาวะหกล้มไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B122', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบAMT/ MMSE-T 2002 ในผู้สูงอายุ ');
-INSERT INTO `cppspecial` VALUES ('1B1220', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบAMT ในผู้สูงอายุพบว่าปกติ');
-INSERT INTO `cppspecial` VALUES ('1B1221', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ AMT ในผู้สูงอายุพบว่าผิดปกติ ให้คำแนะนำและรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1223', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ AMT ในผู้สูงอายุพบว่าผิดปกติและส่งไปรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1224', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ MMSE-T 2002  ในผู้สูงอายุพบว่าปกติ');
-INSERT INTO `cppspecial` VALUES ('1B1225', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ MMSE-T 2002  ในผู้สูงอายุพบว่าผิดปกติ ให้คำแนะนำและรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1226', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ MMSE-T 2002  ในผู้สูงอายุพบว่าผิดปกติและส่งไปรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1229', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ AMT/ MMSE-T 2002   ในผู้สูงอายุ ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B123', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ');
-INSERT INTO `cppspecial` VALUES ('1B1230', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่าไม่มีความเสี่ยง');
-INSERT INTO `cppspecial` VALUES ('1B1231', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยง');
-INSERT INTO `cppspecial` VALUES ('1B1232', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยงสูง');
-INSERT INTO `cppspecial` VALUES ('1B1234', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยงสูงมาก ให้คำแนะนำ / รักษา');
-INSERT INTO `cppspecial` VALUES ('1B1235', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุพบว่ามีความเสี่ยงสูงมาก รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1239', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ  ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B124', 'การตรวจคัดกรองสายตาระยะใกล้/ระยะไกลในผู้สูงอายุ');
-INSERT INTO `cppspecial` VALUES ('1B1240', 'การตรวจคัดกรองสายตาระยะใกล้ในผู้สูงอายุพบว่าไม่มีปัญหา');
-INSERT INTO `cppspecial` VALUES ('1B1241', 'การตรวจคัดกรองสายตาระยะใกล้ในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำและรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1242', 'การตรวจคัดกรองสายตาระยะใกล้ในผู้สูงอายุพบว่ามีปัญหาส่งไปรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1243', 'การตรวจคัดกรองสายตาระยะไกลในผู้สูงอายุพบว่าไม่มีปัญหา');
-INSERT INTO `cppspecial` VALUES ('1B1244', 'การตรวจคัดกรองสายตาระยะไกลในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำและรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1245', 'การตรวจคัดกรองสายตาระยะไกลในผู้สูงอายุพบว่ามีปัญหาส่งไปรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1249', 'การตรวจคัดกรองสายตาระยะใกล้/ระยะไกลในผู้สูงอายุไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B125', 'การตรวจคัดกรองความเสี่ยงต้อกระจก / ต้อหิน / จอประสาทตาเสื่อมจากอายุ ในผู้สูงอายุ');
-INSERT INTO `cppspecial` VALUES ('1B1250', 'การตรวจคัดกรองความเสี่ยงต้อกระจกในผู้สูงอายุพบว่าไม่มีปัญหา');
-INSERT INTO `cppspecial` VALUES ('1B1251', 'การตรวจคัดกรองความเสี่ยงต้อกระจกในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำและรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1252', 'การตรวจคัดกรองความเสี่ยงต้อกระจกในผู้สูงอายุพบว่ามีปัญหาส่งไปรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1253', 'การตรวจคัดกรองความเสี่ยงต้อหินในผู้สูงอายุพบว่าไม่มีปัญหา');
-INSERT INTO `cppspecial` VALUES ('1B1254', 'การตรวจคัดกรองความเสี่ยงต้อหินในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำและรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1255', 'การตรวจคัดกรองความเสี่ยงต้อหินในผู้สูงอายุพบว่ามีปัญหาส่งไปรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1256', 'การตรวจคัดกรองความเสี่ยงโรคจอประสาทตาเสื่อมจากอายุในผู้สูงอายุพบว่าไม่มีปัญหา');
-INSERT INTO `cppspecial` VALUES ('1B1257', 'การตรวจคัดกรองความเสี่ยงโรคจอประสาทตาเสื่อมจากอายุในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำ และรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1258', 'การตรวจคัดกรองความเสี่ยงโรคจอประสาทตาเสื่อมจากอายุในผู้สูงอายุพบว่ามีปัญหา ส่งไปรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1259', 'การตรวจคัดกรองความเสี่ยงต้อกระจก  / ต้อหิน / จอประสาทตาเสื่อมจากอายุ ในผู้สูงอายุ ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B126', 'การตรวจคัดกรองพฤติกรรมเสี่ยงต่อสุขภาพช่องปากในผู้สูงอายุ');
-INSERT INTO `cppspecial` VALUES ('1B1260', 'การตรวจคัดกรองพฤติกรรมเสี่ยงต่อสุขภาพช่องปากในผู้สูงอายุพบว่าพฤติกรรมเหมาะสม');
-INSERT INTO `cppspecial` VALUES ('1B1261', 'การตรวจคัดกรองพฤติกรรมเสี่ยงต่อสุขภาพช่องปากในผู้สูงอายุพบว่าพฤติกรรมไม่เหมาะสม และแนะนำให้ความรู้');
-INSERT INTO `cppspecial` VALUES ('1B1269', 'การตรวจคัดกรองพฤติกรรมเสี่ยงต่อสุขภาพช่องปากในผู้สูงอายุไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B127', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิก ในผู้สูงอายุ / สมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาว');
-INSERT INTO `cppspecial` VALUES ('1B1270', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิกในผู้สูงอายุพบว่าปกติ');
-INSERT INTO `cppspecial` VALUES ('1B1271', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิกในผู้สูงอายุพบว่าผิดปกติ ให้คำแนะนำและรักษา');
-INSERT INTO `cppspecial` VALUES ('1B1272', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิกในผู้สูงอายุพบว่าผิดปกติและส่งรักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B1273', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาวพบว่าไม่ต้องดูแลระยะยาว');
-INSERT INTO `cppspecial` VALUES ('1B1274', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาวพบว่าต้องเฝ้าระวัง ให้คำแนะนำและติดตาม');
-INSERT INTO `cppspecial` VALUES ('1B1275', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาวพบว่าต้องดูแลระยะยาว ให้คำแนะนำและดูแลต่อเนื่อง');
-INSERT INTO `cppspecial` VALUES ('1B1279', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิก ในผู้สูงอายุ / สมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาว ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B128', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวัน/ ผู้สูงอายุที่มีภาวะพึ่งพิง');
-INSERT INTO `cppspecial` VALUES ('1B1280', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวันพบว่าช่วยเหลือตัวเองได้ /ติดสังคม (ADL 12-20 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B1281', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวันพบว่าช่วยเหลือตัวเองได้บ้าง / บางส่วน /ติดบ้าน (ADL 5-11 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B1282', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวัน พบว่าช่วยเหลือตัวเองได้น้อย / ไม่ได้เลย /ภาวะติดเตียง (ADL 0-4 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B1289', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวันไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B129', 'การตรวจคัดกรองความเสี่ยง/เฝ้าระวังในผู้สูงอายุ ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B13', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้ป่วยโรคเรื้อรัง');
-INSERT INTO `cppspecial` VALUES ('1B130', 'การตรวจคัดกรองโรคซึมเศร้าในผู้ป่วยโรคเรื้อรังด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B131', 'การตรวจคัดกรองโรคซึมเศร้าในผู้ป่วยโรคเรื้อรังด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B132', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ป่วยโรคเรื้อรังพบว่าผลปกติ (0 – 4 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B133', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ป่วยโรคเรื้อรังพบว่ามีปัญหาความเครียด (5 – 7 คะแนน) ');
-INSERT INTO `cppspecial` VALUES ('1B134', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ป่วยโรคเรื้อรังพบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
-INSERT INTO `cppspecial` VALUES ('1B139', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้ป่วยโรคเรื้อรังไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B14', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในหญิงตั้งครรภ์/หลังคลอด');
-INSERT INTO `cppspecial` VALUES ('1B140', 'การตรวจคัดกรองโรคซึมเศร้าในหญิงตั้งครรภ์/หลังคลอดด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B141', 'การตรวจคัดกรองโรคซึมเศร้าในหญิงตั้งครรภ์/หลังคลอดด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B142', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในหญิงตั้งครรภ์/หลังคลอดพบว่าผลปกติ (0 – 4 คะแนน) ');
-INSERT INTO `cppspecial` VALUES ('1B143', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในหญิงตั้งครรภ์/หลังคลอดพบว่ามีปัญหาความเครียด  (5 – 7 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B144', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในหญิงตั้งครรภ์/หลังคลอดพบว่ามีความเครียดสูง (8 คะแนนขึ้นไป) ');
-INSERT INTO `cppspecial` VALUES ('1B149', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในหญิงตั้งครรภ์/หลังคลอด ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B15', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้มีปัญหาสุรา/สารเสพติด');
-INSERT INTO `cppspecial` VALUES ('1B150', 'การตรวจคัดกรองโรคซึมเศร้าในผู้มีปัญหาสุรา/สารเสพติดด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B151', 'การตรวจคัดกรองโรคซึมเศร้าในผู้มีปัญหาสุรา/สารเสพติดด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B152', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้มีปัญหาสุรา/สารเสพติดพบว่าผลปกติ (0 – 4 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B153', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้มีปัญหาสุรา/สารเสพติดพบว่ามีปัญหาความเครียด (5 – 7 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B154', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้มีปัญหาสุรา/สารเสพติดพบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
-INSERT INTO `cppspecial` VALUES ('1B159', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้มีปัญหาสุรา/สารเสพติดไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B16', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในกลุ่มที่มีอาการซึมเศร้าชัดเจน');
-INSERT INTO `cppspecial` VALUES ('1B160', 'การตรวจคัดกรองโรคซึมเศร้าในกลุ่มที่มีอาการซึมเศร้าชัดเจนด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B161', 'การตรวจคัดกรองโรคซึมเศร้าในกลุ่มที่มีอาการซึมเศร้าชัดเจนด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B162', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีอาการซึมเศร้าชัดเจนพบว่าผลปกติ (0 – 4 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B163', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีอาการซึมเศร้าชัดเจนพบว่ามีปัญหาความเครียด (5 – 7 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B164', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีอาการซึมเศร้าชัดเจนพบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
-INSERT INTO `cppspecial` VALUES ('1B169', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในกลุ่มที่มีอาการซึมเศร้า ชัดเจน ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B17', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้');
-INSERT INTO `cppspecial` VALUES ('1B170', 'การตรวจคัดกรองโรคซึมเศร้าในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B171', 'การตรวจคัดกรองโรคซึมเศร้าในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B172', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีอาการซึมเศร้ในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ พบว่าผลปกติ (0 – 4 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B173', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ พบว่ามีปัญหาความเครียด (5 – 7 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B174 ', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ พบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
-INSERT INTO `cppspecial` VALUES ('1B179', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้  ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B18', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในกลุ่มที่มีการสูญเสียคนที่รัก /ทรัพย์สินจำนวนมาก ฯลฯ');
-INSERT INTO `cppspecial` VALUES ('1B180', 'การตรวจคัดกรองโรคซึมเศร้าในกลุ่มที่มีการสูญเสีย  ด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B181', 'การตรวจคัดกรองโรคซึมเศร้าในกลุ่มที่มีการสูญเสีย ด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B182', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีการสูญเสีย พบว่าผลปกติ (0 – 4 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B183', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีการสูญเสีย พบว่าปัญหาความเครียด (5 – 7 คะแนน)');
-INSERT INTO `cppspecial` VALUES ('1B184', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีการสูญเสีย พบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
-INSERT INTO `cppspecial` VALUES ('1B189', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในกลุ่มที่มีการสูญเสีย  ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B2', 'การตรวจคัดกรอง / เฝ้าระวัง ในเด็กอายุ 0-60 เดือนโดยเครื่องมือ DSPM / DAIM');
-INSERT INTO `cppspecial` VALUES ('1B20', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหว');
-INSERT INTO `cppspecial` VALUES ('1B200', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B201', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B202', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B203', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPMผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B204', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B205', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B206', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DAIM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B207', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B21', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญา');
-INSERT INTO `cppspecial` VALUES ('1B210', 'การตรวจคัดกรองพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B211', 'การตรวจคัดกรองพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B212', 'การตรวจคัดกรองพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B213', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B214', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B215', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B216', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DAIM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B217', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B219', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM และหรือ DAIM ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B22', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาสมวัยด้านการเข้าใจภาษา');
-INSERT INTO `cppspecial` VALUES ('1B220', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B221', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B222', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B223', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B224', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B225', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B226', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DAIM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B227', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B229', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM และหรือ DAIM ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B23', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาสมวัยด้านการใช้ภาษา');
-INSERT INTO `cppspecial` VALUES ('1B230', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B231', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B232', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B233', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B234', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B235', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B236', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DAIM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B237', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B239', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM และหรือ DAIM ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B24', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาสมวัยด้านการช่วยเหลือตัวเองและสังคม');
-INSERT INTO `cppspecial` VALUES ('1B240', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B241', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B242', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM ผลล่าช้าส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B243', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B244', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
-INSERT INTO `cppspecial` VALUES ('1B245', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาด้านการช่วยเหลือตัวเองและสังคม โดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B246', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DAIM ผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B247', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B249', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPMและหรือ DAIM ไม่ระบุรายละเอียด');
-INSERT INTO `cppspecial` VALUES ('1B25', 'การตรวจประเมินระบบประสาทและพัฒนาการ');
-INSERT INTO `cppspecial` VALUES ('1B250', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุแรกเกิด โดยเครื่องมือ DAIM ข้อที่ 1-3 (ตรวจปฏิกิริยา ตรวจความตึงตัวของกล้ามเนื้อ และตรวจข้อเท้า) ผ่าน');
-INSERT INTO `cppspecial` VALUES ('1B251', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุแรกเกิด โดยเครื่องมือ DAIMข้อที่ 1-3 (ตรวจปฏิกิริยา ตรวจความตึงตัวของกล้ามเนื้อ และตรวจข้อเท้า) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B252', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 1 เดือน โดยเครื่องมือ DAIM ข้อที่ 4 (ตรวจการเหยียดแขนและขา) ผ่าน');
-INSERT INTO `cppspecial` VALUES ('1B253', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 1 เดือน โดยเครื่องมือ DAIM ข้อที่ 4 (ตรวจการเหยียดแขนและขา) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B254', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 3-4 เดือน โดยเครื่องมือ DAIM ข้อที่ 5 (ตรวจการกำมือ) ผ่าน');
-INSERT INTO `cppspecial` VALUES ('1B255', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 3-4 เดือน โดยเครื่องมือ DAIM ข้อที่ 5 (ตรวจการกำมือ) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B256', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 10-12 เดือน โดยเครื่องมือ DAIM ข้อที่ 6 (ตรวจการกางแขน) ผ่าน');
-INSERT INTO `cppspecial` VALUES ('1B257', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 10-12 เดือน โดยเครื่องมือ DAIM ข้อที่ 6 (ตรวจการกางแขน) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B258', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 55-60 เดือน โดยเครื่องมือ DAIM ข้อที่ 7 (เดินต่อส้นเท้า) ผ่าน');
-INSERT INTO `cppspecial` VALUES ('1B259', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 55-60 เดือน โดยเครื่องมือ DAIM ข้อที่ 7 (เดินต่อส้นเท้า) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
-INSERT INTO `cppspecial` VALUES ('1B3  ', 'ผลการตรวจคัดกรองผลปกติ');
-INSERT INTO `cppspecial` VALUES ('1B30', 'ผลการตรวจคัดกรองมะเร็งปากมดลูก');
-INSERT INTO `cppspecial` VALUES ('1B31', 'ผลการตรวจคัดกรองธาลาสซีเมีย');
-INSERT INTO `cppspecial` VALUES ('1B4 ', 'ผลการตรวจคัดกรองผลผิดปกติ');
-INSERT INTO `cppspecial` VALUES ('1B40', 'ผลการตรวจคัดกรองมะเร็งปากมดลูก');
-INSERT INTO `cppspecial` VALUES ('1B41', 'ผลการตรวจคัดกรองธาลาสซีเมีย');
+INSERT INTO `cppspecial_` VALUES ('1B003', 'การคัดกรองความเสี่ยง/โรคมะเร็งเต้านม');
+INSERT INTO `cppspecial_` VALUES ('1B0030', 'ตรวจคัดกรองได้ผลปกติ ผู้รับบริการเคยตรวจด้วยตนเองได้ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0031', 'ตรวจคัดกรองได้ผลปกติ ผู้รับบริการเคยตรวจด้วยตนเองได้ผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0032', 'ตรวจคัดกรองได้ผลปกติ ผู้รับบริการไม่เคยตรวจด้วยตนเอง');
+INSERT INTO `cppspecial_` VALUES ('1B0033', 'ตรวจคัดกรองได้ผลปกติ ไม่ระบุว่าผู้รับบริการเคยตรวจด้วยตนเองหรือไม่');
+INSERT INTO `cppspecial_` VALUES ('1B0034', 'ตรวจคัดกรองได้ผลผิดปกติ ผู้รับบริการเคยตรวจด้วยตนเองได้ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0035', 'ตรวจคัดกรองได้ผลผิดปกติ ผู้รับบริการเคยตรวจด้วยตนเองได้ผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0036', 'ตรวจคัดกรองได้ผลผิดปกติ ผู้รับบริการไม่เคยตรวจด้วยตนเอง');
+INSERT INTO `cppspecial_` VALUES ('1B0037', 'ตรวจคัดกรองได้ผลผิดปกติ ไม่ระบุว่าผู้รับบริการเคยตรวจด้วยตนเองหรือไม่');
+INSERT INTO `cppspecial_` VALUES ('1B0039', 'ตรวจคัดกรองมะเร็งเต้านม ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B004 ', 'การคัดกรองความเสี่ยง/โรคมะเร็งปากมดลูก ');
+INSERT INTO `cppspecial_` VALUES ('1B0040', 'ตรวจคัดกรอง VIA ได้ผลลบ');
+INSERT INTO `cppspecial_` VALUES ('1B0041', 'ตรวจคัดกรอง VIA ได้ผลบวก ไม่ให้การรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B0042', 'ตรวจคัดกรอง VIA ได้ผลบวก และให้การรักษา ');
+INSERT INTO `cppspecial_` VALUES ('1B0043', 'ตรวจคัดกรอง VIA ไม่ระบุผลการตรวจ');
+INSERT INTO `cppspecial_` VALUES ('1B0044', 'ตรวจคัดกรอง Pap (ยังไม่ทราบผล)');
+INSERT INTO `cppspecial_` VALUES ('1B0045', 'การคัดกรองมะเร็งปากมดลูก ด้วยวิธี VIA ผลตรวจเป็นมะเร็งปากมดลูก');
+INSERT INTO `cppspecial_` VALUES ('1B0048', 'ตรวจคัดกรอง วิธีอื่น (ระบุวิธี)');
+INSERT INTO `cppspecial_` VALUES ('1B0049', 'ตรวจคัดกรอง ไม่ระบุวิธี');
+INSERT INTO `cppspecial_` VALUES ('1B026', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q ในกลุ่มผู้ป่วยที่มีผลการคัดกรอง 2Q ผิดปกติ  ');
+INSERT INTO `cppspecial_` VALUES ('1B0260', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q พบว่าผลปกติ ');
+INSERT INTO `cppspecial_` VALUES ('1B0261', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q พบว่าซึมเศร้าน้อย (คะแนน 7-12)');
+INSERT INTO `cppspecial_` VALUES ('1B0262', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q พบว่าซึมเศร้าปานกลาง (คะแนน 13-18)');
+INSERT INTO `cppspecial_` VALUES ('1B0263', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q พบว่าซึมเศร้ารุนแรง (คะแนน≥19)');
+INSERT INTO `cppspecial_` VALUES ('1B0269', 'การประเมินภาวะซึมเศร้าด้วยแบบประเมิน 9Q ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B027', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q ');
+INSERT INTO `cppspecial_` VALUES ('1B0270', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q พบว่าไม่มีแนวโน้มการฆ่าตัวตาย ');
+INSERT INTO `cppspecial_` VALUES ('1B0271', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q พบว่ามีแนวโน้มที่จะฆ่าตัวตายระดับน้อย (คะแนน 1-8) ');
+INSERT INTO `cppspecial_` VALUES ('1B0272', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q พบว่ามีแนวโน้มที่จะฆ่าตัวตายระดับปานกลาง (คะแนน 9-16)');
+INSERT INTO `cppspecial_` VALUES ('1B0273', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q พบว่ามีแนวโน้มที่จะฆ่าตัวตายระดับรุนแรง (คะแนน ≥17)');
+INSERT INTO `cppspecial_` VALUES ('1B0279', 'การประเมินการฆ่าตัวตายด้วยแบบประเมิน 8Q ไม่ระบุรายละเอียด ');
+INSERT INTO `cppspecial_` VALUES ('1B028', 'การตรวจคัดกรองความเสี่ยง / โรคทางจิตเวช อื่นๆ');
+INSERT INTO `cppspecial_` VALUES ('1B0280', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0281', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0282', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 9Q พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0283', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 9Q พบว่าซึมเศร้าน้อย (คะแนน 7-12)');
+INSERT INTO `cppspecial_` VALUES ('1B0284', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 9Q พบว่าซึมเศร้าปานกลาง (คะแนน 13-18)');
+INSERT INTO `cppspecial_` VALUES ('1B0285', 'การตรวจคัดกรองโรคซึมเศร้าในผู้สูงอายุด้วยแบบคัดกรอง 9Q พบว่าซึมเศร้ารุนแรง (คะแนน ≥19)');
+INSERT INTO `cppspecial_` VALUES ('1B0286', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้สูงอายุ พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0287', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้สูงอายุ พบว่าผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B0289', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้สูงอายุ ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B113', 'การตรวจคัดกรองสมรรถภาพทางการเห็น ');
+INSERT INTO `cppspecial_` VALUES ('1B1130', 'การตรวจคัดกรองสมรรถภาพทางการเห็น ผลเหมาะสมกับลักษณะงาน');
+INSERT INTO `cppspecial_` VALUES ('1B1131', 'การตรวจคัดกรองสมรรถภาพทางการเห็น ผลไม่เหมาะสมกับลักษณะงาน');
+INSERT INTO `cppspecial_` VALUES ('1B1139', 'การตรวจคัดกรองสมรรถภาพทางการเห็น ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B114', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน');
+INSERT INTO `cppspecial_` VALUES ('1B1140', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B1141', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ผลต้องเฝ้าระวัง');
+INSERT INTO `cppspecial_` VALUES ('1B1142', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B1143', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ผลผิดปกติจากเสียง');
+INSERT INTO `cppspecial_` VALUES ('1B1149', 'การตรวจคัดกรองสมรรถภาพทางการได้ยิน ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B115', 'การตรวจคัดกรองสมรรถภาพทางปอด');
+INSERT INTO `cppspecial_` VALUES ('1B1150', 'การตรวจคัดกรองสมรรถภาพทางปอด ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B1151', 'การตรวจคัดกรองสมรรถภาพทางปอด ผลต่ำกว่าเกณฑ์มาตรฐานแบบหลอดลมอุดกั้น');
+INSERT INTO `cppspecial_` VALUES ('1B1152', 'การตรวจคัดกรองสมรรถภาพทางปอด ผลต่ำกว่าเกณฑ์มาตรฐานแบบจำกัดการขยายตัว');
+INSERT INTO `cppspecial_` VALUES ('1B1153', 'การตรวจคัดกรองสมรรถภาพทางปอด ผลต่ำกว่าเกณฑ์มาตรฐานแบบผสม');
+INSERT INTO `cppspecial_` VALUES ('1B1159', 'การตรวจคัดกรองสมรรถภาพทางปอด ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B116', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ');
+INSERT INTO `cppspecial_` VALUES ('1B1160', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ผลปกติระดับ 0/0');
+INSERT INTO `cppspecial_` VALUES ('1B1161', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ผลผิดปกติตั้งแต่ระดับ 0/1 – 1/0 ');
+INSERT INTO `cppspecial_` VALUES ('1B1162', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ผลผิดปกติตั้งแต่ระดับ 1/1 ขึ้นไป ');
+INSERT INTO `cppspecial_` VALUES ('1B1169', 'การตรวจเอ็กซเรย์ปอดฟิล์มใหญ่ในวัยทำงาน ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B117', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ');
+INSERT INTO `cppspecial_` VALUES ('1B1170', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B1171', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ผลปลอดภัย');
+INSERT INTO `cppspecial_` VALUES ('1B1172', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ผลมีความเสี่ยง');
+INSERT INTO `cppspecial_` VALUES ('1B1173', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ผลไม่ปลอดภัย');
+INSERT INTO `cppspecial_` VALUES ('1B1179', 'การตรวจคัดกรองเพื่อหาความเสี่ยงจากสารกำจัดศัตรูพืช ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B118', 'การตรวจคัดกรองความเสี่ยง / เฝ้าระวัง ในประชากรวัยแรงงาน อื่น ๆ  ');
+INSERT INTO `cppspecial_` VALUES ('1B119', 'การตรวจคัดกรองความเสี่ยง / เฝ้าระวัง ในประชากรวัยแรงงาน ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B12', 'การตรวจคัดกรองความเสี่ยง/เฝ้าระวังในผู้สูงอายุ');
+INSERT INTO `cppspecial_` VALUES ('1B120', 'การตรวจคัดกรองผู้สูงอายุที่เสี่ยงต่อภาวะหกล้ม');
+INSERT INTO `cppspecial_` VALUES ('1B1200', 'การตรวจคัดกรองผู้สูงอายุที่มีภาวะหกล้ม พบว่าไม่มีความเสี่ยง');
+INSERT INTO `cppspecial_` VALUES ('1B1201', 'การตรวจคัดกรองผู้สูงอายุที่มีภาวะหกล้ม พบว่ามีความเสี่ยง ให้คำแนะนำและรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1202', 'การตรวจคัดกรองผู้สูงอายุที่มีภาวะหกล้ม พบว่ามีความเสี่ยงส่งรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1209', 'การตรวจคัดกรองผู้สูงอายุที่เสี่ยงภาวะหกล้มไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B122', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบAMT/ MMSE-T 2002 ในผู้สูงอายุ ');
+INSERT INTO `cppspecial_` VALUES ('1B1220', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบAMT ในผู้สูงอายุพบว่าปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B1221', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ AMT ในผู้สูงอายุพบว่าผิดปกติ ให้คำแนะนำและรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1223', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ AMT ในผู้สูงอายุพบว่าผิดปกติและส่งไปรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1224', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ MMSE-T 2002  ในผู้สูงอายุพบว่าปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B1225', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ MMSE-T 2002  ในผู้สูงอายุพบว่าผิดปกติ ให้คำแนะนำและรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1226', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ MMSE-T 2002  ในผู้สูงอายุพบว่าผิดปกติและส่งไปรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1229', 'การตรวจคัดกรองสมรรถภาพสมอง (ภาวะสมองเสื่อม) โดยแบบ AMT/ MMSE-T 2002   ในผู้สูงอายุ ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B123', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ');
+INSERT INTO `cppspecial_` VALUES ('1B1230', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่าไม่มีความเสี่ยง');
+INSERT INTO `cppspecial_` VALUES ('1B1231', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยง');
+INSERT INTO `cppspecial_` VALUES ('1B1232', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยงสูง');
+INSERT INTO `cppspecial_` VALUES ('1B1234', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยงสูงมาก ให้คำแนะนำ / รักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1235', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุพบว่ามีความเสี่ยงสูงมาก รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1239', 'การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ  ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B124', 'การตรวจคัดกรองสายตาระยะใกล้/ระยะไกลในผู้สูงอายุ');
+INSERT INTO `cppspecial_` VALUES ('1B1240', 'การตรวจคัดกรองสายตาระยะใกล้ในผู้สูงอายุพบว่าไม่มีปัญหา');
+INSERT INTO `cppspecial_` VALUES ('1B1241', 'การตรวจคัดกรองสายตาระยะใกล้ในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำและรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1242', 'การตรวจคัดกรองสายตาระยะใกล้ในผู้สูงอายุพบว่ามีปัญหาส่งไปรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1243', 'การตรวจคัดกรองสายตาระยะไกลในผู้สูงอายุพบว่าไม่มีปัญหา');
+INSERT INTO `cppspecial_` VALUES ('1B1244', 'การตรวจคัดกรองสายตาระยะไกลในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำและรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1245', 'การตรวจคัดกรองสายตาระยะไกลในผู้สูงอายุพบว่ามีปัญหาส่งไปรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1249', 'การตรวจคัดกรองสายตาระยะใกล้/ระยะไกลในผู้สูงอายุไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B125', 'การตรวจคัดกรองความเสี่ยงต้อกระจก / ต้อหิน / จอประสาทตาเสื่อมจากอายุ ในผู้สูงอายุ');
+INSERT INTO `cppspecial_` VALUES ('1B1250', 'การตรวจคัดกรองความเสี่ยงต้อกระจกในผู้สูงอายุพบว่าไม่มีปัญหา');
+INSERT INTO `cppspecial_` VALUES ('1B1251', 'การตรวจคัดกรองความเสี่ยงต้อกระจกในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำและรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1252', 'การตรวจคัดกรองความเสี่ยงต้อกระจกในผู้สูงอายุพบว่ามีปัญหาส่งไปรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1253', 'การตรวจคัดกรองความเสี่ยงต้อหินในผู้สูงอายุพบว่าไม่มีปัญหา');
+INSERT INTO `cppspecial_` VALUES ('1B1254', 'การตรวจคัดกรองความเสี่ยงต้อหินในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำและรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1255', 'การตรวจคัดกรองความเสี่ยงต้อหินในผู้สูงอายุพบว่ามีปัญหาส่งไปรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1256', 'การตรวจคัดกรองความเสี่ยงโรคจอประสาทตาเสื่อมจากอายุในผู้สูงอายุพบว่าไม่มีปัญหา');
+INSERT INTO `cppspecial_` VALUES ('1B1257', 'การตรวจคัดกรองความเสี่ยงโรคจอประสาทตาเสื่อมจากอายุในผู้สูงอายุพบว่ามีปัญหาให้คำแนะนำ และรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1258', 'การตรวจคัดกรองความเสี่ยงโรคจอประสาทตาเสื่อมจากอายุในผู้สูงอายุพบว่ามีปัญหา ส่งไปรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1259', 'การตรวจคัดกรองความเสี่ยงต้อกระจก  / ต้อหิน / จอประสาทตาเสื่อมจากอายุ ในผู้สูงอายุ ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B126', 'การตรวจคัดกรองพฤติกรรมเสี่ยงต่อสุขภาพช่องปากในผู้สูงอายุ');
+INSERT INTO `cppspecial_` VALUES ('1B1260', 'การตรวจคัดกรองพฤติกรรมเสี่ยงต่อสุขภาพช่องปากในผู้สูงอายุพบว่าพฤติกรรมเหมาะสม');
+INSERT INTO `cppspecial_` VALUES ('1B1261', 'การตรวจคัดกรองพฤติกรรมเสี่ยงต่อสุขภาพช่องปากในผู้สูงอายุพบว่าพฤติกรรมไม่เหมาะสม และแนะนำให้ความรู้');
+INSERT INTO `cppspecial_` VALUES ('1B1269', 'การตรวจคัดกรองพฤติกรรมเสี่ยงต่อสุขภาพช่องปากในผู้สูงอายุไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B127', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิก ในผู้สูงอายุ / สมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาว');
+INSERT INTO `cppspecial_` VALUES ('1B1270', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิกในผู้สูงอายุพบว่าปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B1271', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิกในผู้สูงอายุพบว่าผิดปกติ ให้คำแนะนำและรักษา');
+INSERT INTO `cppspecial_` VALUES ('1B1272', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิกในผู้สูงอายุพบว่าผิดปกติและส่งรักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B1273', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาวพบว่าไม่ต้องดูแลระยะยาว');
+INSERT INTO `cppspecial_` VALUES ('1B1274', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาวพบว่าต้องเฝ้าระวัง ให้คำแนะนำและติดตาม');
+INSERT INTO `cppspecial_` VALUES ('1B1275', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาวพบว่าต้องดูแลระยะยาว ให้คำแนะนำและดูแลต่อเนื่อง');
+INSERT INTO `cppspecial_` VALUES ('1B1279', 'การตรวจคัดกรองข้อเข่าเสื่อมทางคลินิก ในผู้สูงอายุ / สมรรถนะผู้สูงอายุเกี่ยวกับการดูแลระยะยาว ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B128', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวัน/ ผู้สูงอายุที่มีภาวะพึ่งพิง');
+INSERT INTO `cppspecial_` VALUES ('1B1280', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวันพบว่าช่วยเหลือตัวเองได้ /ติดสังคม (ADL 12-20 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B1281', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวันพบว่าช่วยเหลือตัวเองได้บ้าง / บางส่วน /ติดบ้าน (ADL 5-11 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B1282', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวัน พบว่าช่วยเหลือตัวเองได้น้อย / ไม่ได้เลย /ภาวะติดเตียง (ADL 0-4 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B1289', 'การตรวจคัดกรองสมรรถนะผู้สูงอายุเกี่ยวกับความสามารถในการทำกิจวัตรประจำวันไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B129', 'การตรวจคัดกรองความเสี่ยง/เฝ้าระวังในผู้สูงอายุ ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B13', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้ป่วยโรคเรื้อรัง');
+INSERT INTO `cppspecial_` VALUES ('1B130', 'การตรวจคัดกรองโรคซึมเศร้าในผู้ป่วยโรคเรื้อรังด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B131', 'การตรวจคัดกรองโรคซึมเศร้าในผู้ป่วยโรคเรื้อรังด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B132', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ป่วยโรคเรื้อรังพบว่าผลปกติ (0 – 4 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B133', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ป่วยโรคเรื้อรังพบว่ามีปัญหาความเครียด (5 – 7 คะแนน) ');
+INSERT INTO `cppspecial_` VALUES ('1B134', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ป่วยโรคเรื้อรังพบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
+INSERT INTO `cppspecial_` VALUES ('1B139', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้ป่วยโรคเรื้อรังไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B14', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในหญิงตั้งครรภ์/หลังคลอด');
+INSERT INTO `cppspecial_` VALUES ('1B140', 'การตรวจคัดกรองโรคซึมเศร้าในหญิงตั้งครรภ์/หลังคลอดด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B141', 'การตรวจคัดกรองโรคซึมเศร้าในหญิงตั้งครรภ์/หลังคลอดด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B142', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในหญิงตั้งครรภ์/หลังคลอดพบว่าผลปกติ (0 – 4 คะแนน) ');
+INSERT INTO `cppspecial_` VALUES ('1B143', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในหญิงตั้งครรภ์/หลังคลอดพบว่ามีปัญหาความเครียด  (5 – 7 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B144', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในหญิงตั้งครรภ์/หลังคลอดพบว่ามีความเครียดสูง (8 คะแนนขึ้นไป) ');
+INSERT INTO `cppspecial_` VALUES ('1B149', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในหญิงตั้งครรภ์/หลังคลอด ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B15', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้มีปัญหาสุรา/สารเสพติด');
+INSERT INTO `cppspecial_` VALUES ('1B150', 'การตรวจคัดกรองโรคซึมเศร้าในผู้มีปัญหาสุรา/สารเสพติดด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B151', 'การตรวจคัดกรองโรคซึมเศร้าในผู้มีปัญหาสุรา/สารเสพติดด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B152', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้มีปัญหาสุรา/สารเสพติดพบว่าผลปกติ (0 – 4 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B153', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้มีปัญหาสุรา/สารเสพติดพบว่ามีปัญหาความเครียด (5 – 7 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B154', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้มีปัญหาสุรา/สารเสพติดพบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
+INSERT INTO `cppspecial_` VALUES ('1B159', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้มีปัญหาสุรา/สารเสพติดไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B16', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในกลุ่มที่มีอาการซึมเศร้าชัดเจน');
+INSERT INTO `cppspecial_` VALUES ('1B160', 'การตรวจคัดกรองโรคซึมเศร้าในกลุ่มที่มีอาการซึมเศร้าชัดเจนด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B161', 'การตรวจคัดกรองโรคซึมเศร้าในกลุ่มที่มีอาการซึมเศร้าชัดเจนด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B162', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีอาการซึมเศร้าชัดเจนพบว่าผลปกติ (0 – 4 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B163', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีอาการซึมเศร้าชัดเจนพบว่ามีปัญหาความเครียด (5 – 7 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B164', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีอาการซึมเศร้าชัดเจนพบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
+INSERT INTO `cppspecial_` VALUES ('1B169', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในกลุ่มที่มีอาการซึมเศร้า ชัดเจน ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B17', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้');
+INSERT INTO `cppspecial_` VALUES ('1B170', 'การตรวจคัดกรองโรคซึมเศร้าในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B171', 'การตรวจคัดกรองโรคซึมเศร้าในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B172', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีอาการซึมเศร้ในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ พบว่าผลปกติ (0 – 4 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B173', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ พบว่ามีปัญหาความเครียด (5 – 7 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B174 ', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้ พบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
+INSERT INTO `cppspecial_` VALUES ('1B179', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในผู้ที่มีอาการทางกายเรื้อรังหลายอาการที่หาสาเหตุไม่ได้  ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B18', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในกลุ่มที่มีการสูญเสียคนที่รัก /ทรัพย์สินจำนวนมาก ฯลฯ');
+INSERT INTO `cppspecial_` VALUES ('1B180', 'การตรวจคัดกรองโรคซึมเศร้าในกลุ่มที่มีการสูญเสีย  ด้วยแบบคัดกรอง 2Q พบว่าผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B181', 'การตรวจคัดกรองโรคซึมเศร้าในกลุ่มที่มีการสูญเสีย ด้วยแบบคัดกรอง 2Q พบว่าผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B182', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีการสูญเสีย พบว่าผลปกติ (0 – 4 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B183', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีการสูญเสีย พบว่าปัญหาความเครียด (5 – 7 คะแนน)');
+INSERT INTO `cppspecial_` VALUES ('1B184', 'การประเมินความเครียดด้วยแบบคัดกรอง ST5 ในกลุ่มที่มีการสูญเสีย พบว่ามีความเครียดสูง (8 คะแนนขึ้นไป)');
+INSERT INTO `cppspecial_` VALUES ('1B189', 'การตรวจคัดกรองโรคซึมเศร้า/ประเมินความเครียดในกลุ่มที่มีการสูญเสีย  ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B2', 'การตรวจคัดกรอง / เฝ้าระวัง ในเด็กอายุ 0-60 เดือนโดยเครื่องมือ DSPM / DAIM');
+INSERT INTO `cppspecial_` VALUES ('1B20', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหว');
+INSERT INTO `cppspecial_` VALUES ('1B200', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B201', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B202', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B203', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPMผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B204', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B205', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B206', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DAIM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B207', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเคลื่อนไหวโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B21', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญา');
+INSERT INTO `cppspecial_` VALUES ('1B210', 'การตรวจคัดกรองพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B211', 'การตรวจคัดกรองพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B212', 'การตรวจคัดกรองพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B213', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B214', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B215', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B216', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DAIM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B217', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B219', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านกล้ามเนื้อมัดเล็กและสติปัญญาโดยเครื่องมือ DSPM และหรือ DAIM ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B22', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาสมวัยด้านการเข้าใจภาษา');
+INSERT INTO `cppspecial_` VALUES ('1B220', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B221', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B222', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B223', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B224', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B225', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B226', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DAIM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B227', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B229', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านการเข้าใจภาษาโดยเครื่องมือ DSPM และหรือ DAIM ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B23', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาสมวัยด้านการใช้ภาษา');
+INSERT INTO `cppspecial_` VALUES ('1B230', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B231', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B232', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B233', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B234', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B235', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B236', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DAIM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B237', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B239', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาษาโดยเครื่องมือ DSPM และหรือ DAIM ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B24', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาสมวัยด้านการช่วยเหลือตัวเองและสังคม');
+INSERT INTO `cppspecial_` VALUES ('1B240', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B241', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B242', 'การตรวจคัดกรองพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM ผลล่าช้าส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B243', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B244', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPM สงสัยล่าช้า ส่งเสริมพัฒนาการใน 1 เดือน');
+INSERT INTO `cppspecial_` VALUES ('1B245', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการใช้ภาด้านการช่วยเหลือตัวเองและสังคม โดยเครื่องมือ DSPM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B246', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DAIM ผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B247', 'การตรวจแบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DAIM ผลล่าช้า ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B249', 'การตรวจคัดกรอง/แบบเฝ้าระวังพัฒนาการสมวัยด้านการช่วยเหลือตัวเองและสังคมโดยเครื่องมือ DSPMและหรือ DAIM ไม่ระบุรายละเอียด');
+INSERT INTO `cppspecial_` VALUES ('1B25', 'การตรวจประเมินระบบประสาทและพัฒนาการ');
+INSERT INTO `cppspecial_` VALUES ('1B250', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุแรกเกิด โดยเครื่องมือ DAIM ข้อที่ 1-3 (ตรวจปฏิกิริยา ตรวจความตึงตัวของกล้ามเนื้อ และตรวจข้อเท้า) ผ่าน');
+INSERT INTO `cppspecial_` VALUES ('1B251', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุแรกเกิด โดยเครื่องมือ DAIMข้อที่ 1-3 (ตรวจปฏิกิริยา ตรวจความตึงตัวของกล้ามเนื้อ และตรวจข้อเท้า) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B252', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 1 เดือน โดยเครื่องมือ DAIM ข้อที่ 4 (ตรวจการเหยียดแขนและขา) ผ่าน');
+INSERT INTO `cppspecial_` VALUES ('1B253', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 1 เดือน โดยเครื่องมือ DAIM ข้อที่ 4 (ตรวจการเหยียดแขนและขา) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B254', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 3-4 เดือน โดยเครื่องมือ DAIM ข้อที่ 5 (ตรวจการกำมือ) ผ่าน');
+INSERT INTO `cppspecial_` VALUES ('1B255', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 3-4 เดือน โดยเครื่องมือ DAIM ข้อที่ 5 (ตรวจการกำมือ) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B256', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 10-12 เดือน โดยเครื่องมือ DAIM ข้อที่ 6 (ตรวจการกางแขน) ผ่าน');
+INSERT INTO `cppspecial_` VALUES ('1B257', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 10-12 เดือน โดยเครื่องมือ DAIM ข้อที่ 6 (ตรวจการกางแขน) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B258', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 55-60 เดือน โดยเครื่องมือ DAIM ข้อที่ 7 (เดินต่อส้นเท้า) ผ่าน');
+INSERT INTO `cppspecial_` VALUES ('1B259', 'การตรวจประเมินระบบประสาทและพัฒนาการอายุ 55-60 เดือน โดยเครื่องมือ DAIM ข้อที่ 7 (เดินต่อส้นเท้า) ไม่ผ่าน ส่งเพื่อประเมิน/รักษาต่อ');
+INSERT INTO `cppspecial_` VALUES ('1B3  ', 'ผลการตรวจคัดกรองผลปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B30', 'ผลการตรวจคัดกรองมะเร็งปากมดลูก');
+INSERT INTO `cppspecial_` VALUES ('1B31', 'ผลการตรวจคัดกรองธาลาสซีเมีย');
+INSERT INTO `cppspecial_` VALUES ('1B4 ', 'ผลการตรวจคัดกรองผลผิดปกติ');
+INSERT INTO `cppspecial_` VALUES ('1B40', 'ผลการตรวจคัดกรองมะเร็งปากมดลูก');
+INSERT INTO `cppspecial_` VALUES ('1B41', 'ผลการตรวจคัดกรองธาลาสซีเมีย');
 
 -- ----------------------------
--- Table structure for err_person_typearea_cup
+-- Table structure for err_person_typearea_cup_
 -- ----------------------------
-DROP TABLE IF EXISTS `err_person_typearea_cup`;
-CREATE TABLE `err_person_typearea_cup` (
+DROP TABLE IF EXISTS `err_person_typearea_cup_`;
+CREATE TABLE `err_person_typearea_cup_` (
   `CID` varchar(13) NOT NULL,
   `NUM_HOSP` bigint(21) DEFAULT '0',
   `HOSPCODE` text,
@@ -483,7 +470,7 @@ CREATE TABLE `err_person_typearea_cup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of err_person_typearea_cup
+-- Records of err_person_typearea_cup_
 -- ----------------------------
 
 -- ----------------------------
@@ -646,7 +633,7 @@ CREATE TABLE `sys_version` (
 -- ----------------------------
 -- Records of sys_version
 -- ----------------------------
-INSERT INTO `sys_version` VALUES ('20160317');
+INSERT INTO `sys_version` VALUES ('20160330');
 
 -- ----------------------------
 -- Procedure structure for api_epi
@@ -3728,6 +3715,12 @@ SELECT * FROM
 	,if(hos.hoscode is NUll,'AN9201,','')	
 	,if(p.SEX <> 2,'SEX,','')
 	,if(t.GRAVIDA IS NULL or trim(t.GRAVIDA)='' or t.GRAVIDA=0,'GRAVIDA,','')
+	,if((t.ANCNO=1 AND (t.GA NOT BETWEEN 1 AND 12)) 
+			OR (t.ANCNO=2 AND (t.GA NOT BETWEEN 16 AND 20))
+			OR (t.ANCNO=3 AND (t.GA NOT BETWEEN 24 AND 28)) 
+			OR (t.ANCNO=4 AND (t.GA NOT BETWEEN 30 AND 34))
+			OR (t.ANCNO=5 AND (t.GA NOT BETWEEN 36 AND 40))	
+			,'ANCNO,','' )
 ) as ERR_CODE 
 	,t.HOSPCODE 	,t.PID ,p.SEX,t.DATE_SERV,t.GRAVIDA,t.ANCNO,t.GA,date(t.D_UPDATE) as 'DUPDATE'
 
@@ -3804,7 +3797,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `err_charge_opd`()
 BEGIN
 
 
-SET @start_date='2015-10-01',@end_date = CURDATE();
+SET @start_date='2014-10-01',@end_date = CURDATE();
 
 UPDATE sys_check_process t set t.fnc_name = 'err_charge_opd' , t.time = NOW();
 DELETE FROM charge_opd WHERE HOSPCODE NOT IN (SELECT hoscode from chospital_amp);
@@ -3840,7 +3833,9 @@ FROM charge_opd t
 		LEFT JOIN chospital_amp hos ON hos.hoscode = t.HOSPCODE
 		LEFT JOIN cchargeitem c ON c.id_chargeitem = t.CHARGEITEM
 		
-		#WHERE t.DATE_SERV BETWEEN @start_date AND @end_date
+
+		WHERE (t.DATE_SERV BETWEEN @start_date AND @end_date)
+		OR 	t.DATE_SERV is NULL OR t.DATE_SERV < (CURDATE()-INTERVAL 50 YEAR) OR  t.DATE_SERV > CURDATE()
 		
 
 ) d 
@@ -3929,11 +3924,13 @@ SELECT * FROM
 	,if(LENGTH(trim(t.CHRONIC)) < 3 OR t.CHRONIC is NULL ,'CH1130,','')	
 	,if(t.DATE_DIAG is NULL or t.DATE_DIAG < (CURDATE()-INTERVAL 50 YEAR) or  t.DATE_DIAG > CURDATE(),'DATE_DIAG,','')
 	,if(t.TYPEDISCH not in (01,02,03,04,05,06,07,08,09,10,11),'CH1141,','')
-	,if(t.DATE_DISCH <> '0000-00-00','DATE_DISCH,','')
+	,if(t.TYPEDISCH in ('03','05')  AND t.DATE_DISCH <> '0000-00-00','DATE_DISCH,','')
 	,if(p.HOSPCODE IS NUll or p.PID is NULL,'CH9200,','')
 	,if(hos.hoscode is NULL,'CH9201,','')
+	,if(p.DISCHARGE = 1 AND t.TYPEDISCH ='03','PERSON_DEAD,','')
+	,if(p.DISCHARGE = 9 AND t.TYPEDISCH ='02','CHRONIC_DEAD,','')
 ) as ERR_CODE
-	,t.HOSPCODE	,t.PID	,t.CHRONIC,t.TYPEDISCH,t.DATE_DIAG,t.DATE_DISCH,date(t.D_UPDATE) as 'DUPDATE'
+	,t.HOSPCODE	,t.PID	,t.CHRONIC,t.DATE_DIAG,t.TYPEDISCH,p.DISCHARGE,t.DATE_DISCH,date(t.D_UPDATE) as 'DUPDATE'
 
 
 
@@ -3942,7 +3939,7 @@ FROM chronic t
 			LEFT JOIN cchronic c ON c.id_chronic = t.CHRONIC
 			LEFT JOIN chospital_amp hos ON hos.hoscode = t.HOSPCODE
 		
-WHERE t.TYPEDISCH in ('03','05')
+WHERE t.TYPEDISCH in ('02','03','05')
 
 ) d 
 
@@ -4229,7 +4226,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `err_diagnosis_opd`()
 BEGIN
 
-SET @start_date='2015-10-01',@end_date = CURDATE();
+SET @start_date='2014-10-01',@end_date = CURDATE();
 
 UPDATE sys_check_process t set t.fnc_name = 'err_diagnosis_opd' , t.time = NOW();
 DELETE FROM diagnosis_opd WHERE HOSPCODE NOT IN (SELECT hoscode from chospital_amp);
@@ -4270,7 +4267,8 @@ FROM diagnosis_opd t
 		LEFT JOIN person p on t.HOSPCODE = p.HOSPCODE AND t.PID = p.PID
 		LEFT JOIN chospital_amp hos ON hos.hoscode = t.HOSPCODE
 
-		#WHERE t.DATE_SERV BETWEEN @start_date AND @end_date
+		WHERE (t.DATE_SERV BETWEEN @start_date AND @end_date)
+		OR 	t.DATE_SERV is NULL OR t.DATE_SERV < (CURDATE()-INTERVAL 50 YEAR) OR  t.DATE_SERV > CURDATE()
 		
 
 ) d 
@@ -4544,7 +4542,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `err_drug_opd`()
 BEGIN
 
-SET @start_date='2015-10-01',@end_date = CURDATE();
+SET @start_date='2014-10-01',@end_date = CURDATE();
 
 UPDATE sys_check_process t set t.fnc_name = 'err_drug_opd' , t.time = NOW();
 DELETE FROM drug_opd WHERE HOSPCODE NOT IN (SELECT hoscode from chospital_amp);
@@ -4579,7 +4577,8 @@ FROM drug_opd t
 	LEFT JOIN person p on t.HOSPCODE = p.HOSPCODE AND t.PID = p.PID
 	LEFT JOIN chospital_amp hos ON hos.hoscode = t.HOSPCODE
 
-	#WHERE t.DATE_SERV BETWEEN @start_date AND @end_date
+	WHERE (t.DATE_SERV BETWEEN @start_date AND @end_date)
+	OR 	t.DATE_SERV is NULL OR t.DATE_SERV < (CURDATE()-INTERVAL 50 YEAR) OR  t.DATE_SERV > CURDATE()
 
 
 ) d 
@@ -5779,9 +5778,10 @@ SELECT SQL_BIG_RESULT
 	,if(t.TYPEAREA IN (1,3) AND t.DISCHARGE =9,if(trim(t.HID)='' or t.HID is NULL or h.HID is null,'HOME,',''),'') # HOME
 	#,if(t.TYPEAREA IN (1,3,5) AND ep.CID IS NOT NULL,CONCAT('[',ep.HOSPCODE,'],'),'')
 	,if(t.NATION IS NULL OR trim(t.NATION)='','NATION,','')
+	,if(t.NATION ='099' AND t.TYPEAREA in (1,3) AND (cd.INSTYPE_NEW IS NULL OR trim(cd.INSTYPE_NEW)=''),'CARD,','')
 	
 ) as ERR_CODE,
-	t.HOSPCODE,t.PID,t.CID,t.`NAME`,t.LNAME,t.TYPEAREA,t.BIRTH,t.NATION,t.DISCHARGE,t.HID,date(t.D_UPDATE) as 'DUPDATE'
+	t.HOSPCODE,t.PID,t.CID,t.`NAME`,t.LNAME,t.TYPEAREA,t.BIRTH,t.NATION,t.DISCHARGE,t.HID,cd.INSTYPE_NEW AS 'INSTYPE',date(t.D_UPDATE) as 'DUPDATE'
 
 
 
@@ -5789,6 +5789,7 @@ FROM person t
 	LEFT JOIN home h ON h.HOSPCODE = t.HOSPCODE AND h.HID = t.HID
 	LEFT JOIN chospital_amp hos ON hos.hoscode = t.HOSPCODE
   #LEFT JOIN err_person_typearea_cup ep on ep.CID = t.CID
+	LEFT JOIN card cd ON cd.HOSPCODE = t.HOSPCODE AND cd.PID = t.PID
 
 	WHERE t.DISCHARGE = 9
 
@@ -5867,10 +5868,11 @@ p.CID
 ,GROUP_CONCAT(p.PID SEPARATOR ',') AS PID 
 ,GROUP_CONCAT(p.TYPEAREA SEPARATOR ',') AS TYPEAREA 
 ,GROUP_CONCAT(concat(p.`NAME`,' ',p.LNAME) SEPARATOR ',') AS FULLNAME
+#,GROUP_CONCAT(p.NATION SEPARATOR ',') AS NATION
 ,GROUP_CONCAT(DATE_FORMAT(p.D_UPDATE,'%Y-%m-%d') SEPARATOR ',') AS D_UPDATE
 from person p
 
-WHERE p.TYPEAREA in (1,3,5) AND p.DISCHARGE = 9
+WHERE p.TYPEAREA in (1,3,5) AND p.DISCHARGE = 9 AND p.NATION = '099'
 
 GROUP BY p.CID
 
@@ -6394,7 +6396,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `err_service`()
 BEGIN
 
-SET @start_date='2015-10-01',@end_date = CURDATE();
+SET @start_date='2014-10-01',@end_date = CURDATE();
 
 UPDATE sys_check_process t set t.fnc_name = 'err_service' , t.time = NOW();
 DELETE FROM service WHERE HOSPCODE NOT IN (SELECT hoscode from chospital_amp);
@@ -6423,11 +6425,12 @@ SELECT * FROM
 	,if(t.ACTUALPAY is NULL or TRIM(t.ACTUALPAY)='','SE1124,','')
 	,if(p.HOSPCODE IS NUll or p.PID is NULL,'SE9200,','')
 	,if(hos.hoscode is NULL,'SE9201,','')
+	,if(dx.DIAGCODE IS NULL,'DX,','')
 	
 
 	,if(CONCAT(t.HOSPCODE,t.PID,t.SEQ) <> CONCAT(t2.HOSPCODE,t2.PID,t2.SEQ),'SE9299,','') 
 ) as ERR_CODE
-	,t.HOSPCODE,t.PID,t.SEQ,t.DATE_SERV,t.INSTYPE,t.TYPEIN,t.SERVPLACE,t.TYPEOUT,t.PRICE,t.PAYPRICE,t.ACTUALPAY,date(t.D_UPDATE) as 'DUPDATE'
+	,t.HOSPCODE,t.PID,t.SEQ,t.DATE_SERV,t.INSTYPE,t.TYPEIN,t.SERVPLACE,t.TYPEOUT,t.PRICE,t.PAYPRICE,t.ACTUALPAY,dx.DIAGCODE,date(t.D_UPDATE) as 'DUPDATE'
 
 
 
@@ -6438,7 +6441,10 @@ FROM service t
 	AND t.SEQ = t2.SEQ
 	LEFT JOIN person p on t.HOSPCODE = p.HOSPCODE AND t.PID = p.PID
 	LEFT JOIN chospital_amp hos ON hos.hoscode = t.HOSPCODE
-	#WHERE t.DATE_SERV BETWEEN @start_date AND @end_date
+	LEFT JOIN diagnosis_opd dx ON dx.HOSPCODE = t.HOSPCODE AND dx.PID = t.PID AND dx.SEQ = t.SEQ AND dx.DATE_SERV = t.DATE_SERV
+
+	WHERE (t.DATE_SERV BETWEEN @start_date AND @end_date)
+	OR 	t.DATE_SERV is NULL OR t.DATE_SERV < (CURDATE()-INTERVAL 50 YEAR) OR  t.DATE_SERV > CURDATE()	
 
 	
 ) d 
@@ -6685,6 +6691,369 @@ END
 DELIMITER ;
 
 -- ----------------------------
+-- Procedure structure for file_count_send_plk
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `file_count_send_plk`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `file_count_send_plk`()
+BEGIN
+	
+##### 1)person #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('person')
+,TOTAL = (SELECT COUNT(*) FROM person)
+,D_UPDATE = CURDATE() ;
+
+##### 2)address #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('address')
+,TOTAL = (SELECT COUNT(*) FROM address)
+,D_UPDATE = CURDATE() ;
+
+##### 3)death #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('death')
+,TOTAL = (SELECT COUNT(*) FROM death)
+,D_UPDATE = CURDATE() ;
+
+##### 4)chronic #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('chronic')
+,TOTAL = (SELECT COUNT(*) FROM chronic)
+,D_UPDATE = CURDATE() ;
+
+##### 5)card #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('card')
+,TOTAL = (SELECT COUNT(*) FROM card)
+,D_UPDATE = CURDATE() ;
+
+##### 6)home #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('home')
+,TOTAL = (SELECT COUNT(*) FROM home)
+,D_UPDATE = CURDATE() ;
+
+##### 7)village #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('village')
+,TOTAL = (SELECT COUNT(*) FROM village)
+,D_UPDATE = CURDATE() ;
+
+##### 8)disability #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('disability')
+,TOTAL = (SELECT COUNT(*) FROM disability)
+,D_UPDATE = CURDATE() ;
+
+##### 9)provider #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('provider')
+,TOTAL = (SELECT COUNT(*) FROM provider)
+,D_UPDATE = CURDATE() ;
+
+##### 10)women #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('women')
+,TOTAL = (SELECT COUNT(*) FROM women)
+,D_UPDATE = CURDATE() ;
+
+##### 11)drugallergy #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('drugallergy')
+,TOTAL = (SELECT COUNT(*) FROM drugallergy)
+,D_UPDATE = CURDATE() ;
+
+##### 12)functional #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('functional')
+,TOTAL = (SELECT COUNT(*) FROM functional)
+,D_UPDATE = CURDATE() ;
+
+##### 13)icf #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('icf')
+,TOTAL = (SELECT COUNT(*) FROM icf)
+,D_UPDATE = CURDATE() ;
+
+##### 14)service #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('service')
+,TOTAL = (SELECT COUNT(*) FROM service)
+,D_UPDATE = CURDATE() ;
+
+##### 15)diagnosis_opd #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('diagnosis_opd')
+,TOTAL = (SELECT COUNT(*) FROM diagnosis_opd)
+,D_UPDATE = CURDATE() ;
+
+##### 16)drug_opd #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('drug_opd')
+,TOTAL = (SELECT COUNT(*) FROM drug_opd)
+,D_UPDATE = CURDATE() ;
+
+##### 17)procedure_opd #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('procedure_opd')
+,TOTAL = (SELECT COUNT(*) FROM procedure_opd)
+,D_UPDATE = CURDATE() ;
+
+##### 18)charge_opd #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('charge_opd')
+,TOTAL = (SELECT COUNT(*) FROM charge_opd)
+,D_UPDATE = CURDATE() ;
+
+##### 19)surveillance #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('surveillance')
+,TOTAL = (SELECT COUNT(*) FROM surveillance)
+,D_UPDATE = CURDATE() ;
+
+##### 20)accident #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('accident')
+,TOTAL = (SELECT COUNT(*) FROM accident)
+,D_UPDATE = CURDATE() ;
+
+##### 21)labfu #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('labfu')
+,TOTAL = (SELECT COUNT(*) FROM labfu)
+,D_UPDATE = CURDATE() ;
+
+##### 22)chronicfu #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('chronicfu')
+,TOTAL = (SELECT COUNT(*) FROM chronicfu)
+,D_UPDATE = CURDATE() ;
+
+##### 23)admission #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('admission')
+,TOTAL = (SELECT COUNT(*) FROM admission)
+,D_UPDATE = CURDATE() ;
+
+##### 24)diagnosis_ipd #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('diagnosis_ipd')
+,TOTAL = (SELECT COUNT(*) FROM diagnosis_ipd)
+,D_UPDATE = CURDATE() ;
+
+##### 25)drug_ipd #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('drug_ipd')
+,TOTAL = (SELECT COUNT(*) FROM drug_ipd)
+,D_UPDATE = CURDATE() ;
+
+##### 26)procedure_ipd #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('procedure_ipd')
+,TOTAL = (SELECT COUNT(*) FROM procedure_ipd)
+,D_UPDATE = CURDATE() ;
+
+##### 27)charge_ipd #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('charge_ipd')
+,TOTAL = (SELECT COUNT(*) FROM charge_ipd)
+,D_UPDATE = CURDATE() ;
+
+##### 28)appointment #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('appointment')
+,TOTAL = (SELECT COUNT(*) FROM appointment)
+,D_UPDATE = CURDATE() ;
+
+##### 29)dental #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('dental')
+,TOTAL = (SELECT COUNT(*) FROM dental)
+,D_UPDATE = CURDATE() ;
+
+##### 30)rehabilitation #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('rehabilitation')
+,TOTAL = (SELECT COUNT(*) FROM rehabilitation)
+,D_UPDATE = CURDATE() ;
+
+##### 31)ncdscreen #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('ncdscreen')
+,TOTAL = (SELECT COUNT(*) FROM ncdscreen)
+,D_UPDATE = CURDATE() ;
+
+##### 32)fp #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('fp')
+,TOTAL = (SELECT COUNT(*) FROM fp)
+,D_UPDATE = CURDATE() ;
+
+##### 33)prenatal #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('prenatal')
+,TOTAL = (SELECT COUNT(*) FROM prenatal)
+,D_UPDATE = CURDATE() ;
+
+##### 34)anc #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('anc')
+,TOTAL = (SELECT COUNT(*) FROM anc)
+,D_UPDATE = CURDATE() ;
+
+##### 35)labor #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('labor')
+,TOTAL = (SELECT COUNT(*) FROM labor)
+,D_UPDATE = CURDATE() ;
+
+##### 36)postnatal #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('postnatal')
+,TOTAL = (SELECT COUNT(*) FROM postnatal)
+,D_UPDATE = CURDATE() ;
+
+##### 37)newborn #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('newborn')
+,TOTAL = (SELECT COUNT(*) FROM newborn)
+,D_UPDATE = CURDATE() ;
+
+##### 38)newborncare #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('newborncare')
+,TOTAL = (SELECT COUNT(*) FROM newborncare)
+,D_UPDATE = CURDATE() ;
+
+##### 39)epi #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('epi')
+,TOTAL = (SELECT COUNT(*) FROM epi)
+,D_UPDATE = CURDATE() ;
+
+##### 40)nutrition #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('nutrition')
+,TOTAL = (SELECT COUNT(*) FROM nutrition)
+,D_UPDATE = CURDATE() ;
+
+##### 41)specialpp #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('specialpp')
+,TOTAL = (SELECT COUNT(*) FROM specialpp)
+,D_UPDATE = CURDATE() ;
+
+##### 42)community_activity #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('community_activity')
+,TOTAL = (SELECT COUNT(*) FROM community_activity)
+,D_UPDATE = CURDATE() ;
+
+##### 43)community_service #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('community_service')
+,TOTAL = (SELECT COUNT(*) FROM community_service)
+,D_UPDATE = CURDATE() ;
+
+##### 44)care_refer #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('care_refer')
+,TOTAL = (SELECT COUNT(*) FROM care_refer)
+,D_UPDATE = CURDATE() ;
+
+##### 45)clinical_refer #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('clinical_refer')
+,TOTAL = (SELECT COUNT(*) FROM clinical_refer)
+,D_UPDATE = CURDATE() ;
+
+##### 46)drug_refer #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('drug_refer')
+,TOTAL = (SELECT COUNT(*) FROM drug_refer)
+,D_UPDATE = CURDATE() ;
+
+##### 47)investigation_refer #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('investigation_refer')
+,TOTAL = (SELECT COUNT(*) FROM investigation_refer)
+,D_UPDATE = CURDATE() ;
+
+##### 48)procedure_refer #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('procedure_refer')
+,TOTAL = (SELECT COUNT(*) FROM procedure_refer)
+,D_UPDATE = CURDATE() ;
+
+##### 49)refer_history #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('refer_history')
+,TOTAL = (SELECT COUNT(*) FROM refer_history)
+,D_UPDATE = CURDATE() ;
+
+##### 50)refer_result #####
+REPLACE INTO file_count_send_plk  
+SET DISTRICT = (SELECT distcode FROM sys_config_main)
+,FILE = UPPER('refer_result')
+,TOTAL = (SELECT COUNT(*) FROM refer_result)
+,D_UPDATE = CURDATE() ;
+
+
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
 -- Procedure structure for list_sp
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `list_sp`;
@@ -6749,20 +7118,46 @@ DROP PROCEDURE IF EXISTS `tmp_store_proc`;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `tmp_store_proc`()
 BEGIN 
-SELECT h.hoscode,h.hosname ,
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F00' and 'F09',1,0)) 'ความผิดปกติทางจิตและอาการทางจิตที่เกิดจากโรคทางกาย',
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F10' and 'F19',1,0)) 'ความผิดปกติทางจิตและพฤติกรรมที่เกิดจากการใช้สารออกฤทธิ์ต่อจิตประสาท' ,
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F20' and 'F29',1,0)) 'โรคจิตเภท พฤติกรรมแบบโรคจิตเภท และโรคหลงผิด' ,
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F30' and 'F39',1,0)) 'ความผิดปกติทางอารมณ์' ,
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F40' and 'F49',1,0)) 'โรคประสาท ความผิดปกติที่สัมพันธ์กับความเครียด และโรคโซมาโตฟอร์ม' ,
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F50' and 'F59',1,0)) 'กลุ่มอาการทางพฤติกรรมที่พบร่วมกับความผิดปกติทางสรีรวิทยาและปัจจัยทางกายภาพ',
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F60' and 'F69',1,0)) 'ความผิดปกติทางบุคลิกภาพและพฤติกรรมของผู้ใหญ่' ,
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F70' and 'F79',1,0)) 'ภาวะปัญญาอ่อน' ,
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F80' and 'F89',1,0)) 'ความผิดปกติของพัฒนาการทางจิต' ,
-sum(if(substr(upper(d.DIAGCODE),1,3) between 'F90' and 'F98',1,0)) 'ความผิดปกติทางอารมณ์และพฤติกรรมที่มักเริ่มต้นในวัยเด็กและวัยรุ่น' ,
-sum(if(substr(upper(d.DIAGCODE),1,3) = 'F99',1,0)) 'ความผิดปกติทางจิตที่ไม่ระบุรายละเอียด' 
-from diagnosis_opd d INNER JOIN chospital_amp h on d.HOSPCODE=h.hoscode INNER JOIN campur on h.provcode = campur.changwatcode AND h.distcode = campur.ampurcode 
-where d.DATE_SERV BETWEEN '2014-10-01' AND '2015-09-30' GROUP BY h.hoscode;
+SET @date1 = '2014-10-01';
+SET @date2 = '2015-09-30';
+
+SELECT h.hoscode,h.hosname
+,ROUND(SUM(if(t.check='y',1,0))*100/COUNT(DISTINCT t.pid) ,2) as 'ผลงานร้อยละ'
+,COUNT(DISTINCT t.pid) as 'เป้าหมาย (คน)'
+,SUM(IF(t.CHILDDEVELOP=1,1,0)) as '1-ปกติ'
+,SUM(IF(t.CHILDDEVELOP=2,1,0)) as '2-สงสัยช้ากว่าปกติ'
+,SUM(IF(t.CHILDDEVELOP=3,1,0)) as '3-ช้ากว่าปกติ'
+,SUM(IF(t.CHILDDEVELOP NOT IN (1,2,3),1,0)) as 'ไม่ทราบผล'
+,SUM(IF(t.check = 'n',1,0)) as 'ไม่ได้ตรวจ'
+
+FROM chospital_amp h 
+
+LEFT JOIN (
+#indiv
+		SELECT  
+		p.HOSPCODE,p.PID,p.`NAME`,p.LNAME
+		,p.BIRTH,TIMESTAMPDIFF(YEAR,p.BIRTH,CURDATE()) as age_y
+		,n.CHILDDEVELOP,n.DATE_SERV as 'last_check'
+		,IF(n.DATE_SERV IS NULL,'n','y') as 'check'
+		
+		from person p
+
+		LEFT JOIN (
+			SELECT * FROM nutrition t
+			WHERE TRUE 	
+			AND(t.HOSPCODE,t.PID,t.DATE_SERV) IN (SELECT HOSPCODE,PID,MAX(DATE_SERV) FROM  nutrition GROUP BY HOSPCODE,PID)
+			AND t.DATE_SERV BETWEEN @date1 and @date2
+		) n on n.hospcode = p.HOSPCODE and n.pid = p.PID
+
+		WHERE TRUE
+		AND p.TYPEAREA in (1,3) AND p.NATION = 099		
+		
+		AND (p.birth between DATE_ADD(@date1,interval -71 month) AND DATE_ADD(@date2,interval 0 month)) 
+		ORDER BY p.HOSPCODE,p.PID
+#end indiv
+
+) t on t.HOSPCODE = h.hoscode
+GROUP BY h.hoscode;
  END
 ;;
 DELIMITER ;
@@ -6791,6 +7186,23 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `zz_sys_process_running_false`()
 BEGIN
 	
 	UPDATE sys_process_running set is_running = 'false';
+
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Procedure structure for zz_update_upload_log
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `zz_update_upload_log`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `zz_update_upload_log`()
+BEGIN
+	
+
+alter table  sys_upload_fortythree modify upload_date date;
+alter table  sys_upload_fortythree modify upload_time time;
+
 
 END
 ;;
@@ -7187,6 +7599,64 @@ END
 DELIMITER ;
 
 -- ----------------------------
+-- Procedure structure for z_target_f
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `z_target_f`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `z_target_f`()
+BEGIN
+	
+	DROP TABLE IF EXISTS z_target_f;
+CREATE TABLE z_target_f  (
+SELECT t.HOSPCODE,t.PID,p.CID,p.`NAME`,p.LNAME,p.SEX,p.TYPEAREA,t.DIAGCODE FROM (
+SELECT d1.HOSPCODE,d1.PID,d1.DIAGCODE FROM diagnosis_opd d1
+INNER JOIN service s on s.HOSPCODE = d1.HOSPCODE AND s.PID = d1.PID AND s.SEQ = d1.SEQ
+WHERE s.DATE_SERV BETWEEN '2015-04-01' AND '2015-06-30'
+AND d1.DIAGCODE BETWEEN 'F20' AND 'F299' AND d1.DIAGCODE NOT LIKE 'F23%' AND s.INSTYPE = '0100'
+GROUP BY d1.HOSPCODE,d1.PID
+UNION
+SELECT d2.HOSPCODE,d2.PID,d2.DIAGCODE FROM diagnosis_ipd d2
+INNER JOIN admission a on a.HOSPCODE = d2.HOSPCODE AND a.PID = d2.PID AND a.DATETIME_ADMIT = d2.DATETIME_ADMIT
+WHERE a.DATETIME_ADMIT BETWEEN '2015-04-01' AND '2015-06-30'
+AND d2.DIAGCODE BETWEEN 'F20' AND 'F299' AND d2.DIAGCODE NOT LIKE 'F23%' AND a.INSTYPE = '0100'
+GROUP BY d2.HOSPCODE,d2.PID
+) t LEFT JOIN person p ON p.HOSPCODE = t.HOSPCODE  AND p.PID = t.PID
+
+GROUP BY t.HOSPCODE,t.PID
+);
+
+
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Procedure structure for z_working_f
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `z_working_f`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `z_working_f`()
+BEGIN
+DROP TABLE if EXISTS z_working_f;
+CREATE TABLE z_working_f (
+SELECT t.HOSPCODE,t.PID,p.CID,t.DIAGCODE,DATE_FORMAT(t.DATE_SERV,'%Y-%m-%d') AS DATE_SERV FROM (
+SELECT d1.HOSPCODE,d1.PID,d1.DIAGCODE,d1.DATE_SERV FROM diagnosis_opd d1
+INNER JOIN service s on s.HOSPCODE = d1.HOSPCODE AND s.PID = d1.PID AND s.SEQ = d1.SEQ
+WHERE d1.DIAGCODE BETWEEN 'F20' AND 'F299' AND d1.DIAGCODE NOT LIKE 'F23%' AND s.INSTYPE = '0100'
+
+UNION ALL
+
+SELECT d2.HOSPCODE,d2.PID,d2.DIAGCODE,d2.DATETIME_ADMIT as DATE_SERV FROM diagnosis_ipd d2
+INNER JOIN admission a on a.HOSPCODE = d2.HOSPCODE AND a.PID = d2.PID AND a.DATETIME_ADMIT = d2.DATETIME_ADMIT
+WHERE d2.DIAGCODE BETWEEN 'F20' AND 'F299' AND d2.DIAGCODE NOT LIKE 'F23%' AND a.INSTYPE = '0100'
+
+) t LEFT JOIN person p ON p.HOSPCODE = t.HOSPCODE  AND p.PID = t.PID
+);
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
 -- Function structure for age
 -- ----------------------------
 DROP FUNCTION IF EXISTS `age`;
@@ -7299,5 +7769,24 @@ BEGIN
 		END IF;
 			RETURN chkrs;
 		END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Function structure for not_valid_dateserv
+-- ----------------------------
+DROP FUNCTION IF EXISTS `not_valid_dateserv`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` FUNCTION `not_valid_dateserv`(`dateserv` date,`oldyear` int) RETURNS int(1)
+BEGIN
+	  DECLARE var_resp INT DEFAULT 0;
+		SET @dateserv = dateserv,@oldyear = oldyear;
+
+    IF (@dateserv is NULL or @dateserv < (CURDATE()-INTERVAL @oldyear YEAR) or @dateserv > CURDATE()) THEN        
+        SET var_resp = 1;
+    END IF;
+
+    RETURN var_resp;
+END
 ;;
 DELIMITER ;

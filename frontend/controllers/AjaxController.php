@@ -206,8 +206,8 @@ class AjaxController extends \yii\web\Controller {
                     $sql = "truncate $table";
                     \Yii::$app->db->createCommand($sql)->execute();
 
-                    $sql = "truncate tmp_$table";
-                    \Yii::$app->db->createCommand($sql)->execute();
+                    //$sql = "truncate dhdc_tmp_$table";
+                    //\Yii::$app->db->createCommand($sql)->execute();
 
                     echo $sql . "<br>";
                 }
