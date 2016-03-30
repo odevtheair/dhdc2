@@ -1,7 +1,7 @@
 [initial DHDC source code]
 1) clone https://github.com/utehnphnu2015/dhdc.git
-2) copy @vender  to DHDC project
-3) copy another dependency file or folder to DHDC project
+2) copy @vender  to DHDC project  or  composer install
+--3) copy another dependency file or folder to DHDC project
 
 
 [commit code]
