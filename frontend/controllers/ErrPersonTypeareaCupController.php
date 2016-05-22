@@ -32,6 +32,9 @@ class ErrPersonTypeareaCupController extends Controller
      */
     public function actionIndex()
     {
+        if(Yii::$app->user->isGuest){
+            throw new \yii\web\ForbiddenHttpException("ไม่ได้รับอนุญาต");
+        }
         $searchModel = new ErrPersonTypeareaCupSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

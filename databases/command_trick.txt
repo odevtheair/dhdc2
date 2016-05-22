@@ -1,0 +1,2 @@
+1) รวม sql file
+copy /b *.sql all_files.sql
