@@ -96,11 +96,9 @@ class SyssettimeController extends Controller {
             $sql .= $this->call("cal_pyramid_level_3");
 
             $sql .= $this->call("cal_sys_person_type");
-            $sql .= $this->call("cal_count_service", $y - 1);
-            $sql .= $this->call("cal_count_service", $y);
-
-
-            //จบ ใส่ store
+            $sql .= $this->call("run_sys_dhdc_count_file");
+           
+           
 
             $sql .= $this->call("end_process", NULL);
             
@@ -109,6 +107,8 @@ class SyssettimeController extends Controller {
             $sql.= $this->call('z_all',NULL);
                 
             $sql.="\nEND;";
+            
+            //จบ ใส่ store
 
             $this->exec_sql($sql);
         }

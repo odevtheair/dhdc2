@@ -21,6 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'modelClass' => 'Upload 43 แฟ้ม',
                 ]), ['create'], ['class' => 'btn btn-success'])
         ?>
+        <?=Html::a('ปริมาณข้อมูล',['count-file/index'], ['class' => 'btn btn-danger'])?>
 
     </p>
 

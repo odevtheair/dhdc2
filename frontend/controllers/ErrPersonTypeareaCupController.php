@@ -14,9 +14,40 @@ use yii\filters\VerbFilter;
  */
 class ErrPersonTypeareaCupController extends Controller
 {
-    public function behaviors()
-    {
+    public function behaviors() {
+
+        $role = 0;
+        if (!Yii::$app->user->isGuest) {
+            $role = Yii::$app->user->identity->role;
+        }
+        $arr = [''];
+        if ($role == 1) {
+            $arr = ['index'];
+        }
+        if ($role == 2) {
+            $arr = ['index'];
+        }
+
         return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'denyCallback' => function ($rule, $action) {
+                    throw new \yii\web\ForbiddenHttpException("ไม่ได้รับอนุญาต");
+                },
+                'only' => ['index'],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => $arr,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => $arr,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [

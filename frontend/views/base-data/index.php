@@ -15,31 +15,26 @@ $this->params['breadcrumbs'][] = 'ข้อมูลพื้นฐาน';
 
 <p>
     <?php
-    echo \yii\helpers\Html::a('1) จำนวนประชากรแยกตามกลุ่มอายุ', ['base-data/pyramid']);    
+    echo \yii\helpers\Html::a('1) ตรวจสอบปริมาณข้อมูลรายแฟ้ม', ['count-file/index']);    
     ?>
 </p>
 
 <p>
     <?php
-    echo \yii\helpers\Html::a('2) จำนวนประชากรแยกตาม TYPEAREA', ['base-data/checktype']);    
+    echo \yii\helpers\Html::a('2) จำนวนประชากรแยกตามกลุ่มอายุ', ['base-data/pyramid']);    
     ?>
 </p>
 
 <p>
     <?php
-    echo \yii\helpers\Html::a('3) จำนวนครั้งให้บริการแยกรายเดือน (SERVICE)', ['opd/report1']);    
+    echo \yii\helpers\Html::a('3) จำนวนประชากรแยกตาม TYPEAREA', ['base-data/checktype']);    
     ?>
 </p>
 
-<p>
-    <?php
-    echo \yii\helpers\Html::a('4) ปริมาณข้อมูลแยกรายแฟ้ม', ['syscountall/index']);    
-    ?>
-</p>
 
 <p>
     <?php
-    echo \yii\helpers\Html::a('5) รายการ PERSON ที่มี TYPEAREA 1,3 ซ้ำซ้อน', ['err-person-typearea-cup/index']);    
+    echo \yii\helpers\Html::a('4) รายการ PERSON ที่มี TYPEAREA 1,3 ซ้ำซ้อน', ['err-person-typearea-cup/index']);    
     ?>
 </p>
 

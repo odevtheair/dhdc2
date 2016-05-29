@@ -91,15 +91,7 @@ class ExecuteController extends \yii\web\Controller {
             $this->call("start_process", NULL);
 
             $this->call("merge_newborncare", NULL);
-            $sql = "truncate sys_count_all";
-            $this->exec_sql($sql);
-
-            $month = \backend\models\SysMonth::find()->all();
-            foreach ($month as $m) {
-                if ($m->month <= date('Ym')) {
-                    //$this->run_sys_count_all($m->month);
-                }
-            }
+                 
 
             $bdg = '2015-09-30';
             $model = \backend\models\Sysconfigmain::find()->one();
@@ -120,10 +112,8 @@ class ExecuteController extends \yii\web\Controller {
 
             $this->call("cal_sys_person_type");
 
-            $y = date('Y');
-            $this->call("cal_count_service", $y - 1);
-            $this->call("cal_count_service", $y);
-           
+            $this->call("run_sys_dhdc_count_file");
+                    
             
 
 
