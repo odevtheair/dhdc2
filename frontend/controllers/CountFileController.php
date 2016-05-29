@@ -29,12 +29,12 @@ class CountFileController extends \yii\web\Controller {
         return $rawData;
     }
 
-    public function actionIndex() {
-        $post = Yii::$app->request->post();
-        $year = date('m') >= 10 ? date('Y') + 544 : date('Y') + 543;
+    public function actionIndex($tb='service',$b_year='2559') {
+        //$post = Yii::$app->request->post();
+        //$year = date('m') >= 10 ? date('Y') + 544 : date('Y') + 543;
 
-        $tb = !empty($post['tb']) ? $post['tb'] : 'service';
-        $b_year = !empty($post['b_year']) ? $post['b_year'] : $year;
+        //$tb = !empty($post['tb']) ? $post['tb'] : 'service';
+        //$b_year = !empty($post['b_year']) ? $post['b_year'] : $year;
 
         $sql = " SELECT h.hoscode,h.hosname,t.* FROM chospital_amp h  
 LEFT JOIN sys_dhdc_count_file t ON h.hoscode = t.hospcode

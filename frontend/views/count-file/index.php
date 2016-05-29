@@ -4,13 +4,20 @@
 use yii\bootstrap\Html;
 use yii\helpers\ArrayHelper;
 use kartik\grid\GridView;
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Url;
 
 $this->title = 'COUNT-FILE';
 $this->params['breadcrumbs'][] = ['label' => 'ข้อมูลพื้นฐาน', 'url' => ['base-data/index']];
 $this->params['breadcrumbs'][] = 'ปริมาณข้อมูล';
 ?>
 <div class='well'>
-    <form method="POST">       
+     <?php
+    ActiveForm::begin([
+        'method' => 'get',
+        'action' => Url::to(['count-file/index']),
+    ]);
+    ?>
 
         <?php
         $sql = "SELECT DISTINCT t.tb FROM sys_dhdc_count_file t ORDER BY t.tb DESC";
@@ -26,9 +33,10 @@ $this->params['breadcrumbs'][] = 'ปริมาณข้อมูล';
         echo Html::dropDownList('b_year', $b_year, $items, ['prompt' => '--- ปีงบประมาณ ---']);
         ?>    
 
-
-        <button class='btn btn-danger'> ตกลง </button>
-    </form>
+   <?php
+    echo Html::submitButton(' ตกลง ', ['class' => 'btn btn-danger']);
+    ActiveForm::end();
+    ?>
 </div>
 <?php
 $a = substr($b_year, 2) - 1;
@@ -43,7 +51,7 @@ echo GridView::widget([
         'showConfirmAlert' => false,
         'target' => GridView::TARGET_BLANK
     ],
-    //'pjax' => true,
+    'pjax' => true,
     'columns' => [
         [
             'attribute' => 'hoscode',
