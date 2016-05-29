@@ -11,6 +11,7 @@ $this->title = 'COUNT-FILE';
 $this->params['breadcrumbs'][] = ['label' => 'ข้อมูลพื้นฐาน', 'url' => ['base-data/index']];
 $this->params['breadcrumbs'][] = 'ปริมาณข้อมูล';
 ?>
+ <?php  yii\widgets\Pjax::begin();?>
 <div class='well'>
      <?php
     ActiveForm::begin([
@@ -42,6 +43,7 @@ $this->params['breadcrumbs'][] = 'ปริมาณข้อมูล';
 $a = substr($b_year, 2) - 1;
 $b = substr($b_year, 2);
 echo GridView::widget([
+    'floatHeader'=>true,
     'formatter' => ['class' => 'yii\i18n\Formatter', 'nullDisplay' => '0'],
     'dataProvider' => $dataProvider,
     'panel' => [
@@ -51,7 +53,7 @@ echo GridView::widget([
         'showConfirmAlert' => false,
         'target' => GridView::TARGET_BLANK
     ],
-    'pjax' => true,
+    //'pjax' => true,
     'columns' => [
         [
             'attribute' => 'hoscode',
@@ -183,7 +185,8 @@ echo GridView::widget([
         ],
     ]//columns
 ]);
-                                                                                                ?>
-
+      
+        ?>
+ <?php yii\widgets\Pjax::end();?> 
 
 
